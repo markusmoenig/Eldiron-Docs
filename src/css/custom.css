@@ -1,0 +1,132 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+/* :root {
+    --ifm-color-primary: #2e8555;
+    --ifm-color-primary-dark: #29784c;
+    --ifm-color-primary-darker: #277148;
+    --ifm-color-primary-darkest: #205d3b;
+    --ifm-color-primary-light: #33925d;
+    --ifm-color-primary-lighter: #359962;
+    --ifm-color-primary-lightest: #3cad6e;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+} */
+
+/* Footer override - LIGHT THEME */
+.footer {
+    background-color: #e3d4b5 !important; /* Parchment */
+    color: #4e342e !important; /* Deep brown text */
+}
+
+.footer {
+    border-top: 2px solid #c2b393;
+}
+
+.footer a {
+    color: #5e3e4c !important; /* Link color */
+}
+
+.footer a:hover {
+    color: #a65e3b !important; /* Link hover */
+}
+
+/* Light Theme - Footer section titles */
+.footer .footer__title {
+    color: #4e342e !important;
+}
+
+/* Dark Theme - Footer section titles */
+[data-theme="dark"] .footer .footer__title {
+    color: #e4dac0 !important;
+}
+
+:root {
+    --ifm-color-primary: #5e3e4c; /* deep purple-brown for links/buttons */
+    --ifm-color-primary-dark: #4e3440;
+    --ifm-color-primary-light: #7a5064;
+    --ifm-background-color: #f0eadb; /* slightly richer parchment feel */
+    --ifm-font-color-base: #1e1c1a;
+
+    --ifm-navbar-background-color: #f2ebd9; /* parchment */
+    --ifm-navbar-link-color: #4e342e; /* dark brown text */
+    --ifm-navbar-link-hover-color: #7b4b3a; /* warm accent hover */
+    --ifm-navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* soft bottom shadow */
+
+    --ifm-footer-background-color: #e8ddc2; /* parchment footer */
+    --ifm-footer-color: #4e342e; /* matching text */
+    --ifm-footer-link-color: #5e3e4c;
+    --ifm-footer-link-hover-color: #a65e3b;
+
+    --docusaurus-highlighted-code-line-bg: rgba(94, 62, 76, 0.1);
+    --ifm-code-font-size: 95%;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* [data-theme="dark"] {
+    --ifm-color-primary: #25c2a0;
+    --ifm-color-primary-dark: #21af90;
+    --ifm-color-primary-darker: #1fa588;
+    --ifm-color-primary-darkest: #1a8870;
+    --ifm-color-primary-light: #29d5b0;
+    --ifm-color-primary-lighter: #32d8b4;
+    --ifm-color-primary-lightest: #4fddbf;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+} */
+
+[data-theme="dark"] .footer {
+    background-color: #231c17 !important; /* Dark tavern stone */
+    color: #e4dac0 !important; /* Candlelight text */
+}
+
+[data-theme="dark"] .footer a {
+    color: #d27d46 !important;
+}
+
+[data-theme="dark"] .footer a:hover {
+    color: #fcb973 !important;
+}
+
+[data-theme="dark"] {
+    --ifm-color-primary: #d27d46;
+    --ifm-color-primary-dark: #b35e30;
+    --ifm-color-primary-light: #e29868;
+
+    --ifm-background-color: #1c1b19; /* deep brownish black */
+    --ifm-font-color-base: #e3d9b9; /* parchment-like on dark */
+
+    --ifm-navbar-background-color: #1c1b19;
+    --ifm-navbar-link-color: #e4dac0;
+    --ifm-navbar-link-hover-color: #f5955a;
+
+    --ifm-footer-background-color: #1a1511;
+    --ifm-footer-color: #e3d9b9;
+    --ifm-footer-link-color: #d27d46;
+    --ifm-footer-link-hover-color: #fcb973;
+
+    --docusaurus-highlighted-code-line-bg: rgba(245, 149, 90, 0.05);
+}
+
+[data-theme="dark"] body {
+    background-color: #181411 !important;
+}
+
+[data-theme="dark"] .main-wrapper {
+    background-color: #181411 !important;
+}
+
+[data-theme="dark"] .docusaurus-wrapper {
+    background-color: #181411 !important;
+}
+
+[data-theme="dark"] .theme-doc-page {
+    background-color: #181411 !important;
+}
+
+[data-theme="dark"] .footer {
+    border-top: 2px solid #3a2b20; /* warm dark brown, not black */
+}
