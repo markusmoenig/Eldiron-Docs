@@ -21,8 +21,9 @@ There are two tools available for editing character templates:
 
 Both tools **overlap** in functionality. You could set all attributes via **code** in the **startup event**, but the **Data Tool** provides a **more convenient** way to configure the initial state of a character.
 
-> [!INFO]
-> Currently, the **Code Tool** supports only **Python scripting**. A **visual, node-based scripting alternative** will be available before v1.
+:::info
+Currently, the **Code Tool** supports only **Python scripting**. A **visual, node-based scripting alternative** will be available before v1.
+:::
 
 ---
 
@@ -52,8 +53,9 @@ class NewCharacter:
 
 If you rename the **class** (default: `NewCharacter`), the **character template name** will update automatically in the Character section.
 
-> [!TIP]
-> The **Python class name** is also the **character template name**.
+:::tip
+The **Python class name** is also the **character template name**.
+:::
 
 ---
 
@@ -94,11 +96,12 @@ In the earlier example, `user_event` handles **keyboard input**, allowing the pl
 
 When you **drag a character template into the map**, it creates a **new instance**.
 
-The [Character](/creator/SECTIONS/#region) section lists all **character instances** in the **region**. Characters are displayed with a **human avatar** on the map.
+The [Character](/docs/creator/sections/#region) section lists all **character instances** in the **region**. Characters are displayed with a **human avatar** on the map.
 
-> [!TIP]
-> **Click & Drag** a character in the map to move it.
-> **Press 'Delete'** to remove a character instance.
+:::tip
+**Click & Drag** a character in the map to move it.
+**Press 'Delete'** to remove a character instance.
+:::
 
 ### Instance Initialization
 
