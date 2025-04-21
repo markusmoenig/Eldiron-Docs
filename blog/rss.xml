@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Eldiron Blog</title>
+        <link>https://eldiron.com/blog</link>
+        <description>Eldiron Blog</description>
+        <lastBuildDate>Wed, 09 Apr 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Eldiron v0.8.22 Released]]></title>
+            <link>https://eldiron.com/blog/2025/04/09/eldiron-v0.8.22</link>
+            <guid>https://eldiron.com/blog/2025/04/09/eldiron-v0.8.22</guid>
+            <pubDate>Wed, 09 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Eldiron v0.8.22 is now available with several exciting new features and improvements.]]></description>
+            <content:encoded><![CDATA[<p>Eldiron v0.8.22 is now available with several exciting new features and improvements.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-whats-new">🆕 What's New<a href="https://eldiron.com/blog/2025/04/09/eldiron-v0.8.22#-whats-new" class="hash-link" aria-label="Direct link to 🆕 What's New" title="Direct link to 🆕 What's New">​</a></h3>
+<ul>
+<li><strong>Screens &amp; Widgets</strong> – Build your game's UI with buttons, text fields, message boxes, and more.</li>
+<li><strong>New 2D Example: Hideout 2D</strong> – Explore a new demo where you help Moody the goblin re-unite with the treasures in his lair.</li>
+</ul>
+<p>I’ve created a new video walking through the new features and the Hideout 2D example. In it, I explain the mechanics behind characters, items, and the new UI system:</p>
+<h2>Watch the Video</h2>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/mTZUf6c0xy4" title="Hideout 2D Example" frameborder="0"></iframe>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
