@@ -4,32 +4,53 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Cross Platform",
+    title: "Cross-Platform Freedom",
     img: require("@site/static/img/farmer.png").default,
     description: (
       <>
-        Eldiron is written in Rust with no hardware dependencies. Eldiron
-        Creator and its games work everywhere.
+        Eldiron is built in Rust with zero hardware dependencies. Run the
+        Creator and your games seamlessly across all platforms.
       </>
     ),
   },
   {
-    title: "Focus on What Matters",
-    img: require("@site/static/img/farmer.png").default,
+    title: "Multiple Game Styles",
+    img: require("@site/static/img/adventurer.png").default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Create top-down 2D, isometric, or first-person 3D games—switch between
+        them instantly, even during gameplay.
       </>
     ),
   },
   {
-    title: "Powered by React",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    title: "Powerful Inbuilt Editor",
+    img: require("@site/static/img/dragonslayer.png").default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Design maps, build interfaces, or craft procedural materials using the
+        intuitive Doom-style editor system.
+      </>
+    ),
+  },
+  {
+    title: "Tile Everything Beautifully",
+    img: require("@site/static/img/mage.png").default,
+    description: (
+      <>
+        Use your own tilesets or generate unique ones procedurally to texture
+        floors, walls, and characters in your world.
+      </>
+    ),
+  },
+  {
+    title: "Script with Python — Nodes Soon",
+    img: require("@site/static/img/lord.png").default,
+    description: (
+      <>
+        Use the built-in Python editor to create behaviors, events, and logic. A
+        node-based system is coming soon, built on the same Python modules for
+        visual, flexible scripting.
       </>
     ),
   },
@@ -56,7 +77,7 @@ function Feature({ img, title, description }) {
         <img src={img} alt={title} style={{ maxHeight: 120 }} />
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <h3>{title}</h3>
         <p>{description}</p>
       </div>
     </div>
@@ -67,10 +88,63 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        {/* Row 1: first 3 features */}
         <div className="row">
-          {FeatureList.map((props, idx) => (
+          {FeatureList.slice(0, 3).map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+        </div>
+
+        {/* Row 2: last 2 features, centered */}
+        <div
+          className="row"
+          style={{
+            justifyContent: "center",
+            display: "flex",
+            marginTop: "2rem",
+          }}
+        >
+          {FeatureList.slice(3).map((props, idx) => (
+            <Feature key={idx + 3} {...props} />
+          ))}
+        </div>
+
+        {/* ✅ News section goes OUTSIDE the row divs */}
+        <div
+          style={{
+            textAlign: "center",
+            maxWidth: "800px",
+            margin: "3rem auto 0",
+            padding: "0 1rem",
+          }}
+        >
+          <h2
+            style={{ color: "var(--ifm-color-primary)", marginBottom: "1rem" }}
+          >
+            Latest News
+          </h2>
+          <p style={{ fontSize: "1.05rem", lineHeight: 1.6 }}>
+            <span
+              style={{
+                fontWeight: 600,
+                display: "block",
+                marginBottom: "0.25rem",
+              }}
+            >
+              📅 April 9th, 2025
+            </span>
+            <strong>Eldiron v0.8.22</strong> is now available with major updates
+            including the screen editor, UI widgets, and a new Hideout 2D
+            example. Watch the tutorial video{" "}
+            <a
+              href="https://www.youtube.com/watch?v=mTZUf6c0xy4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+            .
+          </p>
         </div>
       </div>
     </section>

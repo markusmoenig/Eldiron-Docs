@@ -18,7 +18,7 @@ const config = {
   url: "https://eldiron.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/eldiron",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -92,6 +92,7 @@ const config = {
             label: "Docs",
           },
           { to: "/blog", label: "Blog", position: "left" },
+          { to: "/sponsor", label: "Sponsor", position: "left" }, // ✅ New entry
           {
             type: "html",
             position: "right",
@@ -138,20 +139,20 @@ const config = {
             items: [
               {
                 label: "YouTube",
-                href: "https://www.youtube.com/channel/UCCmrO356zLQv_m8dPEqBUfA",
+                to: "https://www.youtube.com/channel/UCCmrO356zLQv_m8dPEqBUfA",
               },
               {
                 label: "Discord",
-                href: "https://discord.gg/ZrNj6baSZU",
+                to: "https://discord.gg/ZrNj6baSZU",
               },
               {
                 label: "X",
-                href: "https://x.com/EldironRPG",
+                to: "https://x.com/EldironRPG",
               },
             ],
           },
           {
-            title: "Support",
+            title: "Sponsor",
             items: [
               {
                 label: "Patreon",
@@ -159,11 +160,11 @@ const config = {
               },
               {
                 label: "GitHub Sponsors",
-                href: "https://github.com/markusmoenig",
+                to: "https://github.com/markusmoenig",
               },
               {
                 label: "PayPal",
-                href: "https://paypal.me/markusmoenigos",
+                to: "https://paypal.me/markusmoenigos",
               },
             ],
           },
@@ -172,11 +173,11 @@ const config = {
             items: [
               {
                 label: "Downloads",
-                href: "https://github.com/markusmoenig/Eldiron/releases",
+                to: "https://github.com/markusmoenig/Eldiron/releases",
               },
               {
                 label: "GitHub",
-                href: "https://github.com/markusmoenig/Eldiron",
+                to: "https://github.com/markusmoenig/Eldiron",
               },
             ],
           },
