@@ -130,3 +130,14 @@
 [data-theme="dark"] .footer {
     border-top: 2px solid #3a2b20; /* warm dark brown, not black */
 }
+
+.carousel .control-dots .dot {
+    box-shadow: none !important;
+    background: #ccc !important; /* light mode default */
+    opacity: 1;
+    transition: background 0.3s ease;
+}
+
+.carousel .control-dots .dot.selected {
+    background: var(--ifm-color-primary) !important;
+}

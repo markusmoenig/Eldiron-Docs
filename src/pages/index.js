@@ -40,36 +40,42 @@ export default function Home() {
   return (
     <Layout
       title={`Retro RPG Creator`}
-      description="Description will go into a meta tag in <head />"
+      description="Eldiron is a retro RPG game creator for 2D, isometric, and first-person adventures. Build your own classic RPG worlds with powerful tools and cross-platform freedom."
     >
-      {/* <HomepageHeader /> */}
-      <header>
-        <img
-          src={bannerUrl}
-          alt="Eldiron Banner"
-          style={{
-            display: "block",
-            margin: "0 auto",
-            maxWidth: "1000px",
-            width: "100%",
-            height: "auto",
-            // boxShadow: "0 0 30px rgba(0, 0, 0, 0.6)", // subtle glow
-            // border: "4px solid #372d25",
-          }}
-        />
-      </header>
-
       <main>
-        <HomepageFeatures />
-
+        {/* Carousel at the top */}
         <section
           style={{ padding: "2rem 1rem", maxWidth: "1000px", margin: "0 auto" }}
         >
-          <h2 style={{ textAlign: "center", marginBottom: "1rem" }}>
-            Eldiron Screenshots
-          </h2>
+          <h1
+            style={{
+              textAlign: "center",
+              fontSize: "2.5rem",
+              marginBottom: "0.5rem",
+              fontWeight: "700",
+              color: "var(--ifm-color-primary)",
+            }}
+          >
+            Build Your Own Retro RPG Worlds
+          </h1>
+          <p
+            style={{
+              textAlign: "center",
+              fontSize: "1.2rem",
+              marginBottom: "2rem",
+              color: "#666",
+            }}
+          >
+            {/* Design maps, craft stories, and bring your pixel dreams to life — no
+            coding required. */}
+            Design maps, craft adventures, and build 2D & 3D retro RPGs — with
+            visual tools and Python scripting.
+          </p>
+          {/* <h2 style={{ textAlign: "center", marginBottom: "1rem" }}>
+            Eldiron: A powerful retro RPG Creator
+          </h2> */}
           <Carousel
-            showThumbs={true}
+            showThumbs={false}
             showStatus={false}
             infiniteLoop
             autoPlay
@@ -77,19 +83,81 @@ export default function Home() {
             dynamicHeight
             emulateTouch
           >
-            {["screenshot_hideout2d", "screenshot"].map((name, idx) => (
+            {[
+              {
+                name: "hideout2d",
+                caption: "Build top-down RPGs inspired by Ultima",
+              },
+              {
+                name: "unending_night",
+                caption: "Design immersive 3D worlds with classic vibes",
+              },
+              {
+                name: "scripting",
+                caption:
+                  "Powerful event-driven logic with easy Python scripting",
+              },
+              {
+                name: "materials",
+                caption: "Craft procedural materials visually",
+              },
+              {
+                name: "widgets",
+                caption:
+                  "Design UI widgets and connect them to actions and events",
+              },
+            ].map(({ name, caption }, idx) => (
               <div key={idx}>
-                <img
-                  src={useBaseUrl(`/img/screenshots/${name}.png`)}
-                  alt={`Screenshot ${idx + 1}`}
-                  // style={{
-                  //   borderRadius: "8px",
-                  //   boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
-                  // }}
-                />
+                <div style={{ position: "relative" }}>
+                  <img
+                    src={useBaseUrl(`/img/screenshots/${name}.png`)}
+                    alt={`Screenshot ${idx + 1}`}
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      display: "block",
+                    }}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "4.5rem", // 👈 moved up to avoid dot overlap
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      backgroundColor: "rgba(0, 0, 0, 0.6)",
+                      color: "white",
+                      padding: "0.5rem 1rem",
+                      borderRadius: "6px",
+                      fontSize: "1rem",
+                      maxWidth: "90%",
+                      zIndex: 1,
+                      pointerEvents: "none",
+                    }}
+                  >
+                    {caption}
+                  </div>
+                </div>
               </div>
             ))}
           </Carousel>
+        </section>
+
+        {/* Features in the middle */}
+        <HomepageFeatures />
+
+        {/* Banner at the bottom */}
+        <section style={{ padding: "2rem 1rem", textAlign: "center" }}>
+          <img
+            src={bannerUrl}
+            alt="Eldiron Banner"
+            style={{
+              display: "block",
+              margin: "0 auto",
+              maxWidth: "1000px",
+              width: "100%",
+              height: "auto",
+            }}
+          />
         </section>
       </main>
     </Layout>
