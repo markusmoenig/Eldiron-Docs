@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-sidebar_position: 5
+sidebar_position: 1
 ---
 
 You can configure **Eldiron** using the **Config Tool** with the in-built **TOML editor**.
@@ -12,7 +12,6 @@ You can configure **Eldiron** using the **Config Tool** with the in-built **TOML
 Game configuration options are located in the `[game]` section.
 
 ```toml
-[game]
 [game]
 target_fps = 30                # The target frames per second for the game.
 game_tick_ms = 250             # The milliseconds per game tick.
