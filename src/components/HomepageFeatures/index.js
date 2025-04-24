@@ -56,20 +56,6 @@ const FeatureList = [
   },
 ];
 
-// function Feature({ Svg, title, description }) {
-//   return (
-//     <div className={clsx("col col--4")}>
-//       <div className="text--center">
-//         <Svg className={styles.featureSvg} role="img" />
-//       </div>
-//       <div className="text--center padding-horiz--md">
-//         <Heading as="h3">{title}</Heading>
-//         <p>{description}</p>
-//       </div>
-//     </div>
-//   );
-// }
-
 function Feature({ img, title, description }) {
   return (
     <div className={clsx("col col--4")}>
@@ -131,13 +117,25 @@ export default function HomepageFeatures() {
                 marginBottom: "0.25rem",
               }}
             >
-              📅 April 9th, 2025
+              📅 April 24th, 2025
             </span>
-            <strong>Eldiron v0.8.22</strong> is now available with major updates
+            {/* <strong>Eldiron v0.8.23</strong> is now available with major updates
             including the screen editor, UI widgets, and a new Hideout 2D
             example. Watch the tutorial video{" "}
             <a
               href="https://www.youtube.com/watch?v=mTZUf6c0xy4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+            . */}
+            <strong>Eldiron v0.8.23</strong> is now available, featuring the new
+            procedural material system. Create tileable materials with
+            node-based effects and use them directly in your 2D or 3D maps. Read
+            the blog{" "}
+            <a
+              href="/blog/2025/04/24/eldiron-v0.8.23"
               target="_blank"
               rel="noopener noreferrer"
             >
