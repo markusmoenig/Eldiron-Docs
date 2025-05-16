@@ -145,6 +145,36 @@ export default function Home() {
         {/* Features in the middle */}
         <HomepageFeatures />
 
+        {/* Sponsor Thank You Section */}
+        <section
+          style={{ textAlign: "center", marginTop: "3rem", padding: "0 1rem" }}
+        >
+          <h2 style={{ color: "var(--ifm-color-primary)" }}>
+            Thanks to Our Supporters
+          </h2>
+          <p
+            style={{
+              fontSize: "1.05rem",
+              maxWidth: "700px",
+              margin: "0 auto 1rem",
+            }}
+          >
+            A heartfelt thank you to everyone supporting Eldiron via Patreon and
+            GitHub Sponsors. Your support helps me keep building and improving
+            this project.
+          </p>
+          <div style={{ fontWeight: "bold", marginBottom: "0.5rem" }}>
+            Patreon Supporters:
+          </div>
+          <div style={{ marginBottom: "1rem" }}>
+            Luna (Dragon Slayer), R Isted (Farmer)
+          </div>
+          <div style={{ fontWeight: "bold", marginBottom: "0.5rem" }}>
+            GitHub Sponsors:
+          </div>
+          <div>cnasc</div>
+        </section>
+
         {/* Banner at the bottom */}
         <section style={{ padding: "2rem 1rem", textAlign: "center" }}>
           <img

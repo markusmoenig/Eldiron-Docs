@@ -17,3 +17,11 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+development update:
+  label: development update
+  permalink: /blog/tags/dev-update
+
+releases:
+  label: releases
+  permalink: /blog/tags/releases

@@ -117,7 +117,7 @@ export default function HomepageFeatures() {
                 marginBottom: "0.25rem",
               }}
             >
-              📅 April 24th, 2025
+              📅 May 16th, 2025
             </span>
             {/* <strong>Eldiron v0.8.23</strong> is now available with major updates
             including the screen editor, UI widgets, and a new Hideout 2D
@@ -130,18 +130,16 @@ export default function HomepageFeatures() {
               here
             </a>
             . */}
-            <strong>Eldiron v0.8.23</strong> is now available, featuring the new
-            procedural material system. Create tileable materials with
-            node-based effects and use them directly in your 2D or 3D maps. Read
-            the blog{" "}
+            <strong>Eldiron Dev Update 1</strong> - Read the blog{" "}
             <a
-              href="/blog/2025/04/24/eldiron-v0.8.23"
+              href="/blog/2025/05/16/eldiron-devupdate"
               target="_blank"
               rel="noopener noreferrer"
             >
               here
-            </a>
-            .
+            </a>{" "}
+            to learn about what I am working on, including the render graph,
+            streaming terrain and geometry and more.
           </p>
         </div>
       </div>

@@ -1,6 +1,5 @@
 ---
-title: "Foreword"
-sidebar_position: 1
+title: Foreword
 ---
 
 ## The Beginning
