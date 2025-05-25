@@ -4,10 +4,26 @@
         <title>Eldiron Blog</title>
         <link>https://eldiron.com/blog</link>
         <description>Eldiron Blog</description>
-        <lastBuildDate>Fri, 16 May 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 25 May 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[First Terrain Editing Screenshots]]></title>
+            <link>https://eldiron.com/blog/2025/05/25/eldiron-terrain</link>
+            <guid>https://eldiron.com/blog/2025/05/25/eldiron-terrain</guid>
+            <pubDate>Sun, 25 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[As I work on the next release of Eldiron, I’ll post progress screenshots along the way. Here are two shots of the terrain modeling tools in action.]]></description>
+            <content:encoded><![CDATA[<p>As I work on the next release of Eldiron, I’ll post progress screenshots along the way. Here are two shots of the terrain modeling tools in action.</p>
+<p><img decoding="async" loading="lazy" alt="Terrain Editing" src="https://eldiron.com/assets/images/terrainedit-e40ccad3c936211a60228f8592a19291.png" width="2624" height="1720" class="img_ev3q"></p>
+<p>In the first screenshot, you can see how procedural nodes can be applied to sectors and linedefs to deform and colorize the terrain. For example, we flatten the ground and apply a stone texture, while the linedef creates a smooth path into the mountains.</p>
+<p><img decoding="async" loading="lazy" alt="Terrain Editing" src="https://eldiron.com/assets/images/terrainbrushes-eb7ec294a0eecb510fa49d0639831c69.png" width="2624" height="1720" class="img_ev3q"></p>
+<p>The second screenshot shows the new terrain tool, where we can sculpt the terrain using brushes. Rendering with terrain modifiers happens asynchronously in a background thread, providing a smooth and responsive editing experience.</p>
+<p>—</p>
+<p>Take care,
+Markus</p>]]></content:encoded>
+            <category>development update</category>
+        </item>
         <item>
             <title><![CDATA[Eldiron Development Update 1]]></title>
             <link>https://eldiron.com/blog/2025/05/16/eldiron-devupdate</link>

@@ -2,11 +2,31 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eldiron.com/blog</id>
     <title>Eldiron Blog</title>
-    <updated>2025-05-16T00:00:00.000Z</updated>
+    <updated>2025-05-25T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eldiron.com/blog"/>
     <subtitle>Eldiron Blog</subtitle>
     <icon>https://eldiron.com/img/favicon.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[First Terrain Editing Screenshots]]></title>
+        <id>https://eldiron.com/blog/2025/05/25/eldiron-terrain</id>
+        <link href="https://eldiron.com/blog/2025/05/25/eldiron-terrain"/>
+        <updated>2025-05-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[As I work on the next release of Eldiron, I’ll post progress screenshots along the way. Here are two shots of the terrain modeling tools in action.]]></summary>
+        <content type="html"><![CDATA[<p>As I work on the next release of Eldiron, I’ll post progress screenshots along the way. Here are two shots of the terrain modeling tools in action.</p>
+<p><img decoding="async" loading="lazy" alt="Terrain Editing" src="https://eldiron.com/assets/images/terrainedit-e40ccad3c936211a60228f8592a19291.png" width="2624" height="1720" class="img_ev3q"></p>
+<p>In the first screenshot, you can see how procedural nodes can be applied to sectors and linedefs to deform and colorize the terrain. For example, we flatten the ground and apply a stone texture, while the linedef creates a smooth path into the mountains.</p>
+<p><img decoding="async" loading="lazy" alt="Terrain Editing" src="https://eldiron.com/assets/images/terrainbrushes-eb7ec294a0eecb510fa49d0639831c69.png" width="2624" height="1720" class="img_ev3q"></p>
+<p>The second screenshot shows the new terrain tool, where we can sculpt the terrain using brushes. Rendering with terrain modifiers happens asynchronously in a background thread, providing a smooth and responsive editing experience.</p>
+<p>—</p>
+<p>Take care,
+Markus</p>]]></content>
+        <author>
+            <name>Markus Moenig</name>
+            <uri>https://github.com/markusmoenig</uri>
+        </author>
+        <category label="development update" term="development update"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Eldiron Development Update 1]]></title>
         <id>https://eldiron.com/blog/2025/05/16/eldiron-devupdate</id>
