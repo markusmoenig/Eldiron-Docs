@@ -2,11 +2,52 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eldiron.com/blog</id>
     <title>Eldiron Blog</title>
-    <updated>2025-05-25T00:00:00.000Z</updated>
+    <updated>2025-06-13T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eldiron.com/blog"/>
     <subtitle>Eldiron Blog</subtitle>
     <icon>https://eldiron.com/img/favicon.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[Eldiron v0.8.40 Released]]></title>
+        <id>https://eldiron.com/blog/2025/06/13/eldiron-v0.8.40</id>
+        <link href="https://eldiron.com/blog/2025/06/13/eldiron-v0.8.40"/>
+        <updated>2025-06-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Eldiron v0.8.40 Released]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="eldiron-v0840-released">Eldiron v0.8.40 Released<a href="https://eldiron.com/blog/2025/06/13/eldiron-v0.8.40#eldiron-v0840-released" class="hash-link" aria-label="Direct link to Eldiron v0.8.40 Released" title="Direct link to Eldiron v0.8.40 Released">​</a></h2>
+<p>Eldiron v0.8.40 introduces a range of major new features for building retro-style RPGs:</p>
+<ul>
+<li>
+<p><strong>Character rigging and animation</strong>
+Define and animate character rigs directly within the editor.</p>
+</li>
+<li>
+<p><strong>Item rigging and attachment</strong>
+Equip characters with items that carry their own geometry and animation, attaching cleanly to character slots.</p>
+</li>
+<li>
+<p><strong>Terrain editing and procedural modification</strong>
+Use sectors and linedefs combined with a node-based system to modify terrain heightmaps and colorization.</p>
+</li>
+<li>
+<p><strong>Node-based render graphs</strong>
+All geometry in Eldiron—including characters, terrain, and items—is now driven by flexible, modular node graphs.</p>
+</li>
+<li>
+<p><strong>Asynchronous terrain and geometry streaming</strong>
+Large environments now stream in and render smoothly in the background.</p>
+</li>
+</ul>
+<video controls="" width="100%"><source src="/rigged_character.mov" type="video/quicktime"><p>Sorry, your browser doesn't support embedded videos.</p></video>
+<p>Tutorial videos coming soon!</p>
+<p>—</p>
+<p>Take care,
+Markus</p>]]></content>
+        <author>
+            <name>Markus Moenig</name>
+            <uri>https://github.com/markusmoenig</uri>
+        </author>
+        <category label="releases" term="releases"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[First Terrain Editing Screenshots]]></title>
         <id>https://eldiron.com/blog/2025/05/25/eldiron-terrain</id>
