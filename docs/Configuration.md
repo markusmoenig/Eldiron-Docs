@@ -79,8 +79,9 @@ weapon_slots = ["main_hand", "off_hand"]
 - The **short symbol** shown with currency values (e.g. `"G"`).
 - Appears alongside numbers (e.g. `50 G`, `100 💎`).
 
-> [!TIP]
-> The supported game configuration options will increase over time.
+:::tip
+The supported game configuration options will increase over time.
+:::
 
 ### **Using In-Game Time for Events**
 
