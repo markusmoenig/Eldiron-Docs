@@ -96,8 +96,13 @@ const config = {
             label: "Docs",
           },
           { to: "/blog", label: "Blog", position: "left" },
-          { to: "/intro", label: "Intro", position: "left" }, // ✅ New entry
-          { to: "/sponsor", label: "Sponsor", position: "left" }, // ✅ New entry
+          { to: "/intro", label: "Intro", position: "left" },
+          { to: "/sponsor", label: "Sponsor", position: "left" },
+          {
+            to: "https://github.com/markusmoenig/Eldiron/discussions",
+            label: "Forum",
+            position: "left",
+          },
           {
             type: "html",
             position: "right",
