@@ -50,7 +50,7 @@ set_attr("STR", 10)
 
 ```toml
 [attributes]
-# General purpose attributes
+# General purpose attributes. By convention use uppercase for character attributes.
 STR = 10
 
 # Give the character or item a name (if they differ from the template)
@@ -72,10 +72,25 @@ player = true
 
 # Item specific
 
-# Make the item blocking (based on its radius)
+# Defines the slot of the item (if any) when equipped.
+slot = "legs"
+
+# If the item overrides colors of the character when equipped, specify it here.
+color = "#ff0000"
+
+# When the item is equipped, specifies the names of sectors and linedefs which colors should be overriden with the above color.
+# This is useful when you dont want to override the geometry but just the color of a character geometries nodegraph.
+color_targets = ["left_leg", "right_leg"]
+
+# When the item is equipped, specifies the names of linedefs this item geometry should be attached to. If 'geo_targets' is not
+# present Eldiron checks if there is a linedef with a name equal to this item's slot name and uses that. So use 'geo_targets' only
+# if you want to attach the item geometry to several linedefs.
+geo_targets = ["left_shoulder", "right_shoulder"]
+
+# Make the item blocking (based on its radius).
 blocking = true
 
-# Make the item static (doors, campfires etc.). Static items cannot be picked up
+# Make the item static (doors, campfires etc.). Static items cannot be picked up.
 static = true
 
 # The worth of the item in the base currency. This is its trade value.
@@ -84,6 +99,10 @@ worth = 0.0
 # This item represents money. A monetary item will not be picked up by itself but its worth is added
 # to the entities wallet.
 monetary = false
+
+# Defines the amount of default inventory slots (how many items the character can carry). If not specified
+# the amount of slots is set to 0 (i.e. the character is unable to take any items).
+inventory_slots = 8
 ```
 
 ---
@@ -154,7 +173,8 @@ These commands are **exclusive to characters**:
 
 ```python
 
-# Creates a new item of the given class name and add it to the character's inventory.
+# Creates a new item of the given class name and adds it to the character's inventory. It returns the id of the created
+# item (in case you want to equp it) or -1 on failure.
 add_item(class_name)
 
 # Returns an array of filtered item ids in the character's inventory.
@@ -180,8 +200,14 @@ random_walk(distance, speed, max_sleep)
 # Mostly used for NPCs
 random_walk_in_sector(distance, speed, max_sleep)
 
-# Take an item from the region. The item is removed from the region and added to the character's inventory.
+# Take an item from the region. The item is removed from the region and added to the character's inventory. Returns
+# True if successful or False otherwise (inventory is full).
 take(item_id)
+
+# Equips the item (weapon or gear) with the given item_id to its slot. If there is an existing item in that slot it will
+# be unequipped and put back into the inventory. This function returns True on success and False if it fails (for example)
+# when the item has no slot name.
+equip(item_id)
 ```
 
 ### Commands for Items Only

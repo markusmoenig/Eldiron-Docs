@@ -93,6 +93,16 @@ export default function Home() {
                 caption: "Design immersive 3D worlds with classic vibes",
               },
               {
+                name: "rigging",
+                caption:
+                  "Design animated characters, equip items via slots, and customize colors on the fly",
+              },
+              {
+                name: "terrain",
+                caption:
+                  "Paint terrain with brushes and apply terrain modifiers and procedural coloring to sectors and linedefs",
+              },
+              {
                 name: "scripting",
                 caption:
                   "Powerful event-driven logic with easy Python scripting",

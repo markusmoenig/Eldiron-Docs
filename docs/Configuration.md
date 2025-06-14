@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-sidebar_position: 1
+sidebar_position: 5
 ---
 
 You can configure **Eldiron** using the **Config Tool** with the in-built **TOML editor**.
@@ -24,6 +24,12 @@ start_screen = ""              # The name of the screen to show at startup.
 # Base currency configuration
 base_currency_name = "Gold"      # Display name of the primary in-game currency.
 base_currency_symbol = "G"       # Symbol used to represent the currency (e.g. "G" for Gold).
+
+# The supported gear slots
+gear_slots = ["legs", "head", "torso"]
+
+# The supported weapon slots
+weapon_slots = ["main_hand", "off_hand"]
 ```
 ### **Option Descriptions**
 
@@ -59,6 +65,12 @@ base_currency_symbol = "G"       # Symbol used to represent the currency (e.g. "
   The **name of the screen** to load on startup.
   If empty, Eldiron will display a black screen.
 
+- **`gear_slots`**
+  The **valid gear slots** of items. Items can define it's gear slot by setting `slot` in the data tool.
+
+- **`weapon_slots`**
+  The **valid weapon slots** of items. Items can define it's weapon slot by setting `slot` in the data tool.
+
 #### `base_currency_name`
 - The **display name** of your game's primary currency (e.g. `"Gold"`, `"Credits"`).
 - Used in the UI, item pricing, and trade.
@@ -68,7 +80,7 @@ base_currency_symbol = "G"       # Symbol used to represent the currency (e.g. "
 - Appears alongside numbers (e.g. `50 G`, `100 💎`).
 
 > [!TIP]
-> A future update will introduce **custom entity block modes** to support **alignment-based blocking** and other movement rules.
+> The supported game configuration options will increase over time.
 
 ### **Using In-Game Time for Events**
 
