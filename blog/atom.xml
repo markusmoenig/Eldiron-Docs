@@ -2,11 +2,31 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eldiron.com/blog</id>
     <title>Eldiron Blog</title>
-    <updated>2025-06-13T00:00:00.000Z</updated>
+    <updated>2025-06-16T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eldiron.com/blog"/>
     <subtitle>Eldiron Blog</subtitle>
     <icon>https://eldiron.com/img/favicon.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[New Video | Rigging]]></title>
+        <id>https://eldiron.com/blog/2025/06/16/eldiron-v0.8.4_rigging</id>
+        <link href="https://eldiron.com/blog/2025/06/16/eldiron-v0.8.4_rigging"/>
+        <updated>2025-06-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[🎥 New Video is Live!]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-new-video-is-live">🎥 New Video is Live!<a href="https://eldiron.com/blog/2025/06/16/eldiron-v0.8.4_rigging#-new-video-is-live" class="hash-link" aria-label="Direct link to 🎥 New Video is Live!" title="Direct link to 🎥 New Video is Live!">​</a></h2>
+<p>🔥 <strong>Eldiron v0.84: Rigging</strong> is here — and it’s a game changer!</p>
+<p>In this update, we introduce <strong>character rigging</strong> and <strong>equipment attachment</strong>, letting you build modular animated heroes with swords, shields, and more. Whether you’re designing a dungeon crawler or a retro RPG, this feature opens the door to dynamic, expressive characters.</p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/d92Cl4qMFlc" title="Rigging" frameborder="0"></iframe>
+<p>As always, thank you for your support. Your backing helps me push Eldiron further with every release!</p>
+<p>—</p>
+<p>Take care,
+Markus</p>]]></content>
+        <author>
+            <name>Markus Moenig</name>
+            <uri>https://github.com/markusmoenig</uri>
+        </author>
+        <category label="releases" term="releases"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Eldiron v0.8.40 Released]]></title>
         <id>https://eldiron.com/blog/2025/06/13/eldiron-v0.8.40</id>

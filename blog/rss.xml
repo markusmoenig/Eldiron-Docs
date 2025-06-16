@@ -4,10 +4,26 @@
         <title>Eldiron Blog</title>
         <link>https://eldiron.com/blog</link>
         <description>Eldiron Blog</description>
-        <lastBuildDate>Fri, 13 Jun 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 16 Jun 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[New Video | Rigging]]></title>
+            <link>https://eldiron.com/blog/2025/06/16/eldiron-v0.8.4_rigging</link>
+            <guid>https://eldiron.com/blog/2025/06/16/eldiron-v0.8.4_rigging</guid>
+            <pubDate>Mon, 16 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[🎥 New Video is Live!]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-new-video-is-live">🎥 New Video is Live!<a href="https://eldiron.com/blog/2025/06/16/eldiron-v0.8.4_rigging#-new-video-is-live" class="hash-link" aria-label="Direct link to 🎥 New Video is Live!" title="Direct link to 🎥 New Video is Live!">​</a></h2>
+<p>🔥 <strong>Eldiron v0.84: Rigging</strong> is here — and it’s a game changer!</p>
+<p>In this update, we introduce <strong>character rigging</strong> and <strong>equipment attachment</strong>, letting you build modular animated heroes with swords, shields, and more. Whether you’re designing a dungeon crawler or a retro RPG, this feature opens the door to dynamic, expressive characters.</p>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/d92Cl4qMFlc" title="Rigging" frameborder="0"></iframe>
+<p>As always, thank you for your support. Your backing helps me push Eldiron further with every release!</p>
+<p>—</p>
+<p>Take care,
+Markus</p>]]></content:encoded>
+            <category>releases</category>
+        </item>
         <item>
             <title><![CDATA[Eldiron v0.8.40 Released]]></title>
             <link>https://eldiron.com/blog/2025/06/13/eldiron-v0.8.40</link>

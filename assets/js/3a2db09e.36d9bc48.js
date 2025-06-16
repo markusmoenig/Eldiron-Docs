@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkeldiron_docs=self.webpackChunkeldiron_docs||[]).push([[8121],{8070:e=>{e.exports=JSON.parse('{"tags":[{"label":"releases","permalink":"/blog/tags/blog/tags/releases","count":3},{"label":"development update","permalink":"/blog/tags/blog/tags/dev-update","count":2}]}')}}]);
