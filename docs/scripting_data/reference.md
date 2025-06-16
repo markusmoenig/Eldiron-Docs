@@ -78,7 +78,7 @@ slot = "legs"
 # If the item overrides colors of the character when equipped, specify it here.
 color = "#ff0000"
 
-# When the item is equipped, specifies the names of sectors and linedefs which colors should be overriden with the above color.
+# When the item is equipped, specifies the names of sectors whose colors should be overriden with the above color.
 # This is useful when you dont want to override the geometry but just the color of a character geometries nodegraph.
 color_targets = ["left_leg", "right_leg"]
 

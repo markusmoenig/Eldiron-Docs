@@ -17,6 +17,25 @@ Creating and editing **items** in Eldiron works **just like** working with [Char
 Make sure to read the [Characters](/docs/creator/characters) chapter, as items share many of the same principles, including scripting and event handling.
 :::
 
+## Creating Item Visuals in Eldiron
+
+As with characters, you can either use a `tile_id` to represent the visuals of an item or create the item directly inside Eldiron.
+
+![Shield](/img/docs/shield.png)
+
+Creating items inside Eldiron allows the item to colorize character sectors or attach its geometry to character linedefs. You can do this using the following statements in the item’s **Data** tool:
+
+```TOML
+# When the item is equipped, specifies the names of sectors whose colors should be overridden with the item's color.
+# This is useful when you don’t want to override the geometry but just the color of a character’s nodegraph.
+color_targets = ["left_leg", "right_leg"]
+
+# When the item is equipped, specifies the names of linedefs this item geometry should be attached to.
+# If 'geo_targets' is not present, Eldiron checks if there is a linedef with a name equal to the item's slot name.
+# Use 'geo_targets' only if you want to attach the item geometry to multiple linedefs.
+geo_targets = ["left_shoulder", "right_shoulder"]
+```
+
 ## Item Events
 
 Items receive **System and User events** in the same way as characters.
