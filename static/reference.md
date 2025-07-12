@@ -1,7 +1,3 @@
----
-title: "Reference"
-sidebar_position: 1
----
 
 This chapter serves as a reference for **scripting and data attributes** used in [Characters](/docs/creator/characters) and [Items](/docs/creator/items) in Eldiron.
 

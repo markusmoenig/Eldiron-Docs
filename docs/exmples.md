@@ -1,11 +1,12 @@
 ---
 title: "Examples"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 ## Opening a Door
 
 Opening a door can be achieved in different ways depending on your **gameplay mechanics**. For example, you could open a door when:
+
 - A character **bumps into it**.
 - The player **clicks a "Use" or "Open" button**.
 
@@ -34,6 +35,7 @@ class Door:
 ```
 
 ### **How It Works**
+
 1. When a character **bumps into the door**, the `bumped_by_entity` event is triggered.
 2. The door **opens** by setting:
    - `visible = False` (door disappears).
@@ -51,6 +53,7 @@ Setting the `blocking` attribute isn’t strictly necessary in this case, since 
 ## Opening a Locked Gate
 
 Opening a **locked gate** works similarly to opening a **door**, but with one key difference:
+
 - The gate **requires a key** to open.
 - On the `bumped_by_entity` event, the script checks if the **character has the correct key** in their inventory.
 
@@ -74,6 +77,7 @@ class Gate:
 ```
 
 ### **How It Works**
+
 1. When a character **bumps into the gate**, the `bumped_by_entity` event is triggered.
 2. The `value` parameter contains the **ID of the character** that bumped into the gate.
 3. The script checks if that character **has a "Golden Key"** in their inventory using:

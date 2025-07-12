@@ -1,6 +1,6 @@
 ---
 title: "Screens and Widgets"
-sidebar_position: 4
+sidebar_position: 6
 ---
 
 ## Overview
@@ -40,6 +40,7 @@ grid_size = "40"
 **Button widgets** define interactive UI elements that trigger **game actions** or other logic when clicked.
 
 Buttons are **visually styled** using the **tiles** defined in the **Sector Tool**:
+
 - The **default (normal)** state is drawn from the sector’s base tiles.
 - The **active** state is shown when the button is clicked or when its associated action is currently active.
 

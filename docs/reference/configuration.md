@@ -1,6 +1,6 @@
 ---
 title: "Configuration"
-sidebar_position: 5
+sidebar_position: 2
 ---
 
 You can configure **Eldiron** using the **Config Tool** with the in-built **TOML editor**.
@@ -31,6 +31,7 @@ gear_slots = ["legs", "head", "torso"]
 # The supported weapon slots
 weapon_slots = ["main_hand", "off_hand"]
 ```
+
 ### **Option Descriptions**
 
 - **`target_fps`**
@@ -72,10 +73,12 @@ weapon_slots = ["main_hand", "off_hand"]
   The **valid weapon slots** of items. Items can define it's weapon slot by setting `slot` in the data tool.
 
 #### `base_currency_name`
+
 - The **display name** of your game's primary currency (e.g. `"Gold"`, `"Credits"`).
 - Used in the UI, item pricing, and trade.
 
 #### `base_currency_symbol`
+
 - The **short symbol** shown with currency values (e.g. `"G"`).
 - Appears alongside numbers (e.g. `50 G`, `100 💎`).
 
@@ -104,6 +107,7 @@ Render configuration options are located in the `[render]` section.
 [render]
 sample_mode = "nearest" # "nearest" or "linear"
 ```
+
 ### **Option Descriptions**
 
 - **`sample_mode`**
@@ -125,12 +129,12 @@ height = 720        # Height of the game viewport in pixels.
 grid_size = 32      # Size of one grid tile in pixels.
 ```
 
-  ### **Option Descriptions**
+### **Option Descriptions**
 
-  - **`width` / `height`**
+- **`width` / `height`**
     Defines the **starting resolution** of the game window or screen.
     You can adjust these values to target common resolutions like 1280×720 or 1920×1080.
 
-  - **`grid_size`**
+- **`grid_size`**
     Sets the **pixel size of a single tile** in the world/grid.
     This affects rendering and snapping behavior in tools and the viewport layout.
