@@ -8,6 +8,7 @@ sidebar_position: 4
 Creating and editing **items** in Eldiron works **just like** working with [Characters](/docs/creator/CHARACTERS/).
 
 ### How to Create an Item
+
 1. Click the **+** button in the [Item](/docs/creator/sections/#item) section.
 2. Edit its **behavior** using the **Code Tool**.
 3. Set its **attributes** using the **Data Tool**.
@@ -40,11 +41,22 @@ geo_targets = ["left_shoulder", "right_shoulder"]
 
 Items receive **System and User events** in the same way as characters.
 
-### Example Events:
+### Example Events
+
 - If a **player bumps into an item**, the item receives the **`bump_player`** event.
 - If the **user clicks an item**, the item receives the **`click`** event.
 
 This makes items **highly flexible**, allowing them to interact with the **map and characters** in different ways depending on the **game style** you are creating.
+
+## Item States
+
+Items have a state system via the [active attribute](/docs/reference/attributes#active). The attribute defines if an item is active or not. If the `active` attribute changes the [active event](/docs/reference/events#active) is triggered.
+
+Use this event to sync the visual state of the item (for example if a torch emits light).
+
+:::tip
+A future version of Eldiron will count the usage (active) time of items to support optional maximum lifetimes and simulate aging.
+:::
 
 ## Learn More
 
