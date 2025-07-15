@@ -14,30 +14,14 @@ Events are categorized as:
 
 ---
 
-## Event Index
-
-### System Events
-
-- [`startup`](#startup)
-- [`bumped_into_entity`](#bumped_into_entity)
-- [`bumped_into_item`](#bumped_into_item)
-- [`bumped_by_entity`](#bumped_by_entity)
-- [`clicked`](#clicked)
-- [`take_damage`](#take_damage)
-
-### User Events
-
-- [`key_down`](#key_down)
-- [`key_up`](#key_up)
-
----
-
 ## System Events
 
-### `startup`
+### `active`
 
-- **Value**: *(None)*
-- **Description**: Called when the entity or item is created.
+*Item-only event.*
+
+- **Value**: active state *(bool)*
+- **Description**: Called when the state of the item has changed and directly after item creation. This event allows the item to sync its visuals with the current state, for example a torch may call ... to adjust it's light emission.
 
 ---
 
@@ -62,12 +46,34 @@ Events are categorized as:
 
 ---
 
-### `clicked`
+### `entered`
+
+- **Value**: `sector_name` *(string)*
+- **Description**: Triggered when the character has entered a named sector. Useful for traps or teleports.
+
+---
+
+### `intent`
 
 - **Value**: `dict`  
-  `{ entity_id, distance }`
-- **Description**: Triggered when the player clicks on an entity or item.  
-  Includes the clicking entity’s ID and the distance to the target.
+  `{ intent (string), entity_id (int), item_id (int), distance (float)}`
+- **Description**: Triggered when the player triggers an intent towards another entity or item. Either via a movement based keyboard shortcut or by clicking on the target entity or item.
+  - When the target is an item, the event is send to the target item **and** to the originating player entity as the action may be handled by either of them depending on the context, for example a torch would lit itself when used, or a character may take an item.
+  - When the target is another character, the event is send to both, the originating character and the target entity. For example on an `attack` intent the originating player may call [deal_damage](/docs/reference/scripting_server#deal_damage) to the given `entity_id`, or the target may want to respond when talked to.
+
+---
+
+### `left`
+
+- **Value**: `sector_name` *(string)*
+- **Description**: Triggered when the character has left a named sector.
+
+---
+
+### `startup`
+
+- **Value**: *(None)*
+- **Description**: Called when the entity or item is created.
 
 ---
 

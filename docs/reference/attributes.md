@@ -10,27 +10,19 @@ Attributes can be set via the [Code Tool (Python)](/docs/creator/characters#inst
 
 Attributes are noted in each description as to whether they apply to characters, items, or both.
 
-<!-- ---
+---
 
-## Attribute Index
+## `active`
 
-- [`blocking`](#blocking)
-- [`color`](#color)
-- [`color_targets`](#color_targets)
-- [`geo_targets`](#geo_targets)
-- [`inventory_slots`](#inventory_slots)
-- [`monetary`](#monetary)
-- [`name`](#name)
-- [`player`](#player)
-- [`radius`](#radius)
-- [`slot`](#slot)
-- [`static`](#static)
-- [`STR`](#str)
-- [`tile_id`](#tile_id)
-- [`visible`](#visible)
-- [`worth`](#worth)
+*Item-only attribute.*
 
---- -->
+Represents the active state of an item (on or off). When this attribute is changed, an [active event](/docs/reference/events#active) is automatically send to the item to allow the item to sync its visual state.
+
+```python
+active = true
+```
+
+---
 
 ## `blocking`
 
@@ -165,23 +157,11 @@ static = true
 
 ---
 
-## `STR`
-
-*General attribute (applies to both characters and items; example custom stat).*
-
-Custom attribute, e.g. Strength. By convention, use uppercase for character stats.
-
-```python
-STR = 10
-```
-
----
-
 ## `tile_id`
 
 *General attribute (applies to both characters and items).*
 
-Tile ID for the visual representation. Use the Tile Picker to find valid IDs.
+Tile ID for the visual representation. Use the tile picker to find valid IDs.
 
 ```python
 tile_id = "abc123"

@@ -37,7 +37,7 @@ grid_size = "40"
 
 ## Button Widgets
 
-**Button widgets** define interactive UI elements that trigger **game actions** or other logic when clicked.
+**Button widgets** define interactive UI elements that trigger **game actions**, **intents** or other logic when clicked.
 
 Buttons are **visually styled** using the **tiles** defined in the **Sector Tool**:
 
@@ -48,15 +48,17 @@ Buttons are **visually styled** using the **tiles** defined in the **Sector Tool
 
 ### Example
 
-In this example, clicking the button causes the player to **move forward**.
-(See the list of available actions [here](scripting_data/index.html#available-actions)):
+In this example, clicking the button causes the player to **move forward**. A button widget can contain an `action` or an `intent` but not both at the same time as the movement triggers the intent in the given direction.
+
+An empty intent string specifies the walking intent (the default).
+
+See the list of available actions [here](/docs/reference/scripting_client#action).
 
 ```toml
 [ui]
 role = "button"
-# The action to send to the server when clicked
-# See https://eldiron.com/scripting_data/index.html#available-actions
 action = "forward"
+# intent = "talk"
 ```
 
 ---
