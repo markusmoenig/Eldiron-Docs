@@ -14,7 +14,7 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="/assets/css/styles.5f8e2970.css">
-<script src="/assets/js/runtime~main.cdc6bc34.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4f105cd9.js" defer="defer"></script>
 <script src="/assets/js/main.976c1915.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -45,27 +45,12 @@
 <li><strong>User Events</strong> – sent to the <code>user_event()</code> handler (usually from player input)</li>
 </ul>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="event-index">Event Index<a href="#event-index" class="hash-link" aria-label="Direct link to Event Index" title="Direct link to Event Index">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="system-events">System Events<a href="#system-events" class="hash-link" aria-label="Direct link to System Events" title="Direct link to System Events">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="system-events">System Events<a href="#system-events" class="hash-link" aria-label="Direct link to System Events" title="Direct link to System Events">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="active"><code>active</code><a href="#active" class="hash-link" aria-label="Direct link to active" title="Direct link to active">​</a></h3>
+<p><em>Item-only event.</em></p>
 <ul>
-<li><a href="#startup"><code>startup</code></a></li>
-<li><a href="#bumped_into_entity"><code>bumped_into_entity</code></a></li>
-<li><a href="#bumped_into_item"><code>bumped_into_item</code></a></li>
-<li><a href="#bumped_by_entity"><code>bumped_by_entity</code></a></li>
-<li><a href="#clicked"><code>clicked</code></a></li>
-<li><a href="#take_damage"><code>take_damage</code></a></li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="user-events">User Events<a href="#user-events" class="hash-link" aria-label="Direct link to User Events" title="Direct link to User Events">​</a></h3>
-<ul>
-<li><a href="#key_down"><code>key_down</code></a></li>
-<li><a href="#key_up"><code>key_up</code></a></li>
-</ul>
-<hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="system-events-1">System Events<a href="#system-events-1" class="hash-link" aria-label="Direct link to System Events" title="Direct link to System Events">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="startup"><code>startup</code><a href="#startup" class="hash-link" aria-label="Direct link to startup" title="Direct link to startup">​</a></h3>
-<ul>
-<li><strong>Value</strong>: <em>(None)</em></li>
-<li><strong>Description</strong>: Called when the entity or item is created.</li>
+<li><strong>Value</strong>: active state <em>(bool)</em></li>
+<li><strong>Description</strong>: Called when the state of the item has changed and directly after item creation. This event allows the item to sync its visuals with the current state, for example a torch may call ... to adjust it&#x27;s light emission.</li>
 </ul>
 <hr>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="bumped_into_entity"><code>bumped_into_entity</code><a href="#bumped_into_entity" class="hash-link" aria-label="Direct link to bumped_into_entity" title="Direct link to bumped_into_entity">​</a></h3>
@@ -86,12 +71,34 @@
 <li><strong>Description</strong>: Triggered when another entity collides with this entity or item.</li>
 </ul>
 <hr>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="clicked"><code>clicked</code><a href="#clicked" class="hash-link" aria-label="Direct link to clicked" title="Direct link to clicked">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="entered"><code>entered</code><a href="#entered" class="hash-link" aria-label="Direct link to entered" title="Direct link to entered">​</a></h3>
+<ul>
+<li><strong>Value</strong>: <code>sector_name</code> <em>(string)</em></li>
+<li><strong>Description</strong>: Triggered when the character has entered a named sector. Useful for traps or teleports.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="intent"><code>intent</code><a href="#intent" class="hash-link" aria-label="Direct link to intent" title="Direct link to intent">​</a></h3>
 <ul>
 <li><strong>Value</strong>: <code>dict</code><br>
-<code>{ entity_id, distance }</code></li>
-<li><strong>Description</strong>: Triggered when the player clicks on an entity or item.<br>
-<!-- -->Includes the clicking entity’s ID and the distance to the target.</li>
+<code>{ intent (string), entity_id (int), item_id (int), distance (float)}</code></li>
+<li><strong>Description</strong>: Triggered when the player triggers an intent towards another entity or item. Either via a movement based keyboard shortcut or by clicking on the target entity or item.<!-- -->
+<ul>
+<li>When the target is an item, the event is send to the target item <strong>and</strong> to the originating player entity as the action may be handled by either of them depending on the context, for example a torch would lit itself when used, or a character may take an item.</li>
+<li>When the target is another character, the event is send to both, the originating character and the target entity. For example on an <code>attack</code> intent the originating player may call <a href="/docs/reference/scripting_server#deal_damage">deal_damage</a> to the given <code>entity_id</code>, or the target may want to respond when talked to.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="left"><code>left</code><a href="#left" class="hash-link" aria-label="Direct link to left" title="Direct link to left">​</a></h3>
+<ul>
+<li><strong>Value</strong>: <code>sector_name</code> <em>(string)</em></li>
+<li><strong>Description</strong>: Triggered when the character has left a named sector.</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="startup"><code>startup</code><a href="#startup" class="hash-link" aria-label="Direct link to startup" title="Direct link to startup">​</a></h3>
+<ul>
+<li><strong>Value</strong>: <em>(None)</em></li>
+<li><strong>Description</strong>: Called when the entity or item is created.</li>
 </ul>
 <hr>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="take_damage"><code>take_damage</code><a href="#take_damage" class="hash-link" aria-label="Direct link to take_damage" title="Direct link to take_damage">​</a></h3>
@@ -101,7 +108,7 @@
 <!-- -->The dictionary contains the damage payload sent by the attacker.</li>
 </ul>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="user-events-1">User Events<a href="#user-events-1" class="hash-link" aria-label="Direct link to User Events" title="Direct link to User Events">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="user-events">User Events<a href="#user-events" class="hash-link" aria-label="Direct link to User Events" title="Direct link to User Events">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="key_down"><code>key_down</code><a href="#key_down" class="hash-link" aria-label="Direct link to key_down" title="Direct link to key_down">​</a></h3>
 <ul>
 <li><strong>Value</strong>: <code>string</code> (e.g. <code>&quot;w&quot;</code>, <code>&quot;a&quot;</code>, <code>&quot;space&quot;</code>)</li>
@@ -112,6 +119,6 @@
 <ul>
 <li><strong>Value</strong>: <code>string</code> (e.g. <code>&quot;w&quot;</code>, <code>&quot;a&quot;</code>, <code>&quot;space&quot;</code>)</li>
 <li><strong>Description</strong>: Triggered when a key is released.</li>
-</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/reference/configuration"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Configuration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/reference/scripting_client"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Scripting: Client</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#event-index" class="table-of-contents__link toc-highlight">Event Index</a><ul><li><a href="#system-events" class="table-of-contents__link toc-highlight">System Events</a></li><li><a href="#user-events" class="table-of-contents__link toc-highlight">User Events</a></li></ul></li><li><a href="#system-events-1" class="table-of-contents__link toc-highlight">System Events</a><ul><li><a href="#startup" class="table-of-contents__link toc-highlight"><code>startup</code></a></li><li><a href="#bumped_into_entity" class="table-of-contents__link toc-highlight"><code>bumped_into_entity</code></a></li><li><a href="#bumped_into_item" class="table-of-contents__link toc-highlight"><code>bumped_into_item</code></a></li><li><a href="#bumped_by_entity" class="table-of-contents__link toc-highlight"><code>bumped_by_entity</code></a></li><li><a href="#clicked" class="table-of-contents__link toc-highlight"><code>clicked</code></a></li><li><a href="#take_damage" class="table-of-contents__link toc-highlight"><code>take_damage</code></a></li></ul></li><li><a href="#user-events-1" class="table-of-contents__link toc-highlight">User Events</a><ul><li><a href="#key_down" class="table-of-contents__link toc-highlight"><code>key_down</code></a></li><li><a href="#key_up" class="table-of-contents__link toc-highlight"><code>key_up</code></a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.youtube.com/channel/UCCmrO356zLQv_m8dPEqBUfA" target="_blank" rel="noopener noreferrer" class="footer__link-item">YouTube</a></li><li class="footer__item"><a href="https://discord.gg/ZrNj6baSZU" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord</a></li><li class="footer__item"><a href="https://x.com/EldironRPG" target="_blank" rel="noopener noreferrer" class="footer__link-item">X</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Sponsor</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://patreon.com/eldiron" target="_blank" rel="noopener noreferrer" class="footer__link-item">Patreon</a></li><li class="footer__item"><a href="https://github.com/markusmoenig" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Sponsors</a></li><li class="footer__item"><a href="https://paypal.me/markusmoenigos" target="_blank" rel="noopener noreferrer" class="footer__link-item">PayPal</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/markusmoenig/Eldiron/releases" target="_blank" rel="noopener noreferrer" class="footer__link-item">Downloads</a></li><li class="footer__item"><a href="https://github.com/markusmoenig/Eldiron" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Markus Moenig</div></div></div></footer></div>
+</ul></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/reference/configuration"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Configuration</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/reference/scripting_client"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Scripting: Client</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#system-events" class="table-of-contents__link toc-highlight">System Events</a><ul><li><a href="#active" class="table-of-contents__link toc-highlight"><code>active</code></a></li><li><a href="#bumped_into_entity" class="table-of-contents__link toc-highlight"><code>bumped_into_entity</code></a></li><li><a href="#bumped_into_item" class="table-of-contents__link toc-highlight"><code>bumped_into_item</code></a></li><li><a href="#bumped_by_entity" class="table-of-contents__link toc-highlight"><code>bumped_by_entity</code></a></li><li><a href="#entered" class="table-of-contents__link toc-highlight"><code>entered</code></a></li><li><a href="#intent" class="table-of-contents__link toc-highlight"><code>intent</code></a></li><li><a href="#left" class="table-of-contents__link toc-highlight"><code>left</code></a></li><li><a href="#startup" class="table-of-contents__link toc-highlight"><code>startup</code></a></li><li><a href="#take_damage" class="table-of-contents__link toc-highlight"><code>take_damage</code></a></li></ul></li><li><a href="#user-events" class="table-of-contents__link toc-highlight">User Events</a><ul><li><a href="#key_down" class="table-of-contents__link toc-highlight"><code>key_down</code></a></li><li><a href="#key_up" class="table-of-contents__link toc-highlight"><code>key_up</code></a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.youtube.com/channel/UCCmrO356zLQv_m8dPEqBUfA" target="_blank" rel="noopener noreferrer" class="footer__link-item">YouTube</a></li><li class="footer__item"><a href="https://discord.gg/ZrNj6baSZU" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord</a></li><li class="footer__item"><a href="https://x.com/EldironRPG" target="_blank" rel="noopener noreferrer" class="footer__link-item">X</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Sponsor</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://patreon.com/eldiron" target="_blank" rel="noopener noreferrer" class="footer__link-item">Patreon</a></li><li class="footer__item"><a href="https://github.com/markusmoenig" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Sponsors</a></li><li class="footer__item"><a href="https://paypal.me/markusmoenigos" target="_blank" rel="noopener noreferrer" class="footer__link-item">PayPal</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/markusmoenig/Eldiron/releases" target="_blank" rel="noopener noreferrer" class="footer__link-item">Downloads</a></li><li class="footer__item"><a href="https://github.com/markusmoenig/Eldiron" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Markus Moenig</div></div></div></footer></div>
 </body>
 </html>
