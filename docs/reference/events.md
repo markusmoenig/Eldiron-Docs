@@ -3,8 +3,6 @@ title: "Events"
 sidebar_position: 3
 ---
 
-# Events
-
 This chapter lists all available **events** that can be received by characters and items in Eldiron.
 
 Events are categorized as:

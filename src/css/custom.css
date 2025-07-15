@@ -19,8 +19,10 @@
 
 /* Footer override - LIGHT THEME */
 .footer {
-    background-color: #e3d4b5 !important; /* Parchment */
-    color: #4e342e !important; /* Deep brown text */
+    background-color: #e3d4b5 !important;
+    /* Parchment */
+    color: #4e342e !important;
+    /* Deep brown text */
 }
 
 .footer {
@@ -28,11 +30,13 @@
 }
 
 .footer a {
-    color: #5e3e4c !important; /* Link color */
+    color: #5e3e4c !important;
+    /* Link color */
 }
 
 .footer a:hover {
-    color: #a65e3b !important; /* Link hover */
+    color: #a65e3b !important;
+    /* Link hover */
 }
 
 /* Light Theme - Footer section titles */
@@ -46,19 +50,27 @@
 }
 
 :root {
-    --ifm-color-primary: #5e3e4c; /* deep purple-brown for links/buttons */
+    --ifm-color-primary: #5e3e4c;
+    /* deep purple-brown for links/buttons */
     --ifm-color-primary-dark: #4e3440;
     --ifm-color-primary-light: #7a5064;
-    --ifm-background-color: #f0eadb; /* slightly richer parchment feel */
+    --ifm-background-color: #f0eadb;
+    /* slightly richer parchment feel */
     --ifm-font-color-base: #1e1c1a;
 
-    --ifm-navbar-background-color: #f2ebd9; /* parchment */
-    --ifm-navbar-link-color: #4e342e; /* dark brown text */
-    --ifm-navbar-link-hover-color: #7b4b3a; /* warm accent hover */
-    --ifm-navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* soft bottom shadow */
+    --ifm-navbar-background-color: #f2ebd9;
+    /* parchment */
+    --ifm-navbar-link-color: #4e342e;
+    /* dark brown text */
+    --ifm-navbar-link-hover-color: #7b4b3a;
+    /* warm accent hover */
+    --ifm-navbar-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* soft bottom shadow */
 
-    --ifm-footer-background-color: #e8ddc2; /* parchment footer */
-    --ifm-footer-color: #4e342e; /* matching text */
+    --ifm-footer-background-color: #e8ddc2;
+    /* parchment footer */
+    --ifm-footer-color: #4e342e;
+    /* matching text */
     --ifm-footer-link-color: #5e3e4c;
     --ifm-footer-link-hover-color: #a65e3b;
 
@@ -79,8 +91,10 @@
 } */
 
 [data-theme="dark"] .footer {
-    background-color: #231c17 !important; /* Dark tavern stone */
-    color: #e4dac0 !important; /* Candlelight text */
+    background-color: #231c17 !important;
+    /* Dark tavern stone */
+    color: #e4dac0 !important;
+    /* Candlelight text */
 }
 
 [data-theme="dark"] .footer a {
@@ -91,49 +105,56 @@
     color: #fcb973 !important;
 }
 
+
 [data-theme="dark"] {
-    --ifm-color-primary: #d27d46;
-    --ifm-color-primary-dark: #b35e30;
-    --ifm-color-primary-light: #e29868;
+    --ifm-color-primary: #e6b97a;
+    /* warm gold for links/buttons */
+    --ifm-color-primary-dark: #c99a5e;
+    --ifm-color-primary-light: #ffe0a8;
 
-    --ifm-background-color: #1c1b19; /* deep brownish black */
-    --ifm-font-color-base: #e3d9b9; /* parchment-like on dark */
+    --ifm-background-color: #2d2420;
+    /* lighter, warm brown */
+    --ifm-font-color-base: #f5e9d6;
+    /* parchment-like, brighter */
 
-    --ifm-navbar-background-color: #1c1b19;
-    --ifm-navbar-link-color: #e4dac0;
-    --ifm-navbar-link-hover-color: #f5955a;
+    --ifm-navbar-background-color: #3a2e26;
+    /* lighter, warm brown */
+    --ifm-navbar-link-color: #ffe0a8;
+    --ifm-navbar-link-hover-color: #ffe9c7;
 
-    --ifm-footer-background-color: #1a1511;
-    --ifm-footer-color: #e3d9b9;
-    --ifm-footer-link-color: #d27d46;
-    --ifm-footer-link-hover-color: #fcb973;
+    --ifm-footer-background-color: #3a2e26;
+    --ifm-footer-color: #ffe0a8;
+    --ifm-footer-link-color: #e6b97a;
+    --ifm-footer-link-hover-color: #ffe9c7;
 
-    --docusaurus-highlighted-code-line-bg: rgba(245, 149, 90, 0.05);
+    --docusaurus-highlighted-code-line-bg: rgba(230, 185, 122, 0.10);
 }
 
 [data-theme="dark"] body {
-    background-color: #181411 !important;
+    background-color: #2d2420 !important;
 }
 
 [data-theme="dark"] .main-wrapper {
-    background-color: #181411 !important;
+    background-color: #2d2420 !important;
 }
 
 [data-theme="dark"] .docusaurus-wrapper {
-    background-color: #181411 !important;
+    background-color: #2d2420 !important;
 }
 
 [data-theme="dark"] .theme-doc-page {
-    background-color: #181411 !important;
+    background-color: #2d2420 !important;
 }
 
 [data-theme="dark"] .footer {
-    border-top: 2px solid #3a2b20; /* warm dark brown, not black */
+    border-top: 2px solid #bfa77a;
+    /* lighter warm brown */
 }
 
 .carousel .control-dots .dot {
     box-shadow: none !important;
-    background: #ccc !important; /* light mode default */
+    background: #ccc !important;
+    /* light mode default */
     opacity: 1;
     transition: background 0.3s ease;
 }

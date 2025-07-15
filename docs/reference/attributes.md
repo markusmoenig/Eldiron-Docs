@@ -3,8 +3,6 @@ title: "Attributes"
 sidebar_position: 1
 ---
 
-# Attributes
-
 This chapter lists all supported **attributes** for characters and items in Eldiron.  
 Attributes can be set via the [Code Tool (Python)](/docs/creator/characters#instances) or [Data Tool (TOML)](/docs/creator/items).
 
@@ -12,13 +10,15 @@ Attributes are noted in each description as to whether they apply to characters,
 
 ---
 
+## Attributes
+
 ## `active`
 
 *Item-only attribute.*
 
 Represents the active state of an item (on or off). When this attribute is changed, an [active event](/docs/reference/events#active) is automatically send to the item to allow the item to sync its visual state.
 
-```python
+```toml
 active = true
 ```
 
@@ -30,7 +30,7 @@ active = true
 
 If set to `true`, the item blocks movement based on its radius.
 
-```python
+```toml
 blocking = true
 ```
 
@@ -42,7 +42,7 @@ blocking = true
 
 Hex color code that overrides geometry color when item is equipped.
 
-```python
+```toml
 color = "#ff0000"
 ```
 
@@ -54,7 +54,7 @@ color = "#ff0000"
 
 List of geometry node names whose color should be overridden when the item is equipped.
 
-```python
+```toml
 color_targets = ["left_leg", "right_leg"]
 ```
 
@@ -67,7 +67,7 @@ color_targets = ["left_leg", "right_leg"]
 List of linedef names to attach this item's geometry to when equipped.  
 Used only when automatic matching by `slot` is insufficient.
 
-```python
+```toml
 geo_targets = ["left_shoulder", "right_shoulder"]
 ```
 
@@ -79,7 +79,7 @@ geo_targets = ["left_shoulder", "right_shoulder"]
 
 Number of inventory slots the character has. If not specified, defaults to 0.
 
-```python
+```toml
 inventory_slots = 8
 ```
 
@@ -91,7 +91,7 @@ inventory_slots = 8
 
 If `true`, the item is considered money. It is not picked up normally, but its worth is added to the wallet.
 
-```python
+```toml
 monetary = true
 ```
 
@@ -103,7 +103,7 @@ monetary = true
 
 Name of the character or item. Can override the template name.
 
-```python
+```toml
 name = "Golden Key"
 ```
 
@@ -115,7 +115,7 @@ name = "Golden Key"
 
 Marks the character as a player-controlled character that receives input events.
 
-```python
+```toml
 player = true
 ```
 
@@ -127,7 +127,7 @@ player = true
 
 Collision radius of the character or item. Default is `0.5`.
 
-```python
+```toml
 radius = 0.3
 ```
 
@@ -139,7 +139,7 @@ radius = 0.3
 
 Slot name the item occupies when equipped (e.g. `"legs"`, `"head"`).
 
-```python
+```toml
 slot = "legs"
 ```
 
@@ -151,7 +151,7 @@ slot = "legs"
 
 If `true`, the item is static and cannot be picked up (e.g. doors, campfires).
 
-```python
+```toml
 static = true
 ```
 
@@ -163,7 +163,7 @@ static = true
 
 Tile ID for the visual representation. Use the tile picker to find valid IDs.
 
-```python
+```toml
 tile_id = "abc123"
 ```
 
@@ -175,7 +175,7 @@ tile_id = "abc123"
 
 Whether the character or item is visible in the world.
 
-```python
+```toml
 visible = false
 ```
 
@@ -187,6 +187,22 @@ visible = false
 
 Trade value of the item in base currency.
 
-```python
+```toml
 worth = 12.5
+```
+
+---
+
+## Emitting Light
+
+Both entities and items can emit light by configuring the `light` group in their data tool.
+
+Light emittance can be set on / off via the [set_emit_light](/docs/reference/scripting_server#set_emit_light) command.
+
+```toml
+[light]
+color = "#ffffff" # Light Color
+strength = 5.0      # Strength of the Light
+range = 3.0         # Range of the light
+flicker = 0.4       # Amount of light flickering
 ```

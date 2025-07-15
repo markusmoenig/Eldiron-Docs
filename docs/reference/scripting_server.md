@@ -3,36 +3,11 @@ title: "Scripting: Server"
 sidebar_position: 5
 ---
 
-# Commands
+## Commands
 
 This chapter lists all available scripting **commands** for Eldiron, used in [Characters](/docs/creator/characters) and [Items](/docs/creator/items).
 
 ---
-
-<!-- ## Command Index
-
-- [`add_item`](#add_item)
-- [`block_events`](#block_events)
-- [`deal_damage`](#deal_damage)
-- [`debug`](#debug)
-- [`drop_items`](#drop_items)
-- [`entities_in_radius`](#entities_in_radius)
-- [`equip`](#equip)
-- [`get_attr`](#get_attr)
-- [`get_entity_attr`](#get_entity_attr)
-- [`get_item_attr`](#get_item_attr)
-- [`get_sector_name`](#get_sector_name)
-- [`inventory_items`](#inventory_items)
-- [`inventory_items_of`](#inventory_items_of)
-- [`message`](#message)
-- [`notify_in`](#notify_in)
-- [`random_walk`](#random_walk)
-- [`random_walk_in_sector`](#random_walk_in_sector)
-- [`set_attr`](#set_attr)
-- [`set_proximity_tracking`](#set_proximity_tracking)
-- [`take`](#take)
-
---- -->
 
 ## `add_item`
 
@@ -257,6 +232,22 @@ set_attr("key", value)
 
 ---
 
+## `set_emit_light`
+
+*This command can be used with both characters and items.*
+
+Enables / disables light emittance for entities and items. Items should do this as part of their state, see the [active event](/docs/reference/events#active).
+
+Light parameters need to be set up with the [light attributes](/docs/reference/attributes#emitting-light).
+
+```python
+    def event(self, event, value):
+        if event == "active":
+            set_emit_light(value)
+```
+
+---
+
 ## `set_proximity_tracking`
 
 *This command can be used with both characters and items.*
@@ -279,4 +270,16 @@ Returns `True` on success or `False` if the inventory is full.
 
 ```python
 take(item_id)
+```
+
+---
+
+## `teleport`
+
+*This command can only be used with characters.*
+
+Teleports the character to a named sector, the second parameter is optional and names the region to teleport to. If only the sector name is given `teleport` will search for the sector in the current region.
+
+```python
+teleport("Entrance", "Deadly Dungeon")
 ```
