@@ -30,6 +30,9 @@ gear_slots = ["legs", "head", "torso"]
 
 # The supported weapon slots
 weapon_slots = ["main_hand", "off_hand"]
+
+# The attribute which handles health & death
+health = "HP"
 ```
 
 ### **Option Descriptions**
@@ -71,6 +74,10 @@ weapon_slots = ["main_hand", "off_hand"]
 
 - **`weapon_slots`**
   The **valid weapon slots** of items. Items can define it's weapon slot by setting `slot` in the data tool.
+
+### `health`
+
+  The name of the health attribute for characters. When smaller or equal to zero means the character is considered **dead** and it's [mode](/docs/reference/attributes#mode) attribute is set to '"dead", this is handled automatically by [took_damage](/docs/reference/scripting_server#took_damage) . If you want to use another attribute name than change the default **"HP"** value to something else.
 
 #### `base_currency_name`
 

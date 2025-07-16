@@ -3,8 +3,6 @@ title: "Scripting: Client"
 sidebar_position: 4
 ---
 
-# Client Side Scripting
-
 Client side scripting happens in the `user_event` section of scripts (and only for player characters). You can delete the `user_event` section for non player characters.
 
 :::note

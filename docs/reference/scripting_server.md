@@ -34,16 +34,35 @@ block_events(minutes, "event1", "event2", ...)
 
 ---
 
+## `close_in`
+
+*This command can only be used with characters.*
+
+Makes an NPC character close in within a given radius on a target character with the given speed.
+
+Once it is in range, sends [closed_in](/docs/reference/events#closed_in) events to the NPC.
+
+```python
+close_in(entity_id, 4.0, 1.0) # Close in within 4.0 radius on the entity_id with 1.0 speed.
+```
+
+---
+
 ## `deal_damage`
 
 *This command can be used with both characters and items.*
 
-Deals damage to an entity or item. Sends a `take_damage` event to the receiver with the given dictionary.
+Deals damage to an entity or item. Sends a [take_damage](/docs//reference/events#take_damage) event to the receiver with the script created dictionary. The script should put all relevant information into the dictionary which will be processed by the target's [take_damage](/docs//reference/events#take_damage) event to calculate the real damage done and in turn than calls [took_damage](#took_damage) to register the damage with the system.
+
+The complexity of the information in the dictionary is completely up to the game you want to create. It can be very simple or very complex.
 
 ```python
-deal_damage(entity_id | item_id, {"physical": 10})
+deal_damage(entity_id | item_id, {"physical": random(2, 5)})
 ```
 
+:::note
+Characters and items can deal damage. But only characters can receive damage and actually die.
+:::
 ---
 
 ## `debug`
@@ -140,6 +159,30 @@ Returns the name of the sector the character or item is currently in.
 
 ```python
 get_sector_name()
+```
+
+---
+
+## `goto`
+
+*This command can only be used with characters.*
+
+The character will walk to the named destination sector with the given speed. It will utilize path-finding to avoid obstacles.
+
+```python
+goto("Garden", 1.0)
+```
+
+---
+
+## `id`
+
+*This command can only be used with characters.*
+
+Returns the **id** of the current entity.
+
+```python
+id()
 ```
 
 ---
@@ -252,11 +295,12 @@ Light parameters need to be set up with the [light attributes](/docs/reference/a
 
 *This command can be used with both characters and items.*
 
-Enables or disables proximity tracking.  
-If enabled, proximity events will be received for nearby entities within the given radius.
+Enables or disables proximity tracking for characters. If enabled, [proximity_warning](/docs//reference//events#proximity_warning) events will be send for all nearby entities within the given radius.
+
+Useful for NPCs (or even items) to interact with other characters (attack, talk, heal, etc.).
 
 ```python
-set_proximity_tracking(True or False, radius)
+set_proximity_tracking(True or False, 4.0)
 ```
 
 ---
@@ -283,3 +327,28 @@ Teleports the character to a named sector, the second parameter is optional and 
 ```python
 teleport("Entrance", "Deadly Dungeon")
 ```
+
+---
+
+## `took_damage`
+
+*This command can only be used with characters.*
+
+Registers damage to an entity, this command is called from within [take_damage](/docs//reference/events#take_damage) events, where the target of the damage calculates the real damage done and calls **took_damage** to register it with the system.
+
+Internally **took_damage** will deduct the damage from the [health](/docs/reference/configuration#health) attribute and check if the new value is below or equal to 0. If yes it will:
+
+- Set the [mode](/docs/reference/attributes#mode) attribute of the target to **"dead"**.
+- Send a [dead](/docs//reference/events#dead) event to the target.
+- Send a [kill](/docs//reference/events#kill) event to the entity which caused the damage.
+
+Example:
+
+In the [take_damage](/docs//reference/events#take_damage) event we take the amount and the id of the attacker from the dictionary we created in [deal_damage](#deal_damage) and reduce the amount by 1.
+
+```python
+amount = value["amount"] - 1
+took_damage(value["from"], amount)
+```
+
+---

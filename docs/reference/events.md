@@ -23,6 +23,15 @@ Events are categorized as:
 
 ---
 
+### `arrived`
+
+*Character-only event.*
+
+- **Value**: destination sector name *(string)*
+- **Description**: Send by [goto](/docs/reference/scripting_server#goto) when the character arrives at the destination.
+
+---
+
 ### `bumped_into_entity`
 
 - **Value**: `entity_id` *(int)*
@@ -44,6 +53,20 @@ Events are categorized as:
 
 ---
 
+### `closed_in`
+
+- **Value**: `entity_id` *(int)*
+- **Description**: Send when an NPC closed in within the radius of the target entity. Send by the [close_in](/docs/reference/scripting_server#close_in) command.
+
+---
+
+### `dead`
+
+- **Value**: `entity_id` *(int)*
+- **Description**: Send when another entity kills this character. The *entity_id* of the killer is passed in the value. This is useful for sending messages and taking the next steps. A player character could for example [teleport](/docs/reference/scripting_server#teleport) to a graveyard or healer.
+
+---
+
 ### `entered`
 
 - **Value**: `sector_name` *(string)*
@@ -61,10 +84,24 @@ Events are categorized as:
 
 ---
 
+### `kill`
+
+- **Value**: `entity_id` *(int)*
+- **Description**: Send when this entity kills another character. The *entity_id* of the target is passed in the value. This is useful for sending messages and for NPCs to reset what they are doing.
+
+---
+
 ### `left`
 
 - **Value**: `sector_name` *(string)*
 - **Description**: Triggered when the character has left a named sector.
+
+---
+
+### `proximity_warning`
+
+- **Value**: `entity_ids` *(array)*
+- **Description**: Called when proximity tracking was enabled via [set_proximity_tracking](/docs/reference/scripting_server#set_proximity_tracking) and other entities are in radius. Useful for NPCs to interact with other characters (attack, talk, heal, etc.).
 
 ---
 

@@ -85,6 +85,18 @@ inventory_slots = 8
 
 ---
 
+## `mode`
+
+*Character-only attribute.*
+
+The current mode of the entity. On startup of characters this is set to **"active"**, [took_damage](/docs/reference/scripting_server#took_damage) changes this to **"dead"** when the [health attribute](/docs/reference/configuration#health) is below or equal to 0. Dead characters do not receive events. Healers can set the mode attribute to **"active"** again.
+
+```python
+set_attr("mode", "active")
+```
+
+---
+
 ## `monetary`
 
 *Item-only attribute.*
