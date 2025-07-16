@@ -4,10 +4,65 @@
         <title>Eldiron Blog</title>
         <link>https://eldiron.com/blog</link>
         <description>Eldiron Blog</description>
-        <lastBuildDate>Mon, 16 Jun 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Jul 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Eldiron v0.8.50 Released]]></title>
+            <link>https://eldiron.com/blog/2025/07/16/eldiron-v0.8.50</link>
+            <guid>https://eldiron.com/blog/2025/07/16/eldiron-v0.8.50</guid>
+            <pubDate>Wed, 16 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Eldiron v0.8.50 Released]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="eldiron-v0850-released">Eldiron v0.8.50 Released<a href="https://eldiron.com/blog/2025/07/16/eldiron-v0.8.50#eldiron-v0850-released" class="hash-link" aria-label="Direct link to Eldiron v0.8.50 Released" title="Direct link to Eldiron v0.8.50 Released">​</a></h2>
+<p>After I was mostly working on the graphical aspects of Eldiron in the last releases, this release focuses on the core gameplay mechanics.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="new-features">New Features<a href="https://eldiron.com/blog/2025/07/16/eldiron-v0.8.50#new-features" class="hash-link" aria-label="Direct link to New Features" title="Direct link to New Features">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="server">Server<a href="https://eldiron.com/blog/2025/07/16/eldiron-v0.8.50#server" class="hash-link" aria-label="Direct link to Server" title="Direct link to Server">​</a></h3>
+<ul>
+<li>New 'entered' and 'left' entity system events when entering / leaving named sectors.</li>
+<li>New 'teleport' command which either takes one argument (destination sector name in the same region) or two, the destination sector name and the name of the destination region (which will transfer the character to a different region). The entity will be transferred to the center of the destination sector.</li>
+<li>New <code>[light]</code> data attributes to enable light emission for entities and items.</li>
+<li>New 'set_emit_light(True / False)` cmd to enable / disable light emission for an entity or an item.</li>
+<li>New special <code>active</code> item attribute which specifies if the item is active or not. On startup (or if the attribute is changed) a new <code>active</code> event is send to the item which can than decide what to do based on the value, like enabling / disabling light emission for a torch.</li>
+<li>New <code>intent</code> system. Define the current player intent (like "talk", "use", "open" etc.) via the new <code>intent</code> parameter for button widgets. Server will send new <code>intent</code> events to both entities and items for direction based and click based item interations.</li>
+<li>New <code>health</code> config attribute which holds the name of the default entity health attribute, by default <code>HP</code>.</li>
+<li>New <code>mode</code> entity attribute which holds the current state string of the entity. Set to <code>active</code> on entity instantiation and <code>dead</code> when the health attribute is smaller or equal to 0.</li>
+<li>New <code>death</code> event send to an entity when the health attribute is smaller or equal to 0.</li>
+<li>New <code>id</code> command which returns the id of the current entity.</li>
+<li>New <code>took_damage</code> command (my_id, from_id, damage_amount). This command sends out messages and checks for death.</li>
+<li>New <code>goto</code> command (sector name, speed). Makes an NPC go to a sector. Sends <code>arrived</code> event on arrival with the name of the sector as value.</li>
+<li>New  <code>close_in</code> command (target id, target radius, speed). Makes an NPC close in (in weapon range given by the target radius) of the entity id with the given speed. Once the target is in range a <code>closed_in</code> event is send.</li>
+<li>New <code>kill</code> event send to the attacker when he kills his target. The value of the event is the id of the dead target.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="client">Client<a href="https://eldiron.com/blog/2025/07/16/eldiron-v0.8.50#client" class="hash-link" aria-label="Direct link to Client" title="Direct link to Client">​</a></h3>
+<ul>
+<li>New <code>intent</code> command to invoke an intention via key shortcuts (same as actions).</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="creator">Creator<a href="https://eldiron.com/blog/2025/07/16/eldiron-v0.8.50#creator" class="hash-link" aria-label="Direct link to Creator" title="Direct link to Creator">​</a></h3>
+<ul>
+<li>Tileset tool: Preview icons now in the minimap.</li>
+<li>Tilepicker: Icons preview on hover in the minimap.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bug-fixes">Bug Fixes<a href="https://eldiron.com/blog/2025/07/16/eldiron-v0.8.50#bug-fixes" class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes">​</a></h2>
+<ul>
+<li>Make game widgets honor the global render graph.</li>
+<li>Info viewer did not show item values correctly.</li>
+<li>Changed <code>Data</code> tool shortcut from <code>A</code> to <code>D</code>.</li>
+<li>When adding tiles to the project the background renderer was not updated correctly.</li>
+<li>Adjust Undo / Redo state when switching regions.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="documentation">Documentation<a href="https://eldiron.com/blog/2025/07/16/eldiron-v0.8.50#documentation" class="hash-link" aria-label="Direct link to Documentation" title="Direct link to Documentation">​</a></h2>
+<ul>
+<li>Cleaned up and refactored the reference section of the documentation of Eldiron.com.</li>
+<li>Wrote documentation in the reference for all new features and changes.</li>
+</ul>
+<hr>
+<p>The plan is to finish the remaining missing core gameplay mechanics in the next 1-2 releases (and feature them in the Hideout 2D example), implement the node based behavior system and after that focus on a 3D Dungeon crawler example. Than we are not too far away from version 1!</p>
+<p>I will create a new video showcasing all the new features soon, so don't forget to check and subscribe to the YouTube channel!</p>
+<p>Take care,
+Markus</p>]]></content:encoded>
+            <category>releases</category>
+        </item>
         <item>
             <title><![CDATA[New Video | Rigging]]></title>
             <link>https://eldiron.com/blog/2025/06/16/eldiron-v0.8.4_rigging</link>
