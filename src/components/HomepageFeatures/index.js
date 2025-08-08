@@ -117,7 +117,7 @@ export default function HomepageFeatures() {
                 marginBottom: "0.25rem",
               }}
             >
-              📅 July 16th, 2025
+              📅 August 8th, 2025
             </span>
             {/* <strong>Eldiron v0.8.23</strong> is now available with major updates
             including the screen editor, UI widgets, and a new Hideout 2D
@@ -139,9 +139,9 @@ export default function HomepageFeatures() {
               here
             </a>{" "}
             to see the first terrain editing screenshots in Eldiron. */}
-            <strong>Eldiron v0.8.50</strong> released with many new gameplay mechanics!
+            <strong>Eldiron v0.8.60</strong> released with many new features!
             <a
-              href="/blog/2025/07/16/eldiron-v0.8.50"
+              href="/blog/2025/08/08/eldiron-v0.8.60"
               target="_blank"
               rel="noopener noreferrer"
             >

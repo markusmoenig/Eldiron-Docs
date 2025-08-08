@@ -13,12 +13,14 @@ Eldiron is an open-source retro RPG creator built with Rust, aiming to bring cla
 Join our community on Patreon and choose a tier that suits you:
 
 ### 🧑‍🌾 Farmer — $2/month
+
 * Plant the seeds that help Eldiron grow.
 * Access to Patreon updates and behind-the-scenes insights.
 * Patron-only posts and messages.
 * Discord access.
 
 ### 🧝 Adventurer — $5/month
+
 * Step onto the path of a true hero.
 * All Farmer-tier benefits.
 * Your name in the Eldiron credits as a supporter.
@@ -26,6 +28,7 @@ Join our community on Patreon and choose a tier that suits you:
 * Patron-only voting power.
 
 ### 🐉 Dragon Slayer — $10/month
+
 * Face dragons and help push Eldiron to new heights.
 * All Adventurer-tier benefits.
 * Access to all tilesets in the store priced up to $10—yours at no extra cost.
@@ -33,6 +36,7 @@ Join our community on Patreon and choose a tier that suits you:
 * Behind-the-scenes development insights & previews.
 
 ### 👑 Lord — $25/month
+
 * Stand among the great rulers of the land.
 * All Dragon Slayer-tier benefits.
 * Access to all tilesets in the store priced up to $25—yours at no extra cost.
@@ -70,15 +74,18 @@ Every contribution helps and is greatly appreciated!
 We welcome companies to sponsor Eldiron and support the development of this open-source RPG creator.
 
 ### Bronze Sponsor — $100/month
+
 * Company logo displayed on the Eldiron website.
 * Mention in monthly development updates.
 
 ### Silver Sponsor — $250/month
+
 * All Bronze Sponsor benefits.
 * Featured blog post highlighting your company's support.
 * Priority consideration for feature requests.
 
 ### Gold Sponsor — $500/month
+
 * All Silver Sponsor benefits.
 * Prominent logo placement on the Eldiron website and documentation.
 * Direct communication channel with the development team.
