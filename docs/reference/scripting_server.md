@@ -32,6 +32,14 @@ Blocks the listed events from being sent to the character or item for a number o
 block_events(minutes, "event1", "event2", ...)
 ```
 
+You can also block specific `intent` events.
+
+```python
+block_events(2, "intent: attack") # Block attack intents for 2 in-game minutes.
+
+block_events(2, "intent") # Block all intents for 2 in-game minutes.
+```
+
 ---
 
 ## `close_in`
@@ -77,12 +85,24 @@ debug(arg1, arg2, ...)
 
 ---
 
+## `drop`
+
+*This command can only be used with characters.*
+
+Drop a specific item from the character's inventory. The item is identified by its id and that value is mostly provided by `intent` messages acting on an item.
+
+```python
+drop(value)
+```
+
+---
+
 ## `drop_items`
 
 *This command can only be used with characters.*
 
 Drops items from the character's inventory.  
-If a `filter_string` is provided, only matching items are dropped.
+If a `filter_string` is provided, only matching items are dropped, otherwise all items are dropped.
 
 ```python
 drop_items(filter_string)
@@ -352,3 +372,14 @@ took_damage(value["from"], amount)
 ```
 
 ---
+
+## `offer_inventory`
+
+*This command can only be used with characters.*
+
+Offers the inventory to a given entity with an optional filter string. Mostly used by vendor NPCs who would offer their inventory when spoken to.
+
+```python
+offer_inventory(entity, "") # Offer all inventory items to the given entity.
+offer_inventory(entity, "Torch") # Offer only items named Torch.
+```

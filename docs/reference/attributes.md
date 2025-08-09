@@ -193,6 +193,18 @@ visible = false
 
 ---
 
+## `wealth`
+
+*Character-only attribute.*
+
+Inital wealth of the character in base currency.
+
+```toml
+wealth = 2
+```
+
+---
+
 ## `worth`
 
 *Item-only attribute.*
@@ -200,7 +212,7 @@ visible = false
 Trade value of the item in base currency.
 
 ```toml
-worth = 12.5
+worth = 2
 ```
 
 ---

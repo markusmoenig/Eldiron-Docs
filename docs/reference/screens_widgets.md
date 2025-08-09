@@ -44,13 +44,19 @@ Buttons are **visually styled** using the **tiles** defined in the **Sector Tool
 - The **default (normal)** state is drawn from the sector’s base tiles.
 - The **active** state is shown when the button is clicked or when its associated action is currently active.
 
+ A button widget can:
+
+- Contain an `action` or an `intent` (but not both at the same time, as the movement triggers the intent in the given direction).
+- Support `intent` (such as "use", etc.). An empty intent string specifies the walking intent (the default).
+- Specify an inventory item index, the button will draw the inventory item at the given index and allows `intent` interactions.
+- **Show / hide** specific widgets when clicked.
+- **Deactivate** other buttons when clicked.
+
 ---
 
-### Example
+### Example #1
 
-In this example, clicking the button causes the player to **move forward**. A button widget can contain an `action` or an `intent` but not both at the same time as the movement triggers the intent in the given direction.
-
-An empty intent string specifies the walking intent (the default).
+In this example, clicking the button causes the player to **move forward**.
 
 See the list of available actions [here](/docs/reference/scripting_client#action).
 
@@ -59,6 +65,28 @@ See the list of available actions [here](/docs/reference/scripting_client#action
 role = "button"
 action = "forward"
 # intent = "talk"
+# inventory_index = 0
+```
+
+### Example 2
+
+This button:
+
+- Shows the widget with the sector name of `Messages`
+- Hides all widgets which starts with `Inventory`.
+- Deactivate the button named `Show Inventory`.
+- Sets its own state to `active`.
+
+```toml
+[ui]
+role = "button"
+
+show = ["Messages"]
+hide = ["Inventory*"]
+
+deactivate = ["Show Inventory"]
+
+active = true
 ```
 
 ---
@@ -113,7 +141,16 @@ To change this to **top-down**, set `top_down = true` in the widget’s configur
 role = "messages"
 font = "Tiny5-Regular"
 font_size = 18.0
-spacing = 5.0
+spacing = 5
 warning = "#ff8888"
 default = "#ffffff"
+```
+
+### Multiple Choice
+
+For displaying `multiple choice` messages (for example when a vendor offers his inventory), there are two more options:
+
+```toml
+column_width = 30 # The width of the body column of the text
+multiple_choice = "#ffff88" # The color for multiple choice items
 ```
