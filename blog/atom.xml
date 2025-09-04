@@ -2,11 +2,47 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eldiron.com/blog</id>
     <title>Eldiron Blog</title>
-    <updated>2025-08-08T00:00:00.000Z</updated>
+    <updated>2025-09-04T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eldiron.com/blog"/>
     <subtitle>Eldiron Blog</subtitle>
     <icon>https://eldiron.com/img/favicon.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[Eldiron Nodes Sneak Peek]]></title>
+        <id>https://eldiron.com/blog/2025/09/04/eldiron-nodes-preview</id>
+        <link href="https://eldiron.com/blog/2025/09/04/eldiron-nodes-preview"/>
+        <updated>2025-09-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The big feature for the upcoming next release is the new node system for Eldiron. Previously it was only possible to code behavior for entities and items by programming directly in Python. Now, with the upcoming node system you have an easy-to-use mechanism to define behavior via a grid based node system.]]></summary>
+        <content type="html"><![CDATA[<p>The big feature for the upcoming next release is the new node system for Eldiron. Previously it was only possible to code behavior for entities and items by programming directly in Python. Now, with the upcoming node system you have an easy-to-use mechanism to define behavior via a grid based node system.</p>
+<p>This breaks complex mechanisms into small, easily editable components and even provides feedback and / or errors during runtime.</p>
+<p><img decoding="async" loading="lazy" alt="Nodes" src="https://eldiron.com/assets/images/eldiron-nodes-preview-5bf4641c61fa8110515138b304318787.png" width="2624" height="1720" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-it-works">How it works<a href="https://eldiron.com/blog/2025/09/04/eldiron-nodes-preview#how-it-works" class="hash-link" aria-label="Direct link to How it works" title="Direct link to How it works">​</a></h2>
+<p>You can drag and drop instructions, values or new events into the code grid (in the <em>Code Tool</em>). In the screenshot you can see the <strong>startup</strong> and <strong>intent</strong> events.</p>
+<p>The <strong>startup</strong> event here has two instructions, <strong>random_walk_in_sector</strong> and <strong>add_item</strong>. You can see that each argument of the instruction is individually selectable and has its own descriptive text. This makes it possible to easily enter the values via the user-interface and to type-check that values are of the correct type.</p>
+<p>When the server is running, each instruction optionally provides feedback of its status and / or error. For example in the screenshot we typed the name of the <em>GoldenKey</em> item wrong and <strong>add_item</strong> complains that it cannot find the item which it is supposed to add to the entities inventory.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="a-slightly-more-complex-example">A slightly more complex example<a href="https://eldiron.com/blog/2025/09/04/eldiron-nodes-preview#a-slightly-more-complex-example" class="hash-link" aria-label="Direct link to A slightly more complex example" title="Direct link to A slightly more complex example">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Nodes" src="https://eldiron.com/assets/images/eldiron-nodes-preview2-72a3840e2b9c70bccfc3b534ac3b0bcb.png" width="1571" height="591" class="img_ev3q"></p>
+<p>Here we create a random value between 1 and 10 and if the value is greater than or equal to 5 we add a torch to the inventory. Note that the <strong>random</strong> instruction visually displays during runtime that the resulting number was <em>6</em> and <strong>add_item</strong> displays <em>Ok</em> to indicate that the item was added successfully.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="automatic-creation-of-grid-elements-and-code">Automatic creation of grid elements and code<a href="https://eldiron.com/blog/2025/09/04/eldiron-nodes-preview#automatic-creation-of-grid-elements-and-code" class="hash-link" aria-label="Direct link to Automatic creation of grid elements and code" title="Direct link to Automatic creation of grid elements and code">​</a></h2>
+<p>When you drag an <em>assignment</em>, <em>conditional</em> or <em>function</em> into the grid, the basic grid structure is filled out automatically, you just need to enter values or replace values via drag and drop, it's that easy.</p>
+<p>The nodes are converted to type-checked <strong>Python</strong> code on the fly.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="advantages-of-the-grid-node-system">Advantages of the Grid Node System<a href="https://eldiron.com/blog/2025/09/04/eldiron-nodes-preview#advantages-of-the-grid-node-system" class="hash-link" aria-label="Direct link to Advantages of the Grid Node System" title="Direct link to Advantages of the Grid Node System">​</a></h2>
+<ul>
+<li>Break complex behavior down into individual cells.</li>
+<li>Type-check values and arguments.</li>
+<li>Fast-code creation.</li>
+<li>Visual feedback for function results and errors during runtime.</li>
+</ul>
+<hr>
+<p>I am currently working on porting the Hideout2D example to the new node system and will then release a new version with an explainer video. The new version will probably be ready in 1-2 weeks.</p>
+<p>Take care,
+Markus</p>]]></content>
+        <author>
+            <name>Markus Moenig</name>
+            <uri>https://github.com/markusmoenig</uri>
+        </author>
+        <category label="sneak peek" term="sneak peek"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Eldiron v0.8.60 Released]]></title>
         <id>https://eldiron.com/blog/2025/08/08/eldiron-v0.8.60</id>
