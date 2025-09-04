@@ -177,7 +177,7 @@ export default function Home() {
             Patreon Supporters:
           </div>
           <div style={{ marginBottom: "1rem" }}>
-            Luna (Dragon Slayer), R Isted / Titus Popescu (Farmer)
+            SmileyNina (Dragon Slayer), R Isted / Titus Popescu (Farmer)
           </div>
           <div style={{ fontWeight: "bold", marginBottom: "0.5rem" }}>
             GitHub Sponsors:
