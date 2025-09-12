@@ -105,7 +105,7 @@ export default function Home() {
               {
                 name: "scripting",
                 caption:
-                  "Powerful event-driven logic with easy Python scripting",
+                  "Powerful event-driven logic with a visual node system or Python scripting",
               },
               {
                 name: "materials",

@@ -147,26 +147,14 @@ get_attr("key")
 
 ---
 
-## `get_entity_attr`
+## `get_attr_of`
 
 *This command can be used with both characters and items.*
 
-Gets an attribute from another entity.
+Gets an attribute from a specific entity or item.
 
 ```python
-get_entity_attr(entity_id, "key")
-```
-
----
-
-## `get_item_attr`
-
-*This command can be used with both characters and items.*
-
-Gets an attribute from an item.
-
-```python
-get_item_attr(item_id, "key")
+get_attr_of(entity_item_id, "key")
 ```
 
 ---
@@ -254,6 +242,19 @@ Schedules an event to be sent after a given number of in-game minutes.
 
 ```python
 notify_in(minutes, "event_name")
+```
+
+---
+
+## `offer_inventory`
+
+*This command can only be used with characters.*
+
+Offers the inventory to a given entity with an optional filter string. Mostly used by vendor NPCs who would offer their inventory when spoken to.
+
+```python
+offer_inventory(entity, "") # Offer all inventory items to the given entity.
+offer_inventory(entity, "Torch") # Offer only items named Torch.
 ```
 
 ---
@@ -372,14 +373,3 @@ took_damage(value["from"], amount)
 ```
 
 ---
-
-## `offer_inventory`
-
-*This command can only be used with characters.*
-
-Offers the inventory to a given entity with an optional filter string. Mostly used by vendor NPCs who would offer their inventory when spoken to.
-
-```python
-offer_inventory(entity, "") # Offer all inventory items to the given entity.
-offer_inventory(entity, "Torch") # Offer only items named Torch.
-```

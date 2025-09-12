@@ -44,13 +44,11 @@ const FeatureList = [
     ),
   },
   {
-    title: "Script with Python — Nodes Soon",
+    title: "Node Based Behavior System",
     img: require("@site/static/img/lord.png").default,
     description: (
       <>
-        Use the built-in Python editor to create behaviors, events, and logic. A
-        node-based system is coming soon, built on the same Python modules for
-        visual, flexible scripting.
+        Use the powerful built-in node editor to create behaviors, events, and logic. Or, if you prefer code, write behavior logic natively in Python.
       </>
     ),
   },
@@ -117,7 +115,7 @@ export default function HomepageFeatures() {
                 marginBottom: "0.25rem",
               }}
             >
-              📅 September 4th, 2025
+              📅 September 12th, 2025
             </span>
             {/* <strong>Eldiron v0.8.23</strong> is now available with major updates
             including the screen editor, UI widgets, and a new Hideout 2D
@@ -139,9 +137,9 @@ export default function HomepageFeatures() {
               here
             </a>{" "}
             to see the first terrain editing screenshots in Eldiron. */}
-            <strong>Eldiron Nodes Sneak Peek</strong> Read the blog{" "}
+            <strong>Eldiron v0.8.70 Released</strong> Read the blog{" "}
             <a
-              href="/blog/2025/09/04/eldiron-nodes-preview"
+              href="/blog/2025/09/12/eldiron-v0.8.70"
               target="_blank"
               rel="noopener noreferrer"
             >
