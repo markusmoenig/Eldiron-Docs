@@ -2,11 +2,51 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eldiron.com/blog</id>
     <title>Eldiron Blog</title>
-    <updated>2025-09-04T00:00:00.000Z</updated>
+    <updated>2025-09-12T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eldiron.com/blog"/>
     <subtitle>Eldiron Blog</subtitle>
     <icon>https://eldiron.com/img/favicon.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[Eldiron v0.8.70 Released]]></title>
+        <id>https://eldiron.com/blog/2025/09/12/eldiron-v0.8.70</id>
+        <link href="https://eldiron.com/blog/2025/09/12/eldiron-v0.8.70"/>
+        <updated>2025-09-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The main new feature of this release is the new grid based node system for coding character and item behavior via drag and drop!]]></summary>
+        <content type="html"><![CDATA[<p>The main new feature of this release is the new <strong>grid based node system</strong> for coding character and item behavior via drag and drop!</p>
+<p>A new video explaining it all is coming out soon!</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="advantages-of-the-grid-node-system">Advantages of the Grid Node System<a href="https://eldiron.com/blog/2025/09/12/eldiron-v0.8.70#advantages-of-the-grid-node-system" class="hash-link" aria-label="Direct link to Advantages of the Grid Node System" title="Direct link to Advantages of the Grid Node System">​</a></h2>
+<ul>
+<li>Break complex behavior down into individual cells.</li>
+<li>Type-check values and arguments.</li>
+<li>Fast-code creation.</li>
+<li>Visual feedback for function results and errors during runtime.</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Nodes" src="https://eldiron.com/assets/images/creator_nodes_v0870-0ac462994f014f6353a001943b0c30e6.png" width="2624" height="1720" class="img_ev3q"></p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="new-features">New Features<a href="https://eldiron.com/blog/2025/09/12/eldiron-v0.8.70#new-features" class="hash-link" aria-label="Direct link to New Features" title="Direct link to New Features">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="creator">Creator<a href="https://eldiron.com/blog/2025/09/12/eldiron-v0.8.70#creator" class="hash-link" aria-label="Direct link to Creator" title="Direct link to Creator">​</a></h3>
+<ul>
+<li>Character and item classes can now be renamed via their context menus.</li>
+<li>New grid based node editor for coding entity and item behavior in the code tool. <strong>The main new feature for this release.</strong></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="server">Server<a href="https://eldiron.com/blog/2025/09/12/eldiron-v0.8.70#server" class="hash-link" aria-label="Direct link to Server" title="Direct link to Server">​</a></h3>
+<ul>
+<li>Removed <code>get_entity_attr</code> and <code>get_item_attr</code> and replaced it with <code>get_attr_of</code> which works for both entities and items.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="bug-fixes">Bug Fixes<a href="https://eldiron.com/blog/2025/09/12/eldiron-v0.8.70#bug-fixes" class="hash-link" aria-label="Direct link to Bug Fixes" title="Direct link to Bug Fixes">​</a></h2>
+<ul>
+<li>Fixed deletion of character and item instances in the map (the map would not immediately update sometimes).</li>
+</ul>
+<hr>
+<p>Take care,
+Markus</p>]]></content>
+        <author>
+            <name>Markus Moenig</name>
+            <uri>https://github.com/markusmoenig</uri>
+        </author>
+        <category label="releases" term="releases"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Eldiron Nodes Sneak Peek]]></title>
         <id>https://eldiron.com/blog/2025/09/04/eldiron-nodes-preview</id>
