@@ -15,7 +15,7 @@
             <pubDate>Fri, 12 Sep 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[The main new feature of this release is the new grid based node system for coding character and item behavior via drag and drop!]]></description>
             <content:encoded><![CDATA[<p>The main new feature of this release is the new <strong>grid based node system</strong> for coding character and item behavior via drag and drop!</p>
-<p>A new video explaining it all is coming out soon!</p>
+<p>The new video is now live <a href="https://youtu.be/UBq5kWRjBTw" target="_blank" rel="noopener noreferrer">here</a>.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="advantages-of-the-grid-node-system">Advantages of the Grid Node System<a href="https://eldiron.com/blog/2025/09/12/eldiron-v0.8.70#advantages-of-the-grid-node-system" class="hash-link" aria-label="Direct link to Advantages of the Grid Node System" title="Direct link to Advantages of the Grid Node System">​</a></h2>
 <ul>
 <li>Break complex behavior down into individual cells.</li>
