@@ -4,10 +4,47 @@
         <title>Eldiron Blog</title>
         <link>https://eldiron.com/blog</link>
         <description>Eldiron Blog</description>
-        <lastBuildDate>Fri, 12 Sep 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 13 Oct 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Eldiron 3D Progress]]></title>
+            <link>https://eldiron.com/blog/2025/10/13/eldiron-3d-progress</link>
+            <guid>https://eldiron.com/blog/2025/10/13/eldiron-3d-progress</guid>
+            <pubDate>Mon, 13 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[It’s been a while since the last update, so I wanted to share where things are at — and it’s big!]]></description>
+            <content:encoded><![CDATA[<p>It’s been a while since the last update, so I wanted to share where things are at — and it’s big!</p>
+<p>I’ve been deep in building out the <strong>3D editing layer</strong> of Eldiron, and I can honestly say I’m more excited about it now than when I started. The original goal was “basic 3D support,” but the system that’s emerging is <strong>far more powerful</strong> — without sacrificing any of Eldiron’s 2D strengths.</p>
+<p>That said: <strong>it needs a bit more time</strong>. But it’s worth it.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-what-im-currently-building">🚧 What I’m currently building<a href="https://eldiron.com/blog/2025/10/13/eldiron-3d-progress#-what-im-currently-building" class="hash-link" aria-label="Direct link to 🚧 What I’m currently building" title="Direct link to 🚧 What I’m currently building">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-3d-editing--fully-integrated">✅ <strong>3D Editing — Fully Integrated</strong><a href="https://eldiron.com/blog/2025/10/13/eldiron-3d-progress#-3d-editing--fully-integrated" class="hash-link" aria-label="Direct link to -3d-editing--fully-integrated" title="Direct link to -3d-editing--fully-integrated">​</a></h3>
+<p>3D editing is coming <strong>directly inside the main editor</strong>, not as a separate mode or tool.<br>
+<!-- -->You’ll be able to edit <strong>2D and 3D geometry using the same workflow</strong>, with support for:</p>
+<ul>
+<li>Arbitrary 3D surfaces (floors, roofs, sloped walls, anything)</li>
+<li>Local profile editing in 2D projection space</li>
+<li><strong>Cutouts, windows, recesses, and surface extrusions</strong> — fully procedural per surface</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-action-system">⚙️ <strong>Action System</strong><a href="https://eldiron.com/blog/2025/10/13/eldiron-3d-progress#%EF%B8%8F-action-system" class="hash-link" aria-label="Direct link to ️-action-system" title="Direct link to ️-action-system">​</a></h3>
+<p>A new <strong>Actions</strong> panel will allow you to apply operations (like Extrude, Apply Tile, Cutout, Inset, Align, etc.) to whatever is currently selected.</p>
+<p>It’s modular and future-proof — every editing capability becomes an <strong>Action</strong> you can apply to <strong>sectors, surfaces, linedefs, vertices</strong>, or profile geometry.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-visual-shader-editor">🎨 <strong>Visual Shader Editor</strong><a href="https://eldiron.com/blog/2025/10/13/eldiron-3d-progress#-visual-shader-editor" class="hash-link" aria-label="Direct link to -visual-shader-editor" title="Direct link to -visual-shader-editor">​</a></h3>
+<p>A node-based shader system is in the works, allowing you to build <strong>fully programmable materials</strong> — usable on both 2D and 3D surfaces. Its like the visual behavior system just for shaders.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-the-vision">🎬 The Vision<a href="https://eldiron.com/blog/2025/10/13/eldiron-3d-progress#-the-vision" class="hash-link" aria-label="Direct link to 🎬 The Vision" title="Direct link to 🎬 The Vision">​</a></h2>
+<blockquote>
+<p><em>"The goal isn’t to become a general-purpose modeling tool like Blender, but to keep the <strong>clarity and immediacy of classic level editors</strong> while adding <strong>procedural surface editing</strong>, <strong>profile-driven geometry</strong>, and <strong>UV-based cutouts</strong> — all directly inside Eldiron’s mapping workflow."</em></p>
+</blockquote>
+<p>This means fast, focused world building — but with enough depth to create detailed structures, recesses, trims, and layered surfaces without leaving the editor.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-timeline">⏳ Timeline<a href="https://eldiron.com/blog/2025/10/13/eldiron-3d-progress#-timeline" class="hash-link" aria-label="Direct link to ⏳ Timeline" title="Direct link to ⏳ Timeline">​</a></h2>
+<p>A <strong>first usable version of 3D editing + Actions system</strong> should land <strong>in the next few weeks</strong>.</p>
+<p>Thanks a lot for your patience — this is a big step forward, and I want it to land right.</p>
+<p>— Markus</p>]]></content:encoded>
+            <category>releases</category>
+        </item>
         <item>
             <title><![CDATA[Eldiron v0.8.70 Released]]></title>
             <link>https://eldiron.com/blog/2025/09/12/eldiron-v0.8.70</link>
