@@ -1,20 +1,28 @@
 .features {
     display: flex;
-    align-items: center;
-    padding: 2rem 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
     width: 100%;
+    padding: 3rem 0;
+    background-color: #f9f4e3;
+    border-bottom: 2px solid #d2c1a3;
+    /* optional bottom edge */
+}
+
+.featuresInner {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 1rem;
 }
 
 .featureSvg {
     height: 200px;
     width: 200px;
 }
-.features {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    background-color: #f9f4e3;
-    border-bottom: 2px solid #d2c1a3; /* optional bottom edge */
-}
+
 [data-theme="dark"] .features {
     background-color: #1c1b19;
     border-bottom: 2px solid #372d25;

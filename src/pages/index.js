@@ -8,9 +8,6 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -66,90 +63,63 @@ export default function Home() {
               color: "#666",
             }}
           >
-            {/* Design maps, craft stories, and bring your pixel dreams to life — no
-            coding required. */}
-            Design maps, craft adventures, and build 2D & 3D retro RPGs — with
-            visual tools and Python scripting.
+            Craft adventures and build your own retro RPG — with
+            powerful world building tools and visual scripting
           </p>
-          {/* <h2 style={{ textAlign: "center", marginBottom: "1rem" }}>
-            Eldiron: A powerful retro RPG Creator
-          </h2> */}
-          <Carousel
-            showThumbs={false}
-            showStatus={false}
-            infiniteLoop
-            autoPlay
-            interval={5000}
-            dynamicHeight
-            emulateTouch
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              maxWidth: "1000px",
+              margin: "0 auto",
+              gap: "2%",
+            }}
           >
-            {[
-              {
-                name: "hideout2d",
-                caption: "Build top-down RPGs inspired by Ultima",
-              },
-              {
-                name: "unending_night",
-                caption: "Design immersive 3D worlds with classic vibes",
-              },
-              {
-                name: "rigging",
-                caption:
-                  "Design animated characters, equip items via slots, and customize colors on the fly",
-              },
-              {
-                name: "terrain",
-                caption:
-                  "Paint terrain with brushes and apply terrain modifiers and procedural coloring to sectors and linedefs",
-              },
-              {
-                name: "scripting",
-                caption:
-                  "Powerful event-driven logic with a visual node system or Python scripting",
-              },
-              {
-                name: "materials",
-                caption: "Craft procedural materials visually",
-              },
-              {
-                name: "widgets",
-                caption:
-                  "Design UI widgets and connect them to actions and events",
-              },
-            ].map(({ name, caption }, idx) => (
-              <div key={idx}>
-                <div style={{ position: "relative" }}>
-                  <img
-                    src={useBaseUrl(`/img/screenshots/${name}.png`)}
-                    alt={`Screenshot ${idx + 1}`}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      display: "block",
-                    }}
-                  />
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: "4.5rem", // 👈 moved up to avoid dot overlap
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                      backgroundColor: "rgba(0, 0, 0, 0.6)",
-                      color: "white",
-                      padding: "0.5rem 1rem",
-                      borderRadius: "6px",
-                      fontSize: "1rem",
-                      maxWidth: "90%",
-                      zIndex: 1,
-                      pointerEvents: "none",
-                    }}
-                  >
-                    {caption}
-                  </div>
-                </div>
+            <div style={{ width: "48%", textAlign: "center" }}>
+              <div
+                style={{
+                  fontWeight: "700",
+                  marginBottom: "0.5rem",
+                  fontSize: "1.2rem",
+                  color: "var(--ifm-color-primary)",
+                }}
+              >
+                2D
               </div>
-            ))}
-          </Carousel>
+              <img
+                src={useBaseUrl("/img/screenshots/hideout2d.png")}
+                alt="2D screenshot"
+                style={{
+                  width: "100%",
+                  borderRadius: "12px",
+                  boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+                  display: "block",
+                }}
+              />
+            </div>
+            <div style={{ width: "48%", textAlign: "center" }}>
+              <div
+                style={{
+                  fontWeight: "700",
+                  marginBottom: "0.5rem",
+                  fontSize: "1.2rem",
+                  color: "var(--ifm-color-primary)",
+                }}
+              >
+                3D
+              </div>
+              <img
+                src={useBaseUrl("/img/screenshots/dungeon3d.png")}
+                alt="3D screenshot"
+                style={{
+                  width: "100%",
+                  borderRadius: "12px",
+                  boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+                  display: "block",
+                }}
+              />
+            </div>
+          </div>
         </section>
 
         {/* Features in the middle */}
