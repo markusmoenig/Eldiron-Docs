@@ -137,9 +137,9 @@ export default function HomepageFeatures() {
               here
             </a>{" "}
             to see the first terrain editing screenshots in Eldiron. */}
-            <strong>Eldiron 3D Progress</strong> Read the blog{" "}
+            <strong>Eldiron v0.8.80 Release</strong> Read the blog{" "}
             <a
-              href="/blog/2025/10/13/eldiron-3d-progress"
+              href="/blog/2025/10/23/eldiron-v0.8.80"
               target="_blank"
               rel="noopener noreferrer"
             >
