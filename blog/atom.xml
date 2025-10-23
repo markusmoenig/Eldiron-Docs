@@ -2,11 +2,55 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://eldiron.com/blog</id>
     <title>Eldiron Blog</title>
-    <updated>2025-10-13T00:00:00.000Z</updated>
+    <updated>2025-10-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://eldiron.com/blog"/>
     <subtitle>Eldiron Blog</subtitle>
     <icon>https://eldiron.com/img/favicon.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[Eldiron v0.8.80 Released]]></title>
+        <id>https://eldiron.com/blog/2025/10/23/eldiron-v0.8.80</id>
+        <link href="https://eldiron.com/blog/2025/10/23/eldiron-v0.8.80"/>
+        <updated>2025-10-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Eldiron v0.8.80 marks a major step forward in 3D editing. You can now view, select, and build geometry directly in 3D — making level design faster, more visual, and more intuitive.]]></summary>
+        <content type="html"><![CDATA[<p>Eldiron v0.8.80 marks a major step forward in 3D editing. You can now view, select, and build geometry directly in 3D — making level design faster, more visual, and more intuitive.</p>
+<p><img decoding="async" loading="lazy" alt="Eldiron Screenshot" src="https://eldiron.com/assets/images/Eldironv0.8.80_3D-af1341577da529c6e9eb96f173ecfbcb.png" width="2624" height="1728" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="integrated-3d-workflow">Integrated 3D Workflow<a href="https://eldiron.com/blog/2025/10/23/eldiron-v0.8.80#integrated-3d-workflow" class="hash-link" aria-label="Direct link to Integrated 3D Workflow" title="Direct link to Integrated 3D Workflow">​</a></h2>
+<p>The 3D perspective is now part of Eldiron’s standard editing process. You can move freely between 2D and 3D views to create and refine geometry with true spatial context. While the system is still evolving, it already transforms how you approach world-building and scene layout.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="actions">Actions<a href="https://eldiron.com/blog/2025/10/23/eldiron-v0.8.80#actions" class="hash-link" aria-label="Direct link to Actions" title="Direct link to Actions">​</a></h2>
+<p>A new <strong>Action System</strong> makes editing geometry and applying properties effortless. The available actions update automatically depending on your selection and current editing mode, so you always see just what you need.</p>
+<p><strong>Current geometry actions include:</strong></p>
+<ul>
+<li><strong>Add Arch</strong> – Creates an arch structure on a linedef.</li>
+<li><strong>Apply Shader</strong> – Assigns a shader to the selected surface or sector.</li>
+<li><strong>Apply Tile</strong> – Applies a texture tile to the selected surface.</li>
+<li><strong>Clear Shader</strong> – Removes any assigned shader from the selection.</li>
+<li><strong>Clear Tile</strong> – Clears the applied texture tile.</li>
+<li><strong>Create Center Vertex</strong> – Adds a vertex at the geometric center of a shape.</li>
+<li><strong>Create Linedef</strong> – Draws new line definitions between vertices.</li>
+<li><strong>Create Sector</strong> – Generates a polygonal area from enclosed linedefs.</li>
+<li><strong>Edit Linedef / Sector / Vertex</strong> – Adjusts geometry interactively.</li>
+<li><strong>Extrude Linedef / Sector</strong> – Creates 3D walls or volumes from 2D geometry.</li>
+<li><strong>Recess / Relief</strong> – Adds depth or raised details to surfaces.</li>
+<li><strong>Load / New Shader</strong> – Manage shader assets directly within the editor.</li>
+<li><strong>Set Editing Surface</strong> – Switch between floor, wall, and ceiling editing.</li>
+<li><strong>Split</strong> – Divides geometry into smaller segments for fine-grained control.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="non-destructive-surface-profiles">Non-Destructive Surface Profiles<a href="https://eldiron.com/blog/2025/10/23/eldiron-v0.8.80#non-destructive-surface-profiles" class="hash-link" aria-label="Direct link to Non-Destructive Surface Profiles" title="Direct link to Non-Destructive Surface Profiles">​</a></h2>
+<p>Surfaces can now be modified non-destructively. You can cut holes, add recesses, or raise reliefs while keeping the original geometry intact. Extrusions also stay linked, automatically updating when the base surface changes.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="visual-shading-system">Visual Shading System<a href="https://eldiron.com/blog/2025/10/23/eldiron-v0.8.80#visual-shading-system" class="hash-link" aria-label="Direct link to Visual Shading System" title="Direct link to Visual Shading System">​</a></h2>
+<p>The new <strong>visual shader editor</strong> lets you build materials through an intuitive, node-based interface. It includes a GLSL-style math system and a library of procedural patterns — giving you powerful creative control right inside Eldiron.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="client-build-system">Client Build System<a href="https://eldiron.com/blog/2025/10/23/eldiron-v0.8.80#client-build-system" class="hash-link" aria-label="Direct link to Client Build System" title="Direct link to Client Build System">​</a></h2>
+<p>Eldiron now ships with complete builds for <strong>Mac, Windows, Linux, and Web</strong>. The new web client supports fully playable browser-based games — try the <a href="https://hideout.eldiron.com/" target="_blank" rel="noopener noreferrer">Hideout example</a> to see it in action.</p>
+<hr>
+<p>Take care,<br>
+<!-- -->Markus</p>]]></content>
+        <author>
+            <name>Markus Moenig</name>
+            <uri>https://github.com/markusmoenig</uri>
+        </author>
+        <category label="releases" term="releases"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Eldiron 3D Progress]]></title>
         <id>https://eldiron.com/blog/2025/10/13/eldiron-3d-progress</id>
