@@ -17,6 +17,53 @@
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 } */
 
+.playWrap {
+    position: relative;
+    display: inline-block;
+}
+
+/* ensure the img is a block so the overlay centers correctly */
+.playWrap a img {
+    display: block;
+    border-radius: 8px;
+    transition: filter 0.15s ease;
+}
+
+/* subtle hover feedback */
+.playWrap a:hover img {
+    filter: brightness(0.9);
+}
+
+/* circular backdrop for the play icon */
+.playWrap a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 64px;
+    height: 64px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* triangle play icon */
+.playWrap a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    /* slight nudge looks more centered */
+    width: 0;
+    height: 0;
+    border-left: 18px solid #fff;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    pointer-events: none;
+}
+
 /* Footer override - LIGHT THEME */
 .footer {
     background-color: #e3d4b5 !important;
