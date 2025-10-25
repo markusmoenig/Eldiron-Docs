@@ -98,11 +98,7 @@ const config = {
           { to: "/blog", label: "Blog", position: "left" },
           { to: "/intro", label: "Intro", position: "left" },
           { to: "/sponsor", label: "Sponsor", position: "left" },
-          {
-            to: "https://github.com/markusmoenig/Eldiron/discussions",
-            label: "Forum",
-            position: "left",
-          },
+          { to: "/games", label: "Games", position: "left", },
           {
             type: "html",
             position: "right",
