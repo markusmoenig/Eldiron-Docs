@@ -5,9 +5,8 @@
     justify-content: flex-start;
     width: 100%;
     padding: 3rem 0;
-    background-color: #f9f4e3;
-    border-bottom: 2px solid #d2c1a3;
-    /* optional bottom edge */
+    background-color: #f2e5bc; /* Gruvbox light background for features */
+    border-bottom: 2px solid #d5c4a1; /* Gruvbox light border */
 }
 
 .featuresInner {
@@ -24,6 +23,6 @@
 }
 
 [data-theme="dark"] .features {
-    background-color: #1c1b19;
-    border-bottom: 2px solid #372d25;
+    background-color: #32302f; /* Gruvbox dark background for features */
+    border-bottom: 2px solid #504945; /* Gruvbox dark border */
 }

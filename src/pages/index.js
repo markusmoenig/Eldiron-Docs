@@ -60,11 +60,11 @@ export default function Home() {
               textAlign: "center",
               fontSize: "1.2rem",
               marginBottom: "2rem",
-              color: "#666",
+              color: "var(--ifm-font-color-secondary)",
             }}
           >
-            Craft adventures and build your own retro RPG — with
-            powerful world building tools and visual scripting
+            Craft adventures and build your own retro RPG — with powerful world
+            building tools and visual scripting
           </p>
           <div
             style={{

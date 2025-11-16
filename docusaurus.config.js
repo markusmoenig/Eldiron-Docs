@@ -4,7 +4,119 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import { themes as prismThemes } from "prism-react-renderer";
+const gruvboxLightTheme = {
+  plain: {
+    color: "#3c3836",
+    backgroundColor: "#fbf1c7",
+  },
+  styles: [
+    {
+      types: ["comment", "prolog", "doctype", "cdata"],
+      style: { color: "#928374", fontStyle: "italic" },
+    },
+    {
+      types: ["punctuation"],
+      style: { color: "#7c6f64" },
+    },
+    {
+      types: ["namespace"],
+      style: { color: "#8f3f71" },
+    },
+    {
+      types: ["tag", "constant", "symbol", "deleted", "number", "boolean"],
+      style: { color: "#9d0006" },
+    },
+    {
+      types: ["property", "attr-name", "selector"],
+      style: { color: "#b57614" },
+    },
+    {
+      types: ["string", "char", "builtin", "inserted"],
+      style: { color: "#98971a" },
+    },
+    {
+      types: ["operator", "entity", "url"],
+      style: { color: "#d79921" },
+    },
+    {
+      types: ["atrule", "attr-value", "keyword"],
+      style: { color: "#458588" },
+    },
+    {
+      types: ["function"],
+      style: { color: "#b16286" },
+    },
+    {
+      types: ["variable"],
+      style: { color: "#689d6a" },
+    },
+    {
+      types: ["important", "bold"],
+      style: { fontWeight: "bold" },
+    },
+    {
+      types: ["italic"],
+      style: { fontStyle: "italic" },
+    },
+  ],
+};
+
+const gruvboxDarkTheme = {
+  plain: {
+    color: "#ebdbb2",
+    backgroundColor: "#282828",
+  },
+  styles: [
+    {
+      types: ["comment", "prolog", "doctype", "cdata"],
+      style: { color: "#928374", fontStyle: "italic" },
+    },
+    {
+      types: ["punctuation"],
+      style: { color: "#a89984" },
+    },
+    {
+      types: ["namespace"],
+      style: { color: "#d3869b" },
+    },
+    {
+      types: ["tag", "constant", "symbol", "deleted", "number", "boolean"],
+      style: { color: "#fb4934" },
+    },
+    {
+      types: ["property", "attr-name", "selector"],
+      style: { color: "#fe8019" },
+    },
+    {
+      types: ["string", "char", "builtin", "inserted"],
+      style: { color: "#b8bb26" },
+    },
+    {
+      types: ["operator", "entity", "url"],
+      style: { color: "#fabd2f" },
+    },
+    {
+      types: ["atrule", "attr-value", "keyword"],
+      style: { color: "#83a598" },
+    },
+    {
+      types: ["function"],
+      style: { color: "#d3869b" },
+    },
+    {
+      types: ["variable"],
+      style: { color: "#8ec07c" },
+    },
+    {
+      types: ["important", "bold"],
+      style: { fontWeight: "bold" },
+    },
+    {
+      types: ["italic"],
+      style: { fontStyle: "italic" },
+    },
+  ],
+};
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -191,8 +303,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Markus Moenig`,
       },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: gruvboxLightTheme,
+        darkTheme: gruvboxDarkTheme,
         additionalLanguages: ["toml"],
       },
     }),
