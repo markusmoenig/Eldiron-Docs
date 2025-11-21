@@ -48,12 +48,16 @@ Join our community on Patreon and choose a tier that suits you:
 
 ## 🛍️ Patreon Shop: Tilesets
 
-Enhance your game development with our high-quality 2D tilesets available in the [Patreon Shop](https://www.patreon.com/eldiron/shop):
+Enhance your game development with our high-quality tilesets available in the [Patreon Shop](https://www.patreon.com/eldiron/shop):
 
 * **Eldiron 2D Tileset (24x24)** — $10
   * Dozens of high-quality 2D tiles and sprites.
   * Includes nature tiles, sprites for walls, floors, decorations, animated heroes and monsters, effects, inventory items, and more.
   * Available in PNG format with both black and transparent backgrounds.
+
+* **Eldiron 3D Tileset (16x16)** — $15
+  * A curated collection of tiles and NPC sprites — ideal for creating and prototyping 3D adventures in Eldiron.
+  * Available in PNG format with transparent backgrounds.
 
 🛡️ Patrons at the **Dragon Slayer tier** and above receive access to these tilesets **at no extra cost**.
 

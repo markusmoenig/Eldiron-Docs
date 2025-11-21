@@ -143,14 +143,78 @@ export default function Home() {
             GitHub Sponsors. Your support helps me keep building and improving
             this project.
           </p>
-          <div style={{ fontWeight: "bold", marginBottom: "0.5rem" }}>
-            Patreon Supporters:
+          <div
+            style={{
+              fontWeight: "bold",
+              marginBottom: "0.5rem",
+              color: "var(--ifm-color-primary)",
+              fontSize: "1.2rem",
+            }}
+          >
+            Patreon Supporters
+          </div>
+
+          <div
+            style={{
+              fontWeight: "bold",
+              marginBottom: "0.5rem",
+              fontSize: "0.95rem",
+              color: "var(--ifm-color-primary)",
+            }}
+          >
+            Lord:
+          </div>
+          <div style={{ marginBottom: "1rem" }}>—</div>
+
+          <div
+            style={{
+              fontWeight: "bold",
+              marginBottom: "0.5rem",
+              fontSize: "0.95rem",
+              color: "var(--ifm-color-primary)",
+            }}
+          >
+            Dragon Slayer:
           </div>
           <div style={{ marginBottom: "1rem" }}>
-            SmileyNina (Dragon Slayer), R Isted / Titus Popescu / MZ (Farmer)
+            SmileyNina, Omer Golan-Joel
           </div>
-          <div style={{ fontWeight: "bold", marginBottom: "0.5rem" }}>
-            GitHub Sponsors:
+
+          <div
+            style={{
+              fontWeight: "bold",
+              marginBottom: "0.5rem",
+              fontSize: "0.95rem",
+              color: "var(--ifm-color-primary)",
+            }}
+          >
+            Adventurer:
+          </div>
+          <div style={{ marginBottom: "1rem" }}>Martin Down, Dan</div>
+
+          <div
+            style={{
+              fontWeight: "bold",
+              marginBottom: "0.5rem",
+              fontSize: "0.95rem",
+              color: "var(--ifm-color-primary)",
+            }}
+          >
+            Farmer:
+          </div>
+          <div style={{ marginBottom: "1rem" }}>
+            R Isted, Titus Popescu, MZ, Tom Carlson, Michael Zeis
+          </div>
+
+          <div
+            style={{
+              fontWeight: "bold",
+              marginBottom: "0.5rem",
+              color: "var(--ifm-color-primary)",
+              fontSize: "1.2rem",
+            }}
+          >
+            GitHub Sponsors
           </div>
           <div>cnasc</div>
         </section>
