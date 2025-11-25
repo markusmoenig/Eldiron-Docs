@@ -190,7 +190,9 @@ export default function Home() {
           >
             Adventurer:
           </div>
-          <div style={{ marginBottom: "1rem" }}>Martin Down, Dan</div>
+          <div style={{ marginBottom: "1rem" }}>
+            Martin Down, Dan, Thomas Osborne
+          </div>
 
           <div
             style={{
@@ -203,7 +205,7 @@ export default function Home() {
             Farmer:
           </div>
           <div style={{ marginBottom: "1rem" }}>
-            R Isted, Titus Popescu, MZ, Tom Carlson, Michael Zeis
+            R Isted, Titus Popescu, MZ, Tom Carlson, Michael Zeis, Viking Blood
           </div>
 
           <div
