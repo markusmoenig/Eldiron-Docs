@@ -177,7 +177,7 @@ export default function Home() {
             Dragon Slayer:
           </div>
           <div style={{ marginBottom: "1rem" }}>
-            SmileyNina, Omer Golan-Joel
+            SmileyNina, Omer Golan-Joel, Mike Plaza
           </div>
 
           <div
