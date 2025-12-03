@@ -224,6 +224,15 @@ const config = {
             type: "html",
             position: "right",
             value: `
+              <a href="https://www.patreon.com/eldiron" class="navbar-icon" title="Support on Patreon">
+                <img src="https://img.shields.io/badge/Patreon-Support-458588?style=flat&logo=patreon" alt="Support on Patreon"/>
+              </a>
+            `,
+          },
+          {
+            type: "html",
+            position: "right",
+            value: `
               <a href="https://www.youtube.com/channel/UCCmrO356zLQv_m8dPEqBUfA" class="navbar-icon" title="Eldiron YouTube Channel">
                 <img src="https://img.shields.io/youtube/channel/subscribers/UCCmrO356zLQv_m8dPEqBUfA?style=flat&color=458588&logo=youtube&label=Subscribe" alt="YouTube subscribers"/>
               </a>
