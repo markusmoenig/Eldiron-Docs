@@ -352,3 +352,49 @@ table {
 .markdown hr {
     border-color: var(--ifm-table-border-color);
 }
+
+/* Navbar icons styling */
+.navbar-icon {
+    display: inline-flex;
+    align-items: center;
+    color: var(--ifm-navbar-link-color);
+    transition: all 0.2s ease;
+    padding: 4px 2px;
+    border-radius: 6px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.navbar-icon:hover {
+    color: var(--ifm-color-primary);
+    background-color: var(--ifm-background-surface-color);
+    text-decoration: none;
+}
+
+/* FontAwesome icon sizing */
+.navbar-icon i {
+    font-size: 18px;
+}
+
+/* GitHub stars badge styling */
+.navbar-icon img {
+    filter: grayscale(20%);
+    transition: all 0.2s ease;
+    vertical-align: middle;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.navbar-icon img:hover {
+    filter: grayscale(0%);
+    opacity: 0.9;
+}
+
+/* Adjust badge to match Gruvbox theme */
+[data-theme="dark"] .navbar-icon img {
+    filter: brightness(0.9) grayscale(20%);
+}
+
+[data-theme="dark"] .navbar-icon img:hover {
+    filter: brightness(1) grayscale(0%);
+}

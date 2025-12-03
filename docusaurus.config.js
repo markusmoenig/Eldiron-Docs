@@ -216,7 +216,7 @@ const config = {
             position: "right",
             value: `
               <a href="https://discord.gg/ZrNj6baSZU" class="navbar-icon" title="Eldiron Discord">
-                <i class="fab fa-fw fa-discord"></i>
+                <img src="https://img.shields.io/badge/Discord-Join%20Server-458588?style=flat&logo=discord" alt="Join Discord"/>
               </a>
             `,
           },
@@ -225,7 +225,16 @@ const config = {
             position: "right",
             value: `
               <a href="https://www.youtube.com/channel/UCCmrO356zLQv_m8dPEqBUfA" class="navbar-icon" title="Eldiron YouTube Channel">
-                <i class="fab fa-youtube"></i>
+                <img src="https://img.shields.io/youtube/channel/subscribers/UCCmrO356zLQv_m8dPEqBUfA?style=flat&color=458588&logo=youtube&label=Subscribe" alt="YouTube subscribers"/>
+              </a>
+            `,
+          },
+          {
+            type: "html",
+            position: "right",
+            value: `
+              <a href="https://github.com/markusmoenig/Eldiron" class="navbar-icon" title="GitHub Repository">
+                <img src="https://img.shields.io/github/stars/markusmoenig/Eldiron?style=flat&color=458588&logo=github" alt="GitHub stars"/>
               </a>
             `,
           },
@@ -235,15 +244,6 @@ const config = {
             value: `
               <a href="https://github.com/markusmoenig/Eldiron/releases" class="navbar-icon" title="Download Eldiron">
                 <i class="fas fa-download"></i>
-              </a>
-            `,
-          },
-          {
-            type: "html",
-            position: "right",
-            value: `
-              <a href="https://github.com/markusmoenig/Eldiron" class="navbar-icon" title="GitHub Repository">
-                <i class="fab fa-github"></i>
               </a>
             `,
           },
