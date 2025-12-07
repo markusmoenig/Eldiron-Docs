@@ -109,7 +109,7 @@ export default function Home() {
                 3D
               </div>
               <img
-                src={useBaseUrl("/img/screenshots/dungeon3d.png")}
+                src={useBaseUrl("/img/screenshots/dungeon3d_iso.png")}
                 alt="3D screenshot"
                 style={{
                   width: "100%",
@@ -121,6 +121,22 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Big screenshot section */}
+        {/* <section
+          style={{ padding: "2rem 1rem", maxWidth: "1000px", margin: "0 auto" }}
+        >
+          <img
+            src={useBaseUrl("/img/screenshots/dungeon3d_iso.png")}
+            alt="Dungeon3D Iso"
+            style={{
+              width: "100%",
+              borderRadius: "12px",
+              boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+              display: "block",
+            }}
+          />
+        </section>*/}
 
         {/* Features in the middle */}
         <HomepageFeatures />
