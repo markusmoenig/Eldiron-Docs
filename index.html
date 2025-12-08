@@ -14,7 +14,7 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="/assets/css/styles.e4b81e95.css">
-<script src="/assets/js/runtime~main.648d97d3.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.eb38161e.js" defer="defer"></script>
 <script src="/assets/js/main.2ac4ba68.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -50,35 +50,45 @@
 <p><strong>Eldiron v0.8.90 released!</strong><br>
 <!-- -->New UI System, New GPU Rendering with Raytracing, Integrated Tile Editor and more!</p>
 <p><a href="/blog/2025/12/07/eldiron-v0.8.90">→ Read the full post</a></p>
+<p>[UPDATE] 0.8.91 with a fix for correct support of Windows Monitor Scales &gt; 100%.</p>
 </blockquote>
 <img src="/img/farmer.png" alt="Farmer" style="float:right;margin-left:1rem;border-radius:8px">
 <h1 id="general-features">General Features</h1>
 <ul>
 <li>Design 2D maps in a Doom-style editor using vertices, linedefs, and sectors to create textured polygons.</li>
 <li>Quickly <em>paint</em> with tiles using the <strong>Rect</strong> tool, which automatically generates the necessary geometry as you work.</li>
-<li>Import your <strong>tilesets</strong>, define <strong>animations</strong> and <strong>metadata</strong>, and expand your tile collection. You can easily set tile properties—such as whether a tile is blocking—at any time. Visit our <a href="https://www.patreon.com/c/eldiron/shop">Patreon Shop</a> for a growing collection of <strong>tilesets</strong>; supporting us there helps the project.</li>
-<li>Access all commands in Eldiron Creator through the <strong>Action list</strong>. Available actions update automatically based on your geometry selection or UI state, so you always know which commands are ready to use.</li>
+<li>Import your <strong>tilesets</strong>, define <strong>animations</strong> and <strong>metadata</strong>, and expand your tile collection. You can easily set tile properties—such as whether a tile is blocking—at any time. Visit our <a href="https://www.patreon.com/c/eldiron/shop">Patreon Shop</a> for a growing collection of <strong>tilesets</strong>; your support helps the project thrive.</li>
+<li>Access all commands in Eldiron Creator through the <strong>Action list</strong>. Available actions update automatically based on your geometry selection or UI state, ensuring you always know which commands are ready to use.</li>
 <li>Program character and item behaviors, as well as <strong>advanced shaders</strong>, with intuitive <strong>visual node editors</strong>.</li>
-<li>Eldiron Creator is <strong>cross-platform</strong>, available for <strong>Windows</strong>, <strong>Linux</strong>, and <strong>macOS</strong> in the download section of the <a href="https://github.com/markusmoenig/Eldiron/releases">GitHub repo</a>. Each release includes builds for all clients, including the <strong>Web</strong>. An <strong>Xcode project</strong> is also provided for specialized <strong>iOS</strong>, <strong>macOS</strong>, and <strong>iPadOS</strong> builds.</li>
+<li>Eldiron Creator is <strong>cross-platform</strong>, available for <strong>Windows</strong>, <strong>Linux</strong>, and <strong>macOS</strong> in the download section of the <a href="https://github.com/markusmoenig/Eldiron/releases">GitHub repo</a>. Each release includes builds for all platforms, including the <strong>Web</strong>. An <strong>Xcode project</strong> is also provided for specialized <strong>iOS</strong>, <strong>macOS</strong>, and <strong>iPadOS</strong> builds.</li>
 </ul>
 <p>Eldiron is free and open source under the MIT license — your <a href="sponsor">support</a> is greatly appreciated.</p>
 <img src="/img/adventurer.png" alt="Adventurer" style="float:right;margin-left:1rem;border-radius:8px">
 <h1 id="3d-features">3D Features</h1>
 <ul>
 <li><strong>3D editing</strong> is seamlessly integrated into the editor, allowing you to <strong>create new geometry</strong> or <strong>extrude</strong> and edit <strong>surface profiles</strong> <strong>non-destructively</strong>.</li>
-<li>The <strong>Action</strong> system is fully integrated with the <strong>geometry workflow</strong>, showing all available actions for your <strong>current selection</strong>.</li>
+<li>The <strong>Action</strong> system is fully integrated with the <strong>geometry workflow</strong>, displaying all available actions for your <strong>current selection</strong>.</li>
 <li><strong>Edit</strong> and <strong>extrude</strong> surfaces <strong>non-destructively</strong>, including carving holes for <strong>windows</strong>, <strong>recesses</strong>, and <strong>reliefs</strong>.</li>
 <li>Choose from <strong>isometric</strong>, <strong>first-person</strong>, or <strong>orbit</strong> cameras for flexible editing views.</li>
+<li>Paint with tiles on 3D surfaces using the <strong>Rect</strong> tool.</li>
 <li><strong>Gizmos</strong>, <strong>visual helpers</strong>, and a new <strong>GPU-based renderer</strong> are in active development.</li>
 </ul>
 <p>3D editing features are currently under heavy development.</p>
-<img src="/img/dragonslayer.png" alt="Dragon Slayer" style="float:right;margin-left:1rem;border-radius:8px">
-<h1 id="visual-node-system-for-behavior-and-shaders">Visual Node System for Behavior and Shaders</h1>
+<h1 id="visual-node-system-for-behavior">Visual Node System for Behavior</h1>
 <ul>
 <li>Create behavior visually with a <strong>node-based event system</strong> using simple drag and drop.</li>
 <li>React to <strong>world events</strong> (like a character entering a sector or a conversation starting) by breaking complex logic into small, manageable tasks.</li>
 <li>Choose from a wide range of built-in <strong>events</strong> and <strong>commands</strong>.</li>
-<li>Build <strong>procedural materials</strong> and effects with a similar system for <strong>shaders</strong>.</li>
+<li>The node system generates <strong>Python</strong> code. If you prefer to code directly in Python, an integrated Python editor is provided!</li>
+</ul>
+<img src="/img/dragonslayer.png" alt="Dragon Slayer" style="float:right;margin-left:1rem;border-radius:8px">
+<h1 id="tiles-tiles-and-more-tiles">Tiles, Tiles and more Tiles</h1>
+<ul>
+<li><strong>Pixel art</strong> tiles are the foundation of all your projects, in both 2D and 3D. Import them from your tilesets or create and edit them in the <strong>integrated</strong> tile editor.</li>
+<li>Draw with tiles using the <strong>Rect</strong> tool—even in 3D, you can paint directly on surfaces.</li>
+<li>Tiles in 3D are rendered with PBR materials (<strong>Roughness</strong>, <strong>Metallic</strong>, <strong>Opacity</strong>, <strong>Emissive</strong>). Material attributes can currently be set with the <strong>Set Tile Materials</strong> action; soon you&#x27;ll be able to paint directly with materials inside the tile editor.</li>
+<li>Focusing on tiles makes Eldiron both <strong>easy-to-use</strong> and powerful, recreating the look of those beloved games from the late 80s and 90s.</li>
+<li>Soon the tile editor will support procedural tile creation for fireballs, explosions, bricks, and more.</li>
 </ul>
 <p>Eldiron provides powerful tools to make world building intuitive and fun.</p></div>    </section><section style="text-align:center;margin-top:3rem;padding:0 1rem"><h2 style="color:var(--ifm-color-primary)">Thanks to Our Supporters</h2><p style="font-size:1.05rem;max-width:700px;margin:0 auto 1rem">A heartfelt thank you to everyone supporting Eldiron via Patreon and GitHub Sponsors. Your support helps me keep building and improving this project.</p><div style="font-weight:bold;margin-bottom:0.5rem;color:var(--ifm-color-primary);font-size:1.2rem">Patreon Supporters</div><div style="font-weight:bold;margin-bottom:0.5rem;font-size:0.95rem;color:var(--ifm-color-primary)">Lord:</div><div style="margin-bottom:1rem">—</div><div style="font-weight:bold;margin-bottom:0.5rem;font-size:0.95rem;color:var(--ifm-color-primary)">Dragon Slayer:</div><div style="margin-bottom:1rem">SmileyNina, Omer Golan-Joel, Mike Plaza</div><div style="font-weight:bold;margin-bottom:0.5rem;font-size:0.95rem;color:var(--ifm-color-primary)">Adventurer:</div><div style="margin-bottom:1rem">Martin Down, Dan, Thomas Osborne</div><div style="font-weight:bold;margin-bottom:0.5rem;font-size:0.95rem;color:var(--ifm-color-primary)">Farmer:</div><div style="margin-bottom:1rem">R Isted, Titus Popescu, MZ, Tom Carlson, Michael Zeis, Viking Blood</div><div style="font-weight:bold;margin-bottom:0.5rem;color:var(--ifm-color-primary);font-size:1.2rem">GitHub Sponsors</div><div>cnasc</div></section><section style="padding:2rem 1rem;text-align:center"><img src="/img/eldiron-banner.png" alt="Eldiron Banner" style="display:block;margin:0 auto;max-width:1000px;width:100%;height:auto"></section></main></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://www.youtube.com/channel/UCCmrO356zLQv_m8dPEqBUfA" target="_blank" rel="noopener noreferrer" class="footer__link-item">YouTube</a></li><li class="footer__item"><a href="https://discord.gg/ZrNj6baSZU" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord</a></li><li class="footer__item"><a href="https://x.com/EldironRPG" target="_blank" rel="noopener noreferrer" class="footer__link-item">X</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Sponsor</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://patreon.com/eldiron" target="_blank" rel="noopener noreferrer" class="footer__link-item">Patreon</a></li><li class="footer__item"><a href="https://github.com/markusmoenig" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Sponsors</a></li><li class="footer__item"><a href="https://paypal.me/markusmoenigos" target="_blank" rel="noopener noreferrer" class="footer__link-item">PayPal</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/markusmoenig/Eldiron/releases" target="_blank" rel="noopener noreferrer" class="footer__link-item">Downloads</a></li><li class="footer__item"><a href="https://github.com/markusmoenig/Eldiron" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Markus Moenig</div></div></div></footer></div>
 </body>
