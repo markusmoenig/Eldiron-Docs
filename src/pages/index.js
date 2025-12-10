@@ -207,7 +207,7 @@ export default function Home() {
             Adventurer:
           </div>
           <div style={{ marginBottom: "1rem" }}>
-            Martin Down, Dan, Thomas Osborne
+            Martin Down, Dan, Thomas Osborne, Kendric Tonn
           </div>
 
           <div
