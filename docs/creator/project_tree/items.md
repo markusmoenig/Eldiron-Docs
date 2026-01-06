@@ -1,7 +1,9 @@
 ---
 title: "Items"
-sidebar_position: 4
+sidebar_position: 3
 ---
+
+# Has to be rewritten
 
 ## Creating and Editing Items
 

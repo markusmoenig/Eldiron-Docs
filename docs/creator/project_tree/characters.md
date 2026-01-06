@@ -1,8 +1,10 @@
 ---
 title: "Characters"
 id: characters
-sidebar_position: 3
+sidebar_position: 2
 ---
+
+# Has to be rewritten
 
 ## Creating a Character
 

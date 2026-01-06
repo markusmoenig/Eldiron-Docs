@@ -1,6 +1,6 @@
 ---
 title: "Actions"
-sidebar_position: 5
+sidebar_position: 3
 ---
 
 Actions do the real work in the **Eldiron Creator**. From maximizing the dock widget to creating geometry or switching cameras. It is a centralized system which only displays actions which are currently applicable (depending on the selected geometry, project tree item and camera).
