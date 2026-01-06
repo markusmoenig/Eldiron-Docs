@@ -21,7 +21,7 @@ Sectors define **floors, ceilings, and traversable areas** in your map. They are
 
 ## Assigning Tiles
 
-You can **assign tiles** to selected sectors to decorate **floors** and **ceilings** by applying a **source** (a tile, material, or color) to the selected surface.
+You can **assign tiles** to selected sectors with the [Apply Tile](../actions/#apply-tile) action.
 
 ### How to Apply or Remove Tiles:
 1. **Select a sector** or **multiple sectors** using the **Sector Tool**.

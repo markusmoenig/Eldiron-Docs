@@ -1,9 +1,9 @@
 ---
-title: "Configuration"
+title: "Game Configuration"
 sidebar_position: 2
 ---
 
-You can configure **Eldiron** using the **Config Tool** with the in-built **TOML editor**.
+You can configure **Eldiron** by selecting the **Game -> Settings** item in the **project tree**.
 
 ---
 

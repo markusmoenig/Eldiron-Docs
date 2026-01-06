@@ -10,6 +10,7 @@ Unlike the **Selection Tool**, which can select multiple types of geometry at on
 ## Selection Modes
 
 - **Click**: Select a vertex.
+- **Shift + Click** (on empty area): Create a new vertex.
 - **Shift + Click**: Select multiple vertices.
 - **Alt (Mac: Option) + Click**: Remove vertices from the selection.
 - **Click + Drag**: Move selected vertices.

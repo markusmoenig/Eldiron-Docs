@@ -4,9 +4,8 @@ sidebar_position: 1
 ---
 
 This chapter lists all supported **attributes** for characters and items in Eldiron.  
-Attributes can be set via the [Code Tool (Python)](/docs/creator/characters#instances) or [Data Tool (TOML)](/docs/creator/items).
 
-Attributes are noted in each description as to whether they apply to characters, items, or both.
+Attributes can be applied to characters, items, or both.
 
 ---
 

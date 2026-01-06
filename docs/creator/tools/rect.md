@@ -22,11 +22,8 @@ The Rect Tool has **two modes**:
 
 ## When to Use the Rect Tool
 
-- **2D Games**: The **Rect Tool is the primary tool** for quickly drawing large tile areas.
-- **3D Games**: Used for adding details like **carpets, signs, or decorations**. Tile settings determine how the tile is rendered:
-  - As a **billboard**
-  - As a **box**
-  - As **floor decoration**
-- **Materials**: Functions as a **drawing tool**, allowing you to place **individual pixels**.
+- **2D Camera**: The **Rect Tool is the primary tool** for drawing tiles.
 
-The **Rect Tool** is a fast and intuitive way to add **tiles, decorations, and details** to your maps and materials.
+- **3D Camera**: Draw tiles directly on 3D surfaces and terrain.
+
+The **Rect Tool** is a fast and intuitive way to add **tiles, decorations, and details** to your maps.
