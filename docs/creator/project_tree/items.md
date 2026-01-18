@@ -3,13 +3,19 @@ title: "Items"
 sidebar_position: 3
 ---
 
-# Has to be rewritten
+## Creating an Item
 
-## Creating and Editing Items
+You can create an **item template** by clicking the **+** button at the bottom of the **project tree** and selecting **Item**.
 
-Creating and editing **items** in Eldiron works **just like** working with [Characters](/docs/creator/CHARACTERS/).
+An **item template** is a reusable blueprint that defines the **behavior, attributes, and appearance** of an item in the game.
 
-### How to Create an Item
+To create an **instance** of an item, simply **drag and drop** the item template into the map by dragging the **Name** project tree item.
+
+## Editing Behavior and Attributes
+
+You can edit item behavior using either **Visual Scripting** or **Eldrin Scripting** or edit the initial **Attributes** of the item by simply clicking the corresponding tree item.
+
+<!--### How to Create an Item
 
 1. Click the **+** button in the [Item](/docs/creator/sections/#item) section.
 2. Edit its **behavior** using the **Code Tool**.
@@ -62,4 +68,4 @@ A future version of Eldiron will count the usage (active) time of items to suppo
 
 ## Learn More
 
-See the **[Scripting & Data Reference](/docs/scripting_data/reference)** for a complete list of available **events, commands, actions, and data properties**.
+See the **[Scripting & Data Reference](/docs/scripting_data/reference)** for a complete list of available **events, commands, actions, and data properties**.-->

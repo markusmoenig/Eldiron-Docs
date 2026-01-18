@@ -5,7 +5,7 @@ sidebar_position: 3
 
 The **Linedef Tool** (keyboard shortcut **'L'**) allows you to **select, edit, and create linedefs** in the map.
 
-Unlike the **Selection Tool**, which can select multiple types of geometry at once, the **Linedef Tool** is specifically designed for working with **linedefs only**. It also includes a **creation mode** for quickly building map geometry.
+Unlike the **Selection Tool**, which can select multiple types of geometry at once, the **Linedef Tool** is specifically designed for working with **linedefs only**. It also includes **creation modes** for quickly building map geometry (sectors).
 
 ## Selection Modes
 
@@ -17,22 +17,17 @@ Unlike the **Selection Tool**, which can select multiple types of geometry at on
 - **Delete Key**: Remove selected linedefs.
 - **Escape Key**: Clear the selection.
 
-## Creation Mode
+## Creation Mode (Manual)
 
-- **Click on free space**: Creates a new **vertex**.
+- **Click on free space**: Creates a new **vertex** (or uses an existing one at the click position).
 - **Click again on another free space**: Creates a **linedef** between the new vertex and the previous one.
 - **Clicking on an existing vertex**: Extends the shape by connecting to the selected vertex.
 - **Closing a polygon** (by connecting the last linedef to the starting vertex) **automatically creates a sector**.
 
-This tool is essential for constructing walls, paths, and enclosed areas in your map.
+This manual mode creates sectors by keeping a history of vertex clicks. You can only close already existing shapes when you click on every vertex in the path.
 
-## Assigning Tiles
+## Creation Mode (Automatic)
 
-You can **assign tiles** to selected linedefs (for decorating walls) by applying a **source** (a tile, material, or color) to the selected row.
+ Hold **Command (macOS) / Ctrl** while clicking on vertices; on every click, the automatic mode checks if it can close an existing polygon. For example, if you have a shape that is not closed, you can add linedefs to this shape to close the shape and create a **sector**.
 
-### How to Apply or Remove Tiles:
-1. **Select a linedef** or **multiple linedefs** using the **Linedef Tool**.
-2. Click the **row icon** in the **HUD** to choose the target row.
-3. Click **Apply** to assign the selected source or **Remove** to clear it.
-
-This allows you to easily customize walls and other vertical surfaces in your map.
+This mode fails if you have a grid of existing geometry created by the [Rect Tool](rect).

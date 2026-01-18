@@ -11,7 +11,10 @@ Actions listed in blue represent camera based actions, red actions are applicabl
 
 # General Actions
 
-## Maximize
+## Extrude
+
+
+## Edit / Maximize
 
 Maximizes the **dock widget**. Good for full screen editing of content. Some docks, like the tile-picker, reveal specialized editors when maximized, in the case of the tile-picker, the integrated pixel editor.
 

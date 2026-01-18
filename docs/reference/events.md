@@ -19,7 +19,7 @@ Events are categorized as:
 *Item-only event.*
 
 - **Value**: active state *(bool)*
-- **Description**: Called when the state of the item has changed and directly after item creation. This event allows the item to sync its visuals with the current state, for example a torch may call ... to adjust it's light emission.
+- **Description**: Called when the state of the item has changed and directly after item creation. This event allows the item to sync its visuals with the current state, for example a torch may use [set_emit_light](scripting_server/#set_emit_light) to adjust it's light emission.
 
 ---
 
