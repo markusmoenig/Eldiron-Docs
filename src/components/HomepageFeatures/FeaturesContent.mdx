@@ -18,7 +18,7 @@ Now with the release of Eldiron v0.89 the current documentation is very much out
 >
 > **Dec 10, 2025** [→ New video now live](https://www.youtube.com/watch?v=xtk1JL-jCWw)
 >
-> **Dec 6, 2025** – **Eldiron v0.8.90 released!**  
+> **Dec 6, 2025** – **Eldiron v0.8.90 released!**
 > New UI System, New GPU Rendering with Raytracing, Integrated Tile Editor and more!
 >
 > [→ Read the full post](/blog/2025/12/07/eldiron-v0.8.90)
@@ -34,8 +34,10 @@ Now with the release of Eldiron v0.89 the current documentation is very much out
 - Quickly *paint* with tiles using the **Rect** tool, which automatically generates the necessary geometry as you work.
 - Import your **tilesets**, define **animations** and **metadata**, and expand your tile collection. You can easily set tile properties—such as whether a tile is blocking—at any time. Visit our [Patreon Shop](https://www.patreon.com/c/eldiron/shop) for a growing collection of **tilesets**; your support helps the project thrive.
 - Access all commands in Eldiron Creator through the **Action list**. Available actions update automatically based on your geometry selection or UI state, ensuring you always know which commands are ready to use.
-- Program character and item behaviors, as well as **advanced shaders**, with intuitive **visual node editors**.
+- Define character and item behaviors with an intuitive **visual node editor** or the inbuilt custom scripting language called **Eldrin**.
 - Eldiron Creator is **cross-platform**, available for **Windows**, **Linux**, and **macOS** in the download section of the [GitHub repo](https://github.com/markusmoenig/Eldiron/releases). Each release includes builds for all platforms, including the **Web**. An **Xcode project** is also provided for specialized **iOS**, **macOS**, and **iPadOS** builds.
+
+Eldiron Creator currently ships with localizations for Chinese (Mandarin), German, Russian, Spanish and Taiwanese.
 
 Eldiron is free and open source under the MIT license — your [support](sponsor) is greatly appreciated.
 
@@ -43,23 +45,22 @@ Eldiron is free and open source under the MIT license — your [support](sponsor
 
 # 3D Features
 
-- **3D editing** is seamlessly integrated into the editor, allowing you to **create new geometry** or **extrude** and edit **surface profiles** **non-destructively**.  
+- **3D editing** is seamlessly integrated into the editor, allowing you to **create new geometry** or **extrude** and edit **surface profiles** **non-destructively**.
 - Render your scenes in 3D using the new **GPU-based raytracer**, featuring ambient occlusion, shadows, transparency, PBR materials, and day/night time simulation.
-- The **Action** system is fully integrated with the **geometry workflow**, displaying all available actions for your **current selection**.  
-- **Edit** and **extrude** surfaces **non-destructively**, including carving holes for **windows**, **recesses**, and **reliefs**.  
-- Choose from **isometric**, **first-person**, or **orbit** cameras for flexible editing views.  
+- The **Action** system is fully integrated with the **geometry workflow**, displaying all available actions for your **current selection**.
+- **Edit** and **extrude** surfaces **non-destructively**, including carving holes for **windows**, **recesses**, and **reliefs**.
+- Choose from **isometric**, **first-person**, or **orbit** cameras for flexible editing views.
 - Paint with tiles on 3D surfaces using the **Rect** tool.
-- **Gizmos**, **visual helpers**, and a new **GPU-based renderer** are in active development.
 
-3D editing features are currently under heavy development.
+With Eldiron you can **create great looking 3D geometry** without any prior 3D modelling experience.
 
+# (Visual) Scripting
 
-# Visual Node System for Behavior
-
-- Create behavior visually with a **node-based event system** using simple drag and drop.  
-- React to **world events** (like a character entering a sector or a conversation starting) by breaking complex logic into small, manageable tasks.  
-- Choose from a wide range of built-in **events** and **commands**.  
-- The node system generates **Python** code. If you prefer to code directly in Python, an integrated Python editor is provided!
+- Create behavior visually with a **node-based event system** using simple drag and drop. The node system generates **Eldrin** code.
+- React to **world events** (like a character entering a sector or a conversation starting) by breaking complex logic into small, manageable tasks.
+- Choose from a wide range of built-in **events** and **commands**.
+- See realtime feedback if commands succeeded or failed.
+- You can also program directly in the inbuilt, custom scripting language **Eldrin**.
 
 <img src="/img/dragonslayer.png" alt="Dragon Slayer" style={{ float: 'right', marginLeft: '1rem', borderRadius: '8px' }} />
 
@@ -71,4 +72,16 @@ Eldiron is free and open source under the MIT license — your [support](sponsor
 - Focusing on tiles makes Eldiron both **easy-to-use** and powerful, recreating the look of those beloved games from the late 80s and 90s.
 - Soon the tile editor will support procedural tile creation for fireballs, explosions, bricks, and more.
 
-Eldiron provides powerful tools to make world building intuitive and fun.
+# World building
+
+World building is the core focus of Eldiron. The editor is designed around the idea that a world is more than geometry or visuals — it is a structured space with rules, relationships, and long-term evolution.
+
+<img src="/img/lord.png" alt="Lord" style={{ float: 'right', marginLeft: '1rem', borderRadius: '8px' }} />
+
+- Create worlds using **explicit structure**: vertices, linedefs, sectors, surfaces, and profiles define space in a way that is deterministic and inspectable.
+- Combine **2D and 3D workflows** seamlessly — author top-down maps, then extend them vertically into fully explorable 3D environments without switching tools.
+- Define **world logic alongside geometry**: events, behaviors, and scripted interactions are attached directly to places and entities in the world.
+- Worlds remain **editable at every stage**. Geometry, tiles, materials, and logic can be refined iteratively without destructive baking steps.
+- Eldiron worlds are designed to be **system-driven**, making them suitable not only for games, but also for simulations, experiments, and rule-based environments.
+
+Eldiron aims to make worlds understandable, adaptable, and sustainable — so they can grow over time instead of being rebuilt from scratch.
