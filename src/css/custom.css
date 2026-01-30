@@ -200,6 +200,32 @@
     background-color: var(--ifm-background-surface-color) !important;
 }
 
+/* TOML syntax colors aligned with Eldiron highlighter */
+:root .language-toml .token.comment {
+    color: #928374;
+    font-style: italic;
+}
+:root .language-toml .token.string {
+    color: #d6a46f;
+}
+:root .language-toml .token.number,
+:root .language-toml .token.boolean,
+:root .language-toml .token.date {
+    color: #d3869b;
+}
+:root .language-toml .token.table {
+    color: #fabd2f;
+}
+:root .language-toml .token.key {
+    color: #5d9ad6;
+}
+:root .language-toml .token.punctuation {
+    color: #3c3836;
+}
+[data-theme="dark"] .language-toml .token.punctuation {
+    color: #ebdbb2;
+}
+
 /* Table styling */
 table {
     border-color: var(--ifm-table-border-color) !important;

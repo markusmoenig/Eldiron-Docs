@@ -106,6 +106,34 @@ With the **default settings**, this means the event will trigger **after 2 real-
 
 ---
 
+## Viewport Configuration
+
+Viewport configuration defines the resolution and grid used when the game starts.
+
+```toml
+[viewport]
+width = 1280        # Width of the game viewport in pixels.
+height = 720        # Height of the game viewport in pixels.
+grid_size = 32      # Size of one grid tile in pixels.
+upscale = "aspect"  # 'aspect' upscales the game output to the screen dimensions. 'none' otherwise.
+```
+
+### **Option Descriptions**
+
+- **`width` / `height`**
+    Defines the **starting resolution** of the game window or screen.
+    You can adjust these values to target common resolutions like 1280×720 or 1920×1080.
+
+- **`grid_size`**
+    Sets the **pixel size of a single tile** in the world/grid.
+    This affects rendering and snapping behavior in tools and the viewport layout.
+
+- **`upscale`**
+    If set to **"aspect"** upscales the game output to the screen / window resolution keeping the viewport aspect-ratio intact.
+    **"none"** (the default) does not upscale and centers the output.
+
+---
+
 ## Render Configuration
 
 Render configuration options are located in the `[render]` section.
@@ -243,31 +271,4 @@ These simulation values drive the **3D** AND **2D** procedural sky/sun lighting.
 - **`evening_sun_color`** — Sun tint during sunset; typically warm.
 - **`sunrise_time`** — 24-hour decimal time when sunrise starts (e.g., `6.5` = 06:30). Drives interpolation from night → morning.
 - **`sunset_time`** — 24-hour decimal time when sunset starts (e.g., `18.5` = 18:30). Drives interpolation from midday → evening → night.
-
----
-
-## Viewport Configuration
-
-Viewport configuration defines the resolution and grid used when the game starts.
-
-```toml
-[viewport]
-width = 1280        # Width of the game viewport in pixels.
-height = 720        # Height of the game viewport in pixels.
-grid_size = 32      # Size of one grid tile in pixels.
-upscale = "aspect"  # 'aspect' upscales the game output to the screen dimensions. 'none' otherwise.
-```
-
-### **Option Descriptions**
-
-- **`width` / `height`**
-    Defines the **starting resolution** of the game window or screen.
-    You can adjust these values to target common resolutions like 1280×720 or 1920×1080.
-
-- **`grid_size`**
-    Sets the **pixel size of a single tile** in the world/grid.
-    This affects rendering and snapping behavior in tools and the viewport layout.
-
-- **`upscale`**
-    If set to **"aspect"** upscales the game output to the screen / window resolution keeping the viewport aspect-ratio intact.
-    **"none"** (the default) does not upscale and centers the output.
+-

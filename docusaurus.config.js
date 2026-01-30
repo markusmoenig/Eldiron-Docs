@@ -23,16 +23,20 @@ const gruvboxLightTheme = {
       style: { color: "#8f3f71" },
     },
     {
-      types: ["tag", "constant", "symbol", "deleted", "number", "boolean"],
-      style: { color: "#9d0006" },
+      types: ["number", "boolean", "constant", "symbol", "deleted"],
+      style: { color: "#d3869b" },
     },
     {
-      types: ["property", "attr-name", "selector"],
-      style: { color: "#b57614" },
+      types: ["property"],
+      style: { color: "#5d9ad6" },
+    },
+    {
+      types: ["attr-name", "selector"],
+      style: { color: "#fabd2f" },
     },
     {
       types: ["string", "char", "builtin", "inserted"],
-      style: { color: "#98971a" },
+      style: { color: "#d6a46f" },
     },
     {
       types: ["operator", "entity", "url"],
@@ -40,15 +44,23 @@ const gruvboxLightTheme = {
     },
     {
       types: ["atrule", "attr-value", "keyword"],
-      style: { color: "#458588" },
+      style: { color: "#dcd08a" },
     },
     {
       types: ["function"],
-      style: { color: "#b16286" },
+      style: { color: "#5d9ad6", fontWeight: "bold" },
+    },
+    {
+      types: ["class-name"],
+      style: { color: "#fabd2f" },
+    },
+    {
+      types: ["builtin", "support", "support.function"],
+      style: { color: "#6aa2e8" },
     },
     {
       types: ["variable"],
-      style: { color: "#689d6a" },
+      style: { color: "#8fbf8f" },
     },
     {
       types: ["important", "bold"],
@@ -80,16 +92,20 @@ const gruvboxDarkTheme = {
       style: { color: "#d3869b" },
     },
     {
-      types: ["tag", "constant", "symbol", "deleted", "number", "boolean"],
-      style: { color: "#fb4934" },
+      types: ["number", "boolean", "constant", "symbol", "deleted"],
+      style: { color: "#d3869b" },
     },
     {
-      types: ["property", "attr-name", "selector"],
-      style: { color: "#fe8019" },
+      types: ["property"],
+      style: { color: "#5d9ad6" },
+    },
+    {
+      types: ["attr-name", "selector"],
+      style: { color: "#fabd2f" },
     },
     {
       types: ["string", "char", "builtin", "inserted"],
-      style: { color: "#b8bb26" },
+      style: { color: "#d6a46f" },
     },
     {
       types: ["operator", "entity", "url"],
@@ -97,15 +113,23 @@ const gruvboxDarkTheme = {
     },
     {
       types: ["atrule", "attr-value", "keyword"],
-      style: { color: "#83a598" },
+      style: { color: "#dcd08a" },
     },
     {
       types: ["function"],
-      style: { color: "#d3869b" },
+      style: { color: "#5d9ad6", fontWeight: "bold" },
+    },
+    {
+      types: ["class-name"],
+      style: { color: "#fabd2f" },
+    },
+    {
+      types: ["builtin", "support", "support.function"],
+      style: { color: "#6aa2e8" },
     },
     {
       types: ["variable"],
-      style: { color: "#8ec07c" },
+      style: { color: "#8fbf8f" },
     },
     {
       types: ["important", "bold"],
