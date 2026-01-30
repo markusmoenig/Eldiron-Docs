@@ -112,16 +112,137 @@ Render configuration options are located in the `[render]` section.
 
 ```toml
 [render]
-sample_mode = "nearest" # "nearest" or "linear"
+# AO samples (number of rays, default 2)
+ao_samples = 1.0
+
+# AO radius (default 0.5)
+ao_radius = 0.5
+
+# Reflection samples (0 = disabled, >=1 = GGX PBR reflection rays)
+reflection_samples = 0.0
+
+# Bump strength (0.0-1.0, default 1.0)
+bump_strength = 1.0
+
+# Max transparency bounces (default 8)
+max_transparency_bounces = 8.0
+
+# Max shadow distance (default 10.0)
+max_shadow_distance = 10.0
+
+# Max sky distance (default 50.0)
+max_sky_distance = 50.0
+
+# Max shadow steps for transparent shadows (0.0 = no transparent shadows, default: 0)
+max_shadow_steps = 0.0
+
+# Static sky color (used when simulation is disabled)
+sky_color = "#87CEEB"
+
+# Static sun color (used when simulation is disabled)
+sun_color = "#FFFACD"
+
+# Sun intensity/brightness multiplier
+sun_intensity = 1.0
+
+# Static sun direction as [x, y, z] (used when simulation is disabled)
+sun_direction = [-0.5, -1.0, -0.3]
+
+# Enable/disable sun lighting
+sun_enabled = true
+
+# Ambient light color
+ambient_color = "#999999"
+
+# Ambient light strength (0.0 - 1.0)
+ambient_strength = 0.3
+
+# Fog color
+fog_color = "#808080"
+
+# Fog density (0.0 = no fog, higher values = denser fog)
+fog_density = 0.0
 ```
 
 ### **Option Descriptions**
 
-- **`sample_mode`**
-  - Defines the **interpolation mode** used for **scaling textures**.
-  - `"nearest"` → **Nearest-neighbor interpolation** (best for pixel art).
-  - `"linear"` → **Bilinear interpolation** (better for high-resolution textures).
-  - **Recommendation:** Use `"nearest"` for pixel art games to preserve crisp edges.
+All `[render]` options apply **only to the 3D renderer** (they do not affect the 2D tile/sprite renderer).
+
+- **`ao_samples`** — Number of ambient-occlusion rays. Higher counts smooth AO but cost performance; set `0` to disable.
+- **`ao_radius`** — World-space distance for AO rays. Larger radii darken wider cavities; very large values can over-darken scenes.
+- **`reflection_samples`** — GGX PBR reflection rays per hit. `0` disables ray-traced reflections; ≥1 enables glossy/mirror reflections.
+- **`bump_strength`** — Scales normal-map/bump detail (0–1). Lower to flatten surfaces; `1.0` keeps full normal-map effect.
+- **`max_transparency_bounces`** — Max number of ray marches through transparent layers (glass, billboards). Raise for stacked glass; lower for speed.
+- **`max_shadow_distance`** — Furthest distance to search for shadow casters for sun/point lights. Reduce to speed up or limit long shadows.
+- **`max_sky_distance`** — Maximum trace distance for sky/environment contribution and reflections. Lower to clip sky on dense scenes.
+- **`max_shadow_steps`** — Steps for transparency-aware shadows. `0` = fast binary shadows; >0 enables softer/transparent shadowing at higher cost.
+- **`sky_color`** — Static sky RGB used when sky simulation is off or beyond `max_sky_distance`.
+- **`sun_color`** — Static sun RGB tint used when sun simulation is off.
+- **`sun_intensity`** — Multiplier for sun brightness. Increase for harsher lighting; reduce for softer daylight.
+- **`sun_direction`** — Sun vector `[x, y, z]` (points from light to scene). Adjust to change time-of-day lighting angle.
+- **`sun_enabled`** — Toggles the directional sun light. Set `false` for indoor or emissive-only scenes.
+- **`ambient_color`** — Uniform ambient RGB independent of sky. Use to fill shadows with a specific hue.
+- **`ambient_strength`** — Scalar (0–1) for ambient_color energy. Higher values lighten occluded areas.
+- **`fog_color`** — Fog RGB tint applied with distance-based fog.
+- **`fog_density`** — Strength of exponential-squared fog. `0` disables; higher values increase haze with distance.
+
+---
+
+## Simulation Configuration
+
+Simulation configuration options are located in the `[simulation]` section.
+
+```toml
+[simulation]
+# Enable procedural daylight simulation (overrides static sky_color, sun_color, sun_direction)
+enabled = true
+
+# Sky color at night (dark)
+night_sky_color = "#050510"
+
+# Sky color at sunrise/sunset (morning)
+morning_sky_color = "#FF9966"
+
+# Sky color at midday
+midday_sky_color = "#87CEEB"
+
+# Sky color in the evening
+evening_sky_color = "#FF8040"
+
+# Sun/moon color at night (very dim)
+night_sun_color = "#1A1A26"
+
+# Sun color at sunrise/sunset (morning)
+morning_sun_color = "#FFCC99"
+
+# Sun color at midday
+midday_sun_color = "#FFFFF2"
+
+# Sun color in the evening
+evening_sun_color = "#FFB380"
+
+# Sunrise time in 24-hour format (e.g., 6.5 = 6:30 AM)
+sunrise_time = 6.0
+
+# Sunset time in 24-hour format (e.g., 18.5 = 6:30 PM)
+sunset_time = 18.0
+```
+
+### **Option Descriptions**
+
+These simulation values drive the **3D** AND **2D** procedural sky/sun lighting.
+
+- **`enabled`** — Turns procedural daylight on. When `true`, it overrides static `sky_color`, `sun_color`, and `sun_direction` from `[render]`.
+- **`night_sky_color`** — Sky tint used from sunset to sunrise.
+- **`morning_sky_color`** — Sky tint blended in during the sunrise transition.
+- **`midday_sky_color`** — Sky tint applied around noon for clear daylight.
+- **`evening_sky_color`** — Sky tint used during sunset.
+- **`night_sun_color`** — Dim sun/moon color at night for subtle skylight.
+- **`morning_sun_color`** — Sun tint during sunrise; often warmer/orange.
+- **`midday_sun_color`** — Sun tint at noon; typically neutral/white.
+- **`evening_sun_color`** — Sun tint during sunset; typically warm.
+- **`sunrise_time`** — 24-hour decimal time when sunrise starts (e.g., `6.5` = 06:30). Drives interpolation from night → morning.
+- **`sunset_time`** — 24-hour decimal time when sunset starts (e.g., `18.5` = 18:30). Drives interpolation from midday → evening → night.
 
 ---
 
@@ -134,6 +255,7 @@ Viewport configuration defines the resolution and grid used when the game starts
 width = 1280        # Width of the game viewport in pixels.
 height = 720        # Height of the game viewport in pixels.
 grid_size = 32      # Size of one grid tile in pixels.
+upscale = "aspect"  # 'aspect' upscales the game output to the screen dimensions. 'none' otherwise.
 ```
 
 ### **Option Descriptions**
@@ -145,3 +267,7 @@ grid_size = 32      # Size of one grid tile in pixels.
 - **`grid_size`**
     Sets the **pixel size of a single tile** in the world/grid.
     This affects rendering and snapping behavior in tools and the viewport layout.
+
+- **`upscale`**
+    If set to **"aspect"** upscales the game output to the screen / window resolution keeping the viewport aspect-ratio intact.
+    **"none"** (the default) does not upscale and centers the output.
