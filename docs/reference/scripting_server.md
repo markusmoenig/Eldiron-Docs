@@ -16,7 +16,7 @@ This chapter lists all available scripting **commands** for Eldiron, used in [Ch
 Creates a new item of the given class and adds it to the character’s inventory.  
 Returns the item ID or `-1` on failure.
 
-```rust
+```eldrin
 add_item("Torch")
 ```
 
@@ -28,13 +28,13 @@ add_item("Torch")
 
 Blocks the listed events from being sent to the character or item for a number of in-game minutes.
 
-```rust
+```eldrin
 block_events(minutes, "event1", "event2", ...)
 ```
 
 You can also block specific `intent` events.
 
-```rust
+```eldrin
 block_events(2, "intent: attack") // Block attack intents for 2 in-game minutes.
 
 block_events(2, "intent") // Block all intents for 2 in-game minutes.
@@ -50,7 +50,7 @@ Makes an NPC character close in within a given radius on a target character with
 
 Once it is in range, sends [closed_in](/docs/reference/events#closed_in) events to the NPC.
 
-```rust
+```eldrin
 close_in(entity_id, 4.0, 1.0) // Close in within 4.0 radius on the entity_id with 1.0 speed.
 ```
 
@@ -62,7 +62,7 @@ close_in(entity_id, 4.0, 1.0) // Close in within 4.0 radius on the entity_id wit
 
 Deals damage to an entity or item. Sends a [take_damage](/docs//reference/events#take_damage) event to the receiver with the script created dictionary. The script should put all relevant information into the dictionary which will be processed by the target's [take_damage](/docs//reference/events#take_damage) event to calculate the real damage done and in turn than calls [took_damage](#took_damage) to register the damage with the system.
 
-```rust
+```eldrin
 deal_damage(id, random(2, 5))
 ```
 
@@ -77,7 +77,7 @@ Characters and items can deal damage. But only characters can receive damage and
 
 Sends a debug message to the log.
 
-```rust
+```eldrin
 debug(arg1, arg2, ...)
 ```
 
@@ -89,7 +89,7 @@ debug(arg1, arg2, ...)
 
 Drop a specific item from the character's inventory. The item is identified by its id and that value is mostly provided by `intent` messages acting on an item.
 
-```rust
+```eldrin
 drop(value)
 ```
 
@@ -102,7 +102,7 @@ drop(value)
 Drops items from the character's inventory.  
 If a `filter_string` is provided, only matching items are dropped, otherwise all items are dropped.
 
-```rust
+```eldrin
 drop_items(filter_string)
 ```
 
@@ -114,7 +114,7 @@ drop_items(filter_string)
 
 Returns a list of nearby entity IDs within radius.
 
-```rust
+```eldrin
 entities_in_radius()
 ```
 
@@ -127,7 +127,7 @@ entities_in_radius()
 Equips an item from the character’s inventory to its slot.  
 Returns `true` on success or `false` on failure.
 
-```rust
+```eldrin
 equip(item_id)
 ```
 
@@ -139,7 +139,7 @@ equip(item_id)
 
 Gets an attribute of the current character or item.
 
-```rust
+```eldrin
 get_attr("key")
 ```
 
@@ -151,7 +151,7 @@ get_attr("key")
 
 Gets an attribute from a specific entity or item.
 
-```rust
+```eldrin
 get_attr_of(id, "key")
 ```
 
@@ -163,7 +163,7 @@ get_attr_of(id, "key")
 
 Returns the name of the sector the character or item is currently in.
 
-```rust
+```eldrin
 get_sector_name()
 ```
 
@@ -175,7 +175,7 @@ get_sector_name()
 
 The character will walk to the named destination sector with the given speed. It will utilize path-finding to avoid obstacles.
 
-```rust
+```eldrin
 goto("Garden", 1.0)
 ```
 
@@ -187,7 +187,7 @@ goto("Garden", 1.0)
 
 Returns the **id** of the current entity.
 
-```rust
+```eldrin
 id()
 ```
 
@@ -200,7 +200,7 @@ id()
 Returns a list of item IDs in the character’s inventory.  
 If a `filter_string` is provided, only matching items are returned.
 
-```rust
+```eldrin
 inventory_items(filter_string)
 ```
 
@@ -213,7 +213,7 @@ inventory_items(filter_string)
 Returns a list of item IDs in another entity’s inventory.  
 If a `filter_string` is provided, only matching items are returned.
 
-```rust
+```eldrin
 inventory_items_of(entity_id, filter_string)
 ```
 
@@ -226,7 +226,7 @@ inventory_items_of(entity_id, filter_string)
 Sends a message to a given character.  
 An optional category can be used for UI coloring.
 
-```rust
+```eldrin
 message(entity_id, "message", "optional_category")
 ```
 
@@ -238,7 +238,7 @@ message(entity_id, "message", "optional_category")
 
 Schedules an event to be sent after a given number of in-game minutes.
 
-```rust
+```eldrin
 notify_in(minutes, "event_name")
 ```
 
@@ -250,7 +250,7 @@ notify_in(minutes, "event_name")
 
 Offers the inventory to a given entity with an optional filter string. Mostly used by vendor NPCs who would offer their inventory when spoken to.
 
-```rust
+```eldrin
 offer_inventory(entity, "") // Offer all inventory items to the given entity.
 offer_inventory(entity, "Torch") // Offer only items named Torch.
 ```
@@ -264,7 +264,7 @@ offer_inventory(entity, "Torch") // Offer only items named Torch.
 Moves the character in a random direction for the given distance and speed.  
 Sleeps after each move for a random time up to `max_sleep` in in-game minutes.
 
-```rust
+```eldrin
 random_walk(distance, speed, max_sleep)
 ```
 
@@ -276,7 +276,7 @@ random_walk(distance, speed, max_sleep)
 
 Similar to `random_walk`, but restricted to the current sector.
 
-```rust
+```eldrin
 random_walk_in_sector(distance, speed, max_sleep)
 ```
 
@@ -288,7 +288,7 @@ random_walk_in_sector(distance, speed, max_sleep)
 
 Sets an attribute on the current character or item.
 
-```rust
+```eldrin
 set_attr("key", value)
 ```
 
@@ -302,7 +302,7 @@ Enables / disables light emittance for entities and items. Items should do this 
 
 Light parameters need to be set up with the [light attributes](/docs/reference/attributes#emitting-light).
 
-```rust
+```eldrin
 fn event(event, value) {
     if event == "active" {
         set_emit_light(value)
@@ -320,7 +320,7 @@ Enables or disables proximity tracking for characters. If enabled, [proximity_wa
 
 Useful for NPCs (or even items) to interact with other characters (attack, talk, heal, etc.).
 
-```rust
+```eldrin
 set_proximity_tracking(true, 4.0)
 ```
 
@@ -333,7 +333,7 @@ set_proximity_tracking(true, 4.0)
 Takes an item from the region and adds it to the character’s inventory.  
 Returns `True` on success or `False` if the inventory is full.
 
-```rust
+```eldrin
 take(item_id)
 ```
 
@@ -345,7 +345,7 @@ take(item_id)
 
 Teleports the character to a named sector, the second parameter is optional and names the region to teleport to. If only the sector name is given `teleport` will search for the sector in the current region.
 
-```rust
+```eldrin
 teleport("Entrance", "Deadly Dungeon")
 ```
 
@@ -367,7 +367,7 @@ Example:
 
 In the [take_damage](/docs//reference/events#take_damage) event we take the amount and the id of the attacker from the dictionary we created in [deal_damage](#deal_damage) and reduce the amount by 1.
 
-```rust
+```eldrin
 let amount = value.amount - 1
 took_damage(value.subject_id, amount)
 ```

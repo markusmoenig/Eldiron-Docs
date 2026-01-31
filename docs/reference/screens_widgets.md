@@ -28,7 +28,7 @@ If `grid_size` is not set, it defaults to the value defined in the global `[view
 
 ```toml
 [ui]
-# The role of the widget, "none", "game", "button", "text"
+# The role of the widget, "none", "game", "button", "text", "messages"
 role = "game"
 grid_size = "40"
 ```

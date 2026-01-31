@@ -229,3 +229,37 @@ strength = 5.0      # Strength of the Light
 range = 3.0         # Range of the light
 flicker = 0.4       # Amount of light flickering
 ```
+
+---
+
+## Billboard Gate/Door Animation
+
+*Item-only attributes; only valid for items linked to Gate/Door sectors that use billboard sprites.*
+
+### `animation`
+
+Billboard animation type applied when the sector opens/closes. Valid values: `"fade"`, `"up"`, `"down"`, `"left"`, `"right"`.
+
+```toml
+animation = "fade"
+```
+
+---
+
+### `animation_duration`
+
+Duration of the animation in seconds.
+
+```toml
+animation_duration = 1.0
+```
+
+---
+
+### `animation_clock`
+
+Timing mode for the animation: `"smooth"` (time-based) or `"tick"` (game-tick based).
+
+```toml
+animation_clock = "smooth"
+```

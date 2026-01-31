@@ -13,27 +13,37 @@ Player characters must be marked with `player = true` in their data to receive i
 
 Example `user_event()` script for handling key presses:
 
-```python
-    def user_event(self, event, value):
-        if event == 'key_down':
-            if value == 'w':
-                action("forward")
-            if value == 'a':
-                action("left")
-            if value == 'd':
-                action("right")
-            if value == 's':
-                action("backward")
-
-            if value == 'u':
-                intent("use")
-            if value == 't':
-                intent("attack")
-            if value == 'k':
-                intent("take")
-
-        if event == 'key_up':
-                action("none")
+```eldrin
+fn user_event(event, value) {
+    if event == "key_down" {
+        let key = value;
+        if key == "w" {
+            action( "forward");
+        }
+        if key == "a" {
+            action( "left");
+        }
+        if key == "d" {
+            action( "right");
+        }
+        if key == "s" {
+            action( "backward");
+        }
+        if key == "u" {
+            intent( "use");
+        }
+        if key == "t" {
+            intent( "attack");
+        }
+        if key == "k" {
+            intent( "take");
+        }
+    }
+    if event == "key_up" {
+        let key = value;
+        action( "none");
+    }
+}
 ```
 
 ---
