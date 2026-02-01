@@ -9,6 +9,7 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className={styles.featuresInner}>
         <FeaturesContent />
-      </div>    </section>
+      </div>
+    </section>
   );
 }

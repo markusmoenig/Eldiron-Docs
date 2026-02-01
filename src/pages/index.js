@@ -122,6 +122,37 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Centered progress screenshot */}
+        <section
+          style={{
+            padding: "1rem 1rem 2.5rem",
+            maxWidth: "800px",
+            margin: "0 auto",
+            textAlign: "center",
+          }}
+        >
+          <div
+            style={{
+              fontWeight: "700",
+              marginBottom: "0.5rem",
+              fontSize: "1.2rem",
+              color: "var(--ifm-color-primary)",
+            }}
+          >
+            Dungeon Master-Style Progress
+          </div>
+          <img
+            src={useBaseUrl("/img/screenshots/dungeon3d_progress.png")}
+            alt="Dungeon Master example progress"
+            style={{
+              width: "100%",
+              borderRadius: "12px",
+              boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+              display: "block",
+            }}
+          />
+        </section>
+
         {/* Big screenshot section */}
         {/* <section
           style={{ padding: "2rem 1rem", maxWidth: "1000px", margin: "0 auto" }}
