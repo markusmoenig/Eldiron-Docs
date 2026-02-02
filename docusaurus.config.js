@@ -297,6 +297,10 @@ const config = {
                 to: "https://discord.gg/ZrNj6baSZU",
               },
               {
+                label: "Bluesky",
+                to: "https://bsky.app/profile/markusmoenig.bsky.social",
+              },
+              {
                 label: "X",
                 to: "https://x.com/EldironRPG",
               },
@@ -322,6 +326,10 @@ const config = {
           {
             title: "Links",
             items: [
+              {
+                label: "Getting Started",
+                to: "/docs/getting_started",
+              },
               {
                 label: "Downloads",
                 to: "https://github.com/markusmoenig/Eldiron/releases",

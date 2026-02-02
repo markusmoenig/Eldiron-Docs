@@ -66,6 +66,14 @@ export default function Home() {
             Craft adventures and build your own retro RPG — with powerful world
             building tools and visual scripting
           </p>
+          <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+            <Link
+              className="button button--primary button--lg"
+              to="/docs/getting_started"
+            >
+              Getting Started
+            </Link>
+          </div>
           <div
             style={{
               display: "flex",
