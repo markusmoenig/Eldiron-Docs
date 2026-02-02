@@ -179,7 +179,7 @@ Copy the selected tile’s UUID to both the internal and system clipboard.
 
 ### Edit Tile Meta
 
-Set tile *role* (TileRole), *blocking* flag (2D collisions), and *tags/name* string.
+Set tile *role*, *blocking* flag (2D collisions), and *tags* for the currently selected tile in the tile picker.
 
 ### Set Tile Material
 

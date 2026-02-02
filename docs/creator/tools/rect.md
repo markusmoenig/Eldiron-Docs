@@ -5,20 +5,13 @@ sidebar_position: 5
 
 The **Rect Tool** (keyboard shortcut **'R'**) allows you to **directly draw tiles** onto the map.
 
-Unlike other map-based tools, the **Rect Tool does not edit geometry**—instead, it **instantly places selected tiles, materials, or colors** into the map grid.
+Unlike other map-based tools, the **Rect Tool does not edit geometry**—instead, it **instantly places selected the selected tile* into the map grid by creating a rectangular sector.
 
 ### How It Works
 
 - The **Rect Tool automatically creates the geometry** for a **sector** and **assigns the selected tile**.
 - Click on the map to **draw**.
 - **Shift + Click** to **delete content**.
-
-### Modes
-
-The Rect Tool has **two modes**:
-
-- **Overwrite Mode**: Replaces any existing tiles in the grid.
-- **Layer Mode**: Places tiles **on top** of existing ones, allowing layered decorations.
 
 ## When to Use the Rect Tool
 
