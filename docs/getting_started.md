@@ -27,4 +27,4 @@ For **macOS** download
 
 ## First Steps
 
-After installing **Eldiron Creator** read the *Building Maps* chapter, especially [Working with Tiles](/docs/building_maps/working_with_tiles) and  [2D or 3D Maps ?](/docs/building_maps/2d_or_3d) and continue based on your preferences.
+After installing **Eldiron Creator** read [Working with Geometry](/docs/working_with_geometry) and after that the *Building Maps* chapter, especially [Working with Tiles](/docs/building_maps/working_with_tiles) and  [2D or 3D Maps ?](/docs/building_maps/2d_or_3d) and continue based on your preferences.
