@@ -63,7 +63,7 @@ Add a vertex at the centroid of each selected sector—handy for arches, props, 
 
 If a linedef is selected, split it at midpoint. If two vertices are selected, insert a linedef between them.
 
-### Toggle Rect Geo
+### Toggle Rect Geometry
 
 In 2D view (no surface selected), toggle rectangular placement helpers for geometry edits. The dock state is left unchanged.
 
@@ -115,7 +115,7 @@ Choose which face of the selected sector is being profiled (front/back/left/righ
 
 Remove any stored profile operation (`profile_op`) from selected sectors. This restores a flat face.
 
-### Toggle Editing Geo
+### Toggle Editing Geometry
 
 *Shortcut: Ctrl/Cmd + T*
 
