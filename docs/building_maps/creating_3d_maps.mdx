@@ -59,10 +59,50 @@ For a gate, a nice decoration is to select the top **linedef** of the profile an
 
 You can have any number of holes of any shape, edit the profile geometry for windows or reliefs in any way you want.
 
-## Hole based Actions
+## Hole-Based Actions
 
 Instead of just using a **surface profile** as a hole, you can also apply the [Recess](/docs/creator/actions/#recess) and [Relief](/docs/creator/actions/#relief) actions to create a recess and relief of a given depth or height. You can drag and drop tiles for the sides and cap to the given action.
 
 A more sophisticated profile action is [Gate / Door](/docs/creator/actions/#gate--door), which uses the given icon to create a gate or door for the hole. The key is that, by selecting the **sector**, you can use the [Edit Sector](/docs/creator/actions/#edit-sector) action to associate an item for the gate (set **Item Name** to the name of the **Item Template**). In the item behavior code you can then dynamically open/close the gate and make it **blocking** by setting the **visible** and **blocking** attributes of the item.
 
 All this is discussed in more detail in the upcoming scripting chapter.
+
+## Creating a Roof
+
+So far **Eldiron** has done the surface building for us. To add a roof we need to build a surface sector ourselves.
+
+### Flat Roof
+
+You can select the vertices you want to create a new surface sector for and apply the [Create Sector](/docs/creator/actions/#create-sector) action
+
+![3D Tutorial Step7](3d_tutorial7.png)
+
+which will create a new surface sector. After extrusion and applying a tile the roof will look like this.
+
+![3D Tutorial Step8](3d_tutorial8.png)
+
+### Gable Roof
+
+For a gable roof we need to create new vertices. Undo the flat roof creation and select the two linedefs of the upper side walls like this:
+
+![3D Tutorial Step9](3d_tutorial9.png)
+
+Applying the [Split](/docs/creator/actions/#split) action on the two linedefs will split them in two, i.e. create a new vertex in the middle of each of them.
+
+Now we can select each vertex with the **vertex tool**, which automatically selects the [Edit Vertex](/docs/creator/actions/#edit-vertex) action. Here we change the **Y** coordinate of the vertex from 2 to 4, moving it up.
+
+![3D Tutorial Step10](3d_tutorial10.png)
+
+Selecting the four vertices and applying the [Create Sector](/docs/creator/actions/#create-sector) action again will create one half of the gable roof.
+
+![3D Tutorial Step11](3d_tutorial11.png)
+
+<Admonition type="note" title="Create Sector">
+    The **Create Sector** action works with both vertices and linedefs. Use it to create custom surface sectors for your geometry.
+</Admonition>
+
+Of course you can further decorate roof surfaces or floors with profiles (recesses / reliefs) like we did with the side wall.
+
+<Admonition type="tip" title="Creating Vertices">
+    Shift-clicking geometry with the **vertex** tool creates a new vertex at the hit position—handy for quickly adding and connecting vertices.
+</Admonition>

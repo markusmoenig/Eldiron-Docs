@@ -25,6 +25,28 @@ For **macOS** download
 - **Eldiron_mac.zip**
 - A macOS AppStore version is planned after we reach v1
 
+### Install via Cargo
+
+If you have [Rust installed](https://www.rust-lang.org/tools/install), you can install Eldiron Creator directly from the repository:
+
+```bash
+cargo install --git https://github.com/markusmoenig/Eldiron --bin eldiron-creator
+```
+
+### Building from Source
+
+Clone the repository and build:
+
+```bash
+git clone https://github.com/markusmoenig/Eldiron
+cd Eldiron
+cargo run --release --package creator
+```
+
+### Linux Dependencies
+
+Make sure these dependencies are installed: `libasound2-dev` `libatk1.0-dev` `libgtk-3-dev`
+
 ## First Steps
 
 After installing **Eldiron Creator** read [Working with Geometry](/docs/working_with_geometry) and after that the *Building Maps* chapter, especially [Working with Tiles](/docs/building_maps/working_with_tiles) and  [2D or 3D Maps ?](/docs/building_maps/2d_or_3d) and continue based on your preferences.

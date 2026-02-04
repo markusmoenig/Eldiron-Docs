@@ -64,7 +64,7 @@ export default function Home() {
             }}
           >
             Craft adventures and build your own retro RPG — with powerful world
-            building tools and visual scripting
+            building tools and versatile scripting
           </p>
           <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
             <Link
