@@ -11,7 +11,7 @@ The first step is to download your copy of **Eldiron** from the GitHub repositor
 
 For **Windows** download
 
-- **eldiron-creator-x86_64-pc-windows-msvc.tar.gz** which is the raw executable 
+- **eldiron-creator-x86_64-pc-windows-msvc.zip** which is the raw executable 
 - or **Eldiron-Creator.msi** which is installer based.
 
 For **Linux** download
