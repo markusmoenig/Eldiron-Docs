@@ -232,7 +232,7 @@ export default function Home() {
             Dragon Slayer:
           </div>
           <div style={{ marginBottom: "1rem" }}>
-            SmileyNina, Omer Golan-Joel, Mike Plaza
+            Scott Hamill, SmileyNina, Omer Golan-Joel, Mike Plaza
           </div>
 
           <div
@@ -273,7 +273,7 @@ export default function Home() {
           >
             GitHub Sponsors
           </div>
-          <div>cnasc</div>
+          <div>rijupahwa, cnasc</div>
         </section>
 
         {/* Banner at the bottom */}
