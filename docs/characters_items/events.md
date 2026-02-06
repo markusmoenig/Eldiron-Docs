@@ -1,6 +1,6 @@
 ---
 title: "Events"
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 This chapter lists all available **events** that can be received by characters and items in Eldiron.
@@ -19,7 +19,7 @@ Events are categorized as:
 *Item-only event.*
 
 - **Value**: active state *(bool)*
-- **Description**: Called when the state of the item has changed and directly after item creation. This event allows the item to sync its visuals with the current state, for example a torch may use [set_emit_light](scripting_server/#set_emit_light) to adjust it's light emission.
+- **Description**: Called when the state of the item has changed and directly after item creation. This event allows the item to sync its visuals with the current state, for example a torch may use [set_emit_light](server_commands/#set_emit_light) to adjust it's light emission.
 
 ---
 
@@ -28,7 +28,7 @@ Events are categorized as:
 *Character-only event.*
 
 - **Value**: destination sector name *(string)*
-- **Description**: Send by [goto](/docs/reference/scripting_server#goto) when the character arrives at the destination.
+- **Description**: Send by [goto](server_commands#goto) when the character arrives at the destination.
 
 ---
 
@@ -56,14 +56,14 @@ Events are categorized as:
 ### `closed_in`
 
 - **Value**: `entity_id` *(int)*
-- **Description**: Send when an NPC closed in within the radius of the target entity. Send by the [close_in](/docs/reference/scripting_server#close_in) command.
+- **Description**: Send when an NPC closed in within the radius of the target entity. Send by the [close_in](server_commands#close_in) command.
 
 ---
 
 ### `dead`
 
 - **Value**: `entity_id` *(int)*
-- **Description**: Send when another entity kills this character. The *entity_id* of the killer is passed in the value. This is useful for sending messages and taking the next steps. A player character could for example [teleport](/docs/reference/scripting_server#teleport) to a graveyard or healer.
+- **Description**: Send when another entity kills this character. The *entity_id* of the killer is passed in the value. This is useful for sending messages and taking the next steps. A player character could for example [teleport](server_commands#teleport) to a graveyard or healer.
 
 ---
 
@@ -80,7 +80,7 @@ Events are categorized as:
   `{ intent (string), entity_id (int), item_id (int), distance (float)}`
 - **Description**: Triggered when the player triggers an intent towards another entity or item. Either via a movement based keyboard shortcut or by clicking on the target entity or item.
   - When the target is an item, the event is send to the target item **and** to the originating player entity as the action may be handled by either of them depending on the context, for example a torch would lit itself when used, or a character may take an item.
-  - When the target is another character, the event is send to both, the originating character and the target entity. For example on an `attack` intent the originating player may call [deal_damage](/docs/reference/scripting_server#deal_damage) to the given `entity_id`, or the target may want to respond when talked to.
+  - When the target is another character, the event is send to both, the originating character and the target entity. For example on an `attack` intent the originating player may call [deal_damage](server_commands#deal_damage) to the given `entity_id`, or the target may want to respond when talked to.
 
 ---
 
@@ -101,7 +101,7 @@ Events are categorized as:
 ### `proximity_warning`
 
 - **Value**: `entity_ids` *(array)*
-- **Description**: Called when proximity tracking was enabled via [set_proximity_tracking](/docs/reference/scripting_server#set_proximity_tracking) and other entities are in radius. Useful for NPCs to interact with other characters (attack, talk, heal, etc.).
+- **Description**: Called when proximity tracking was enabled via [set_proximity_tracking](server_commands#set_proximity_tracking) and other entities are in radius. Useful for NPCs to interact with other characters (attack, talk, heal, etc.).
 
 ---
 

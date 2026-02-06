@@ -1,6 +1,6 @@
 ---
-title: "Scripting: Client"
-sidebar_position: 4
+title: "Client Commands"
+sidebar_position: 7
 ---
 
 Client side scripting happens in the `user_event` section of scripts (and only for player characters). You can delete the `user_event` section for non player characters.
@@ -114,8 +114,8 @@ Stops any ongoing movement or rotation.
 
 ## `intent`
 
-Tells the server that the next movement action or click is not movement based, but rather has a specific intent behind it. You can send any string with this command as long as you handle it inside the [intent event](/docs/reference/events#intent) for characters or items.
+Tells the server that the next movement action or click is not movement based, but rather has a specific intent behind it. You can send any string with this command as long as you handle it inside the [intent event](events#intent) for characters or items.
 
-The `intent` command in the `user_events` is useful for providing short-cuts, for the user interface use [button widgets](/docs/reference/screens_widgets#button-widgets).
+The `intent` command in the `user_events` is useful for providing short-cuts, for the user interface use [button widgets](/docs/screens/screens_widgets#button-widgets).
 
 ---

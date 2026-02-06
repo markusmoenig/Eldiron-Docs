@@ -1,6 +1,6 @@
 ---
 title: "Attributes"
-sidebar_position: 1
+sidebar_position: 4
 ---
 
 This chapter lists all supported **attributes** for characters and items in Eldiron.  
@@ -15,7 +15,7 @@ Attributes can be applied to characters, items, or both.
 
 *Item-only attribute.*
 
-Represents the active state of an item (on or off). When this attribute is changed, an [active event](/docs/reference/events#active) is automatically send to the item to allow the item to sync its visual state.
+Represents the active state of an item (on or off). When this attribute is changed, an [active event](events#active) is automatically send to the item to allow the item to sync its visual state.
 
 ```toml
 active = true
@@ -88,7 +88,7 @@ inventory_slots = 8
 
 *Character-only attribute.*
 
-The current mode of the entity. On startup of characters this is set to **"active"**, [took_damage](/docs/reference/scripting_server#took_damage) changes this to **"dead"** when the [health attribute](/docs/reference/configuration#health) is below or equal to 0. Dead characters do not receive events. Healers can set the mode attribute to **"active"** again.
+The current mode of the entity. On startup of characters this is set to **"active"**, [took_damage](server_commands#took_damage) changes this to **"dead"** when the [health attribute](/docs/configuration/game#health) is below or equal to 0. Dead characters do not receive events. Healers can set the mode attribute to **"active"** again.
 
 ```python
 set_attr("mode", "active")
@@ -220,7 +220,7 @@ worth = 2
 
 Both entities and items can emit light by configuring the `light` group in their data tool.
 
-Light emittance can be set on / off via the [set_emit_light](/docs/reference/scripting_server#set_emit_light) command.
+Light emittance can be set on / off via the [set_emit_light](server_commands#set_emit_light) command.
 
 ```toml
 [light]

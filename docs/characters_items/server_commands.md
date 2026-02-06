@@ -1,11 +1,11 @@
 ---
-title: "Scripting: Server"
-sidebar_position: 5
+title: "Server Commands"
+sidebar_position: 6
 ---
 
 ## Commands
 
-This chapter lists all available scripting **commands** for Eldiron, used in [Characters](/docs/creator/characters) and [Items](/docs/creator/items).
+This chapter lists all available scripting **commands** for Eldiron, used by characters and items.
 
 ---
 
@@ -48,7 +48,7 @@ block_events(2, "intent") // Block all intents for 2 in-game minutes.
 
 Makes an NPC character close in within a given radius on a target character with the given speed.
 
-Once it is in range, sends [closed_in](/docs/reference/events#closed_in) events to the NPC.
+Once it is in range, sends [closed_in](events#closed_in) events to the NPC.
 
 ```eldrin
 close_in(entity_id, 4.0, 1.0) // Close in within 4.0 radius on the entity_id with 1.0 speed.
@@ -60,7 +60,7 @@ close_in(entity_id, 4.0, 1.0) // Close in within 4.0 radius on the entity_id wit
 
 *This command can be used with both characters and items.*
 
-Deals damage to an entity or item. Sends a [take_damage](/docs//reference/events#take_damage) event to the receiver with the script created dictionary. The script should put all relevant information into the dictionary which will be processed by the target's [take_damage](/docs//reference/events#take_damage) event to calculate the real damage done and in turn than calls [took_damage](#took_damage) to register the damage with the system.
+Deals damage to an entity or item. Sends a [take_damage](events#take_damage) event to the receiver with the script created dictionary. The script should put all relevant information into the dictionary which will be processed by the target's [take_damage](events#take_damage) event to calculate the real damage done and in turn than calls [took_damage](#took_damage) to register the damage with the system.
 
 ```eldrin
 deal_damage(id, random(2, 5))
@@ -298,9 +298,9 @@ set_attr("key", value)
 
 *This command can be used with both characters and items.*
 
-Enables / disables light emittance for entities and items. Items should do this as part of their state, see the [active event](/docs/reference/events#active).
+Enables / disables light emittance for entities and items. Items should do this as part of their state, see the [active event](events#active).
 
-Light parameters need to be set up with the [light attributes](/docs/reference/attributes#emitting-light).
+Light parameters need to be set up with the [light attributes](attributes#emitting-light).
 
 ```eldrin
 fn event(event, value) {
@@ -316,7 +316,7 @@ fn event(event, value) {
 
 *This command can be used with both characters and items.*
 
-Enables or disables proximity tracking for characters. If enabled, [proximity_warning](/docs//reference//events#proximity_warning) events will be send for all nearby entities within the given radius.
+Enables or disables proximity tracking for characters. If enabled, [proximity_warning](events#proximity_warning) events will be send for all nearby entities within the given radius.
 
 Useful for NPCs (or even items) to interact with other characters (attack, talk, heal, etc.).
 
@@ -355,17 +355,17 @@ teleport("Entrance", "Deadly Dungeon")
 
 *This command can only be used with characters.*
 
-Registers damage to an entity, this command is called from within [take_damage](/docs//reference/events#take_damage) events, where the target of the damage calculates the real damage done and calls **took_damage** to register it with the system.
+Registers damage to an entity, this command is called from within [take_damage](events#take_damage) events, where the target of the damage calculates the real damage done and calls **took_damage** to register it with the system.
 
-Internally **took_damage** will deduct the damage from the [health](/docs/reference/configuration#health) attribute and check if the new value is below or equal to 0. If yes it will:
+Internally **took_damage** will deduct the damage from the [health](/docs/configuration/game/#health) attribute and check if the new value is below or equal to 0. If yes it will:
 
-- Set the [mode](/docs/reference/attributes#mode) attribute of the target to **"dead"**.
-- Send a [dead](/docs//reference/events#dead) event to the target.
-- Send a [kill](/docs//reference/events#kill) event to the entity which caused the damage.
+- Set the [mode](attributes#mode) attribute of the target to **"dead"**.
+- Send a [dead](events#dead) event to the target.
+- Send a [kill](events#kill) event to the entity which caused the damage.
 
 Example:
 
-In the [take_damage](/docs//reference/events#take_damage) event we take the amount and the id of the attacker from the dictionary we created in [deal_damage](#deal_damage) and reduce the amount by 1.
+In the [take_damage](events#take_damage) event we take the amount and the id of the attacker from the dictionary we created in [deal_damage](#deal_damage) and reduce the amount by 1.
 
 ```eldrin
 let amount = value.amount - 1

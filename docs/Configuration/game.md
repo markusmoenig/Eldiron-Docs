@@ -1,6 +1,6 @@
 ---
 title: "Game Configuration"
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 You can configure **Eldiron** by selecting the **Game -> Settings** item in the **project tree**.
@@ -77,7 +77,7 @@ health = "HP"
 
 ### `health`
 
-  The name of the health attribute for characters. When smaller or equal to zero means the character is considered **dead** and it's [mode](/docs/reference/attributes#mode) attribute is set to '"dead", this is handled automatically by [took_damage](/docs/reference/scripting_server#took_damage) . If you want to use another attribute name than change the default **"HP"** value to something else.
+  The name of the health attribute for characters. When smaller or equal to zero means the character is considered **dead** and it's [mode](/docs/characters_items/attributes#mode) attribute is set to '"dead", this is handled automatically by [took_damage](/docs/characters_items/server_commands#took_damage) . If you want to use another attribute name than change the default **"HP"** value to something else.
 
 #### `base_currency_name`
 
