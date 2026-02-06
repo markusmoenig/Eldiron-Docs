@@ -60,7 +60,7 @@ The `action()` command accepts the following action types:
 
 ### `forward`
 
-```python
+```eldrin
 action("forward")
 ```
 
@@ -71,7 +71,7 @@ action("forward")
 
 ### `left`
 
-```python
+```eldrin
 action("left")
 ```
 
@@ -82,7 +82,7 @@ action("left")
 
 ### `right`
 
-```python
+```eldrin
 action("right")
 ```
 
@@ -93,7 +93,7 @@ action("right")
 
 ### `backward`
 
-```python
+```eldrin
 action("backward")
 ```
 
@@ -104,7 +104,7 @@ action("backward")
 
 ### `none`
 
-```python
+```eldrin
 action("none")
 ```
 
@@ -114,8 +114,13 @@ Stops any ongoing movement or rotation.
 
 ## `intent`
 
-Tells the server that the next movement action or click is not movement based, but rather has a specific intent behind it. You can send any string with this command as long as you handle it inside the [intent event](events#intent) for characters or items.
+Handling differs by game widget:
 
-The `intent` command in the `user_events` is useful for providing short-cuts, for the user interface use [button widgets](/docs/screens/screens_widgets#button-widgets).
+- In 2D mode, it tells the server that the next movement action or click is intent-based rather than movement-based. Because 2D defaults to movement, you can set an intent in a specific direction for the next movement action.
+- In 3D mode, it sets the current intent to the new value until you change it.
+
+You can send any string with this command as long as you handle it inside the [intent event](events#intent) for characters or items.
+
+The `intent` command in `user_events` is useful for shortcuts; for user interfaces use [button widgets](/docs/screens/screens_widgets#button-widgets).
 
 ---

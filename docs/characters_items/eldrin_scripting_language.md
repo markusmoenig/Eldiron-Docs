@@ -147,7 +147,7 @@ As *subject_id* is an alias for the .x, you can also always just use *value* dir
 
 ---
 
-**count** is an alias for **.z**. Some events send a "," separated list of characters or items in the string field, you can check how many ids are in the list via **.count**.
+**count** is an alias for **.z**. Some events send a "," separated list of character or item ids in the string field, you can check how many ids are in the list via **.count**.
 
 In this example the door checks how many entities are in its radius (to test if it is safe to close the door):
 

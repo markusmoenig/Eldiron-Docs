@@ -20,10 +20,12 @@ You define them by editing their behavior and attributes:
 
 ## Difference between Characters and Items
 
-Even though characters and items are very similar. There are some core differences:
+Even though characters and items are very similar. There are some key differences:
 
 - Items cannot take damage or move and cannot die (but they can be destroyed).
 - Items are designed to be handled in inventories of characters.
+
+Every character and item has a unique ID used to reference it.
 
 ---
 
@@ -39,4 +41,8 @@ Defines a player based character. Only players get send [user events](client_com
 
 You can find a complete reference of all [attributes here](attributes).
 
+---
+
 ## Player Characters
+
+While all characters and items get send [event](events), only player characters get send **user events**. *User events* are used to map user events (key presses, mouse events) to an [action](client_commands/#action) or [intent](client_commands/#intent). These are client commands, as user input is processed on the client and send to the server. All other commands are processed on the server.

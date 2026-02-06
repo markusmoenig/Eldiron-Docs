@@ -1,0 +1,167 @@
+---
+title: "Widgets"
+sidebar_position: 2
+---
+
+Every widget supports a **layer** integer attribute in its **ui** section, higher layer values are drawn later. Except the **game widget** which is always drawn first.
+
+## Game Widgets
+
+Use a widget with **role = "game"** to render the game inside a screen. The game layer is always drawn first and the other widgets on top of it.
+
+### UI section
+
+- **role = "game"** draws the game output into this widget region.
+- **grid_size** (2D): pixel size of one tile (zoom level); if omitted, it falls back to **[viewport].grid_size**.
+- **upscale** (3D): render at **(widget size ÷ upscale)** and scale back up; **1** keeps native size, higher values soften, lower values sharpen.
+
+### Camera section
+
+- **type**: Rendering camera mode; **iso**, **firstp**, or **2D**.
+ 
+### Example
+
+```toml
+[ui]
+role = "game"
+grid_size = "40"
+upscale = 1.5
+
+[camera]
+type = "firstp"
+```
+
+---
+
+## Button Widgets
+
+**Button widgets** define interactive UI elements that trigger **game actions**, **intents** or other logic when clicked.
+
+Buttons are **visually styled** using the **tiles** defined by the [Apply Tile](/docs/creator/actions/#apply-tile) action.
+
+In the HUD you can select between two icons per sector:
+
+- The **default (normal)** state.
+- The **active** state is shown when the button is clicked or when its associated action is currently active.
+
+### UI section
+
+- **action**: trigger a game action (mutually exclusive with **intent**).
+- **intent**: send an intent such as **"use"**; empty string means walking intent.
+- **inventory_index**: draw and interact with the inventory item at that slot using the intent.
+- **show / hide**: toggle specific widgets when clicked.
+- **deactivate**: turn off other buttons when clicked.
+- **active**: set this button’s state to active by default.
+
+---
+
+### Example #1
+
+In this example, clicking the button causes the player to **move forward**.
+
+See the list of available actions [here](/docs/reference/scripting_client#action).
+
+```toml
+[ui]
+role = "button"
+action = "forward"
+# intent = "talk"
+# inventory_index = 0
+```
+
+### Example 2
+
+This button:
+
+- Shows the widget with the sector name of `Messages`
+- Hides all widgets which starts with `Inventory`.
+- Deactivate the button named `Show Inventory`.
+- Sets its own state to `active`.
+
+```toml
+[ui]
+role = "button"
+
+show = ["Messages"]
+hide = ["Inventory*"]
+
+deactivate = ["Show Inventory"]
+
+active = true
+```
+
+---
+
+## Text Widgets
+
+**Text widgets** display text on the screen and can include **static content** or **dynamic placeholders** for player or game data.
+
+### UI section
+
+- **text**: multiline string content; placeholders like `{PLAYER.STR}`, `{PLAYER.DEX}`, `{PLAYER.FUNDS}` are replaced at runtime.
+- **font**: font family name.
+- **font_size**: size of the font.
+- **spacing**: line spacing.
+- **color**: text color.
+
+You can customize the **font**, **size**, **line spacing**, and **color** of the text.
+
+### Example
+
+```toml
+[ui]
+role = "text"
+text = """
+Welcome, adventurer!
+
+STR:  {PLAYER.STR}  DEX: {PLAYER.DEX}
+GOLD: {PLAYER.FUNDS}
+
+May the stars guide you!
+"""
+
+font = "Tiny5-Regular"
+font_size = 18.0
+spacing = 2.0
+color = "#aaaaaa"
+```
+
+---
+
+## Messages Widget
+
+The **Messages widget** displays all incoming messages for the player in a scrollable list.
+
+### UI section
+
+- Messages are sent using the **message** command.
+- Each message can include an optional **category** to pick a display color.
+- If no category is specified, messages default to color **#aaaaaa** (override with **default**).
+
+You can define custom **colors for categories** using keys in the widget's data section.
+In the example below, messages with the `"warning"` category will appear in **light red**.
+
+By default, messages are listed **bottom-up** (most recent at the bottom).
+To change this to **top-down**, set `top_down = true` in the widget’s configuration.
+
+### Example
+
+```toml
+[ui]
+role = "messages"
+font = "Tiny5-Regular"
+font_size = 18.0
+spacing = 5
+warning = "#ff8888"
+default = "#ffffff"
+```
+
+### Multiple Choice
+
+For displaying **multiple choice** messages (for example when a vendor offers his inventory), there are two more options:
+
+```toml
+[ui]
+column_width = 30 # The width of the body column of the text
+multiple_choice = "#ffff88" # The color for multiple choice items
+```
