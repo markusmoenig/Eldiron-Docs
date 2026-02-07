@@ -3,6 +3,8 @@ title: "Widgets"
 sidebar_position: 2
 ---
 
+import Admonition from '@theme/Admonition';
+
 Every widget supports a **layer** integer attribute in its **ui** section, higher layer values are drawn later. Except the **game widget** which is always drawn first.
 
 ## Game Widgets
@@ -19,6 +21,11 @@ Use a widget with **role = "game"** to render the game inside a screen. The game
 
 - **type**: Rendering camera mode; **iso**, **firstp**, or **2D**.
  
+<Admonition type="note" title="player input controls">
+This setting only affects **rendering**. It does **not** change how player input controls the camera.  
+To define player camera behavior, see [set_player_camera](/docs/characters_items/server_commands/#set_player_camera).
+</Admonition>
+
 ### Example
 
 ```toml

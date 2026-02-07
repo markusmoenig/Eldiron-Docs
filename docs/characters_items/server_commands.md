@@ -305,9 +305,29 @@ Light parameters need to be set up with the [light attributes](attributes#emitti
 ```eldrin
 fn event(event, value) {
     if event == "active" {
-        set_emit_light(value)
+        set_emit_light(value);
     }
 }
+```
+
+---
+
+## `set_player_camera`
+
+*This command can only be used with player characters.*
+
+Defines how incoming player [actions](client_commands/#action) are translated into movement and camera behavior.  
+This command **does not change the visual rendering camera**. This is done by the game widgets [camera setting](/docs/screens/widgets/#camera-section)
+It only changes how player input is interpreted.
+
+Current valid values are:
+
+* `2d` — **forward**, **backward**, **left**, **right** move the character directly in the given world directions. This is the default.
+* `iso` — Same movement behavior as `2d`, typically used with an isometric view.
+* `firstp` — **forward** moves the player in the direction they are facing, **backward** moves opposite. **left** and **right** rotate the view instead of strafing.
+
+```eldrin
+set_player_camera("firstp");
 ```
 
 ---
