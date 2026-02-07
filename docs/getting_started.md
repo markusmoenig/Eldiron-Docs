@@ -22,7 +22,7 @@ For **Linux** download
 
 For **macOS** download
 
-- **Eldiron_mac.zip**
+- **eldiron_creator_macOS.zip**
 - A macOS AppStore version is planned after we reach v1
 
 ### Install via Cargo
