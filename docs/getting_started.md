@@ -49,4 +49,6 @@ Make sure these dependencies are installed: `libasound2-dev` `libatk1.0-dev` `li
 
 ## First Steps
 
-After installing **Eldiron Creator** read [Working with Geometry](/docs/working_with_geometry) and after that the *Building Maps* chapter, especially [Working with Tiles](/docs/building_maps/working_with_tiles) and  [2D or 3D Maps ?](/docs/building_maps/2d_or_3d) and continue based on your preferences.
+After installing **Eldiron Creator** read [Working with Geometry](/docs/working_with_geometry) and after that the *Building Maps* chapter, especially [Working with Tiles](/docs/building_maps/working_with_tiles) and  [2D or 3D Maps ?](/docs/building_maps/2d_or_3d).
+
+Learning about **characters** and **clients** would be a good next step, start with [Getting Started](/docs/characters_items/getting_started).
