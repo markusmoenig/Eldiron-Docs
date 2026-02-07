@@ -5,19 +5,26 @@ sidebar_position: 2
 
 import Admonition from '@theme/Admonition';
 
-Every widget supports a **layer** integer attribute in its **ui** section, higher layer values are drawn later. Except the **game widget** which is always drawn first.
+### Widget Drawing Order
+
+Every widget supports a **layer** index attribute in its **ui** section, higher layer values are drawn later. Except the **game widget** which is always drawn first. The default **layer** value is 0.
+
+```toml
+[ui]
+layer = 1
+```
 
 ## Game Widgets
 
 Use a widget with **role = "game"** to render the game inside a screen. The game layer is always drawn first and the other widgets on top of it.
 
-### UI section
+### UI Section
 
 - **role = "game"** draws the game output into this widget region.
 - **grid_size** (2D): pixel size of one tile (zoom level); if omitted, it falls back to **[viewport].grid_size**.
 - **upscale** (3D): render at **(widget size ÷ upscale)** and scale back up; **1** keeps native size, higher values soften, lower values sharpen.
 
-### Camera section
+### Camera Cection
 
 - **type**: Rendering camera mode; **iso**, **firstp**, or **2D**.
  
@@ -51,14 +58,20 @@ In the HUD you can select between two icons per sector:
 - The **default (normal)** state.
 - The **active** state is shown when the button is clicked or when its associated action is currently active.
 
-### UI section
+### UI Section
 
-- **action**: trigger a game action (mutually exclusive with **intent**).
-- **intent**: send an intent such as **"use"**; empty string means walking intent.
-- **inventory_index**: draw and interact with the inventory item at that slot using the intent.
-- **show / hide**: toggle specific widgets when clicked.
-- **deactivate**: turn off other buttons when clicked.
-- **active**: set this button’s state to active by default.
+- **action** - Trigger a game action (mutually exclusive with **intent**).
+- **intent** - Send an intent such as **"use"**; empty string means walking intent.
+- **inventory_index** - Draw and interact with the inventory item at that slot using the intent.
+- **show / hide** - Toggle specific widgets when clicked.
+- **deactivate** - Turn off other buttons when clicked.
+- **active** - Set this button’s state to active by default.
+
+The following attributes are valid for 3D scenes only. They enable `intent` buttons to be able to show specific mouse cursors when hovering or clicking an entity or item:
+- **entity_cursor_id** - The [tile id](/docs/what_is/#tileid) for the mouse cursor when hovering above a character.
+- **entity_clicked_cursor_id** - The [tile id](/docs/what_is/#tileid) for the mouse cursor when clicking a character.
+- **item_cursor_id** - The [tile id](/docs/what_is/#tileid) for the mouse cursor when hovering above an item.
+- **item_clicked_cursor_id** - The [tile id](/docs/what_is/#tileid) for the mouse cursor when clicking an item.
 
 ---
 
@@ -103,7 +116,7 @@ active = true
 
 **Text widgets** display text on the screen and can include **static content** or **dynamic placeholders** for player or game data.
 
-### UI section
+### UI Section
 
 - **text**: multiline string content; placeholders like `{PLAYER.STR}`, `{PLAYER.DEX}`, `{PLAYER.FUNDS}` are replaced at runtime.
 - **font**: font family name.
@@ -139,7 +152,7 @@ color = "#aaaaaa"
 
 The **Messages widget** displays all incoming messages for the player in a scrollable list.
 
-### UI section
+### UI Section
 
 - Messages are sent using the **message** command.
 - Each message can include an optional **category** to pick a display color.

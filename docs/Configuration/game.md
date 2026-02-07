@@ -116,6 +116,7 @@ width = 1280        # Width of the game viewport in pixels.
 height = 720        # Height of the game viewport in pixels.
 grid_size = 32      # Size of one grid tile in pixels.
 upscale = "aspect"  # 'aspect' upscales the game output to the screen dimensions. 'none' otherwise.
+cursor_id = "..."   # The tile id of the default mouse cursor.
 ```
 
 ### **Option Descriptions**
@@ -132,6 +133,8 @@ upscale = "aspect"  # 'aspect' upscales the game output to the screen dimensions
     If set to **"aspect"** upscales the game output to the screen / window resolution keeping the viewport aspect-ratio intact.
     **"none"** (the default) does not upscale and centers the output.
 
+- **`cursor_id`**
+    The [tile id](/docs/what_is/#tileid) for the default mouse cursor.
 ---
 
 ## Render Configuration
