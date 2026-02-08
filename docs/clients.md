@@ -25,6 +25,14 @@ For the **Web / WASM**, download
 
 For **macOS**, we currently do not have a pre-built binary.
 
+### Install via Cargo
+
+If you have [Rust installed](https://www.rust-lang.org/tools/install), you can install Eldiron Creator directly from [crates.io](https://crates.io):
+
+```bash
+cargo install eldiron-client
+```
+
 # Running your Game
 
 On **Linux** and **Windows**, just start the client and pass the name of the **.eldiron** game file on the command line.
